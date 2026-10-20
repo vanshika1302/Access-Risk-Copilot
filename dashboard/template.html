@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Risk Copilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--page:#f9f9f7;--surface:#fcfcfb;--raised:#fff;--ink:#0b0b0b;--ink-2:#52514e;--ink-3:#6f6d67;--hairline:#e1e0d9;
+    --a:#2a78d6;--b:#eb6834;--good:#0a7d0a;--bad:#c23030;
+    --font-display:"Fraunces",Georgia,serif;--font-body:"IBM Plex Sans",system-ui,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;color-scheme:light}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#0d0d0d;--surface:#1a1a19;--raised:#202020;--ink:#fff;--ink-2:#c3c2b7;--ink-3:#a3a198;--hairline:#2c2c2a;--a:#3987e5;--b:#d95926;--good:#4cc24c;--bad:#e66767;color-scheme:dark}}
+  :root[data-theme="dark"]{--page:#0d0d0d;--surface:#1a1a19;--raised:#202020;--ink:#fff;--ink-2:#c3c2b7;--ink-3:#a3a198;--hairline:#2c2c2a;--a:#3987e5;--b:#d95926;--good:#4cc24c;--bad:#e66767;color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font:15px/1.55 var(--font-body)}
+  h1,h2,h3{font-family:var(--font-display);line-height:1.2;margin:0;font-weight:600}
+  a{color:var(--a)} .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  .eyebrow{font:500 12px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+  header{padding:28px 0 12px} header h1{font-size:clamp(26px,4vw,40px);margin:8px 0 10px} header p{max-width:70ch;color:var(--ink-2);margin:0 0 8px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0}
+  .kpi,.card{background:var(--surface);border:1px solid var(--hairline);border-radius:8px;padding:14px 16px}
+  .kpi .v{font:600 38px var(--font-display);font-variant-numeric:tabular-nums} .kpi .l{font-weight:600} .kpi .s{color:var(--ink-3);font-size:13px}
+  section{margin:28px 0} section>h2{font-size:22px;margin-bottom:4px} section>p{color:var(--ink-2);max-width:75ch;margin:0 0 12px}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+  table{border-collapse:collapse;width:100%;font-size:14px} th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--hairline)} td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+  th{color:var(--ink-3);font-weight:500}
+  svg text{fill:var(--ink-2);font:12px var(--font-body)} .legend{display:flex;gap:14px;font-size:13px;color:var(--ink-2);margin:6px 0} .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}
+  select{background:var(--raised);color:var(--ink);border:1px solid var(--hairline);border-radius:6px;padding:4px 6px;font:inherit}
+  .finding{border-top:1px solid var(--hairline);padding:10px 0} .pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:600;text-transform:uppercase;border:1px solid var(--ink-3);color:var(--ink-2);margin-right:6px}
+  .tip{position:fixed;pointer-events:none;background:var(--raised);border:1px solid var(--hairline);border-radius:6px;padding:4px 8px;font-size:12px;display:none;z-index:9}
+  .warn{border-left:3px solid var(--b);padding-left:12px;color:var(--ink-2);max-width:80ch} footer{padding:24px 0 48px;color:var(--ink-3);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Controls design · SQL · ML · AI-risk judgment</div>
+  <h1>Access Risk Copilot</h1>
+  <p>Access requests are approved or denied by a person. Which ones deserve a second look? Three SQL controls flag risky requests, a model scores the likelihood of denial, and an LLM writes a short audit finding that is checked against the SQL facts.</p>
+  <p class="eyebrow" id="meta"></p>
+</header>
+<div class="kpis" id="kpis"></div>
+<p class="warn">Real data, anonymised IDs. Every column is an opaque ID, so no resource, role or department has a name here. The separation-of-duties conflict pairs are an <b>illustrative, seeded list</b> I authored, not real policy.</p>
+
+<section><h2>1. SQL controls</h2>
+<p>Three controls in DuckDB (<code>sql/controls.sql</code>). Denial rates use only dev and test rows, which no control or model was built from.</p>
+<div class="card"><table id="ctrl"></table></div>
+<div class="card" style="margin-top:12px"><div class="eyebrow">Denial rate of flagged requests vs all held-out requests</div><svg id="ctrlbars" width="100%" viewBox="0 0 700 150" role="img" aria-label="Denial rate by control"></svg></div></section>
+
+<section><h2>2. Predicting denied requests</h2>
+<p>Logistic regression on one-hot IDs, then a random forest. Chosen on dev, test scored once. Denied is the rare class (5.8%), so AUC is the headline.</p>
+<div class="grid2"><div class="card"><div class="eyebrow">ROC curve, test set</div><svg id="roc" width="100%" viewBox="0 0 360 330" role="img" aria-label="ROC curves"></svg>
+<div class="legend"><span><i class="sw" style="background:var(--a)"></i>Random forest</span><span><i class="sw" style="background:var(--b)"></i>Logistic regression</span></div></div>
+<div class="card"><div class="eyebrow">Top risk drivers: random forest permutation importance (AUC lost when shuffled)</div><svg id="drivers" width="100%" viewBox="0 0 360 330" role="img" aria-label="Driver importance"></svg></div></div></section>
+
+<section><h2>3. AI audit findings, checked against SQL</h2>
+<p>An LLM (Claude via headless <code>claude -p</code>, all tools disabled) writes one finding per flagged case. A scorer then checks every claim and number against the SQL facts. A <b>silent error</b> is a wrong finding that did not say it was uncertain.</p>
+<div class="grid2"><div class="card"><div class="eyebrow">Outcome of each finding</div><svg id="evalbars" width="100%" viewBox="0 0 360 150" role="img" aria-label="Evaluation buckets"></svg>
+<div class="legend"><span><i class="sw" style="background:var(--a)"></i>Correct</span><span><i class="sw" style="background:var(--b)"></i>Correct, flagged uncertain</span></div><div id="evalnote" class="s" style="color:var(--ink-3);font-size:13px"></div></div>
+<div class="card" id="limits"></div></div>
+<div class="card" style="margin-top:12px"><label>Show findings for <select id="kind"></select></label><div id="findings"></div></div></section>
+
+<section><h2>Limitations</h2><div class="card"><ul>
+<li>Test findings: 60 cases, 0 silent errors. With zero events in 60, the true rate could still be about 5% (rule of three).</li>
+<li>The scorer checks structured claims, quoted numbers and every number in the text. It does not judge free-text reasoning or tone.</li>
+<li>The template baseline is correct by construction, so the model is not "beating" it on accuracy; it adds readable explanation.</li>
+<li>Controls are rules I wrote on anonymised IDs. Unusual access flags 26% of requests, which is too many to review in practice and would be tightened.</li>
+<li>SoD flags only requests that were approved, so their denial rate is 0 by design: they are policy conflicts, not denial predictors.</li>
+<li>Findings come from Claude Code headless mode on a subscription, not the API. No API key was used.</li></ul></div></section>
+
+<footer>Source and tests on GitHub. Data: Amazon Employee Access Challenge via OpenML. <a href="https://github.com/vanshika1302/Access-Risk-Copilot">Repo</a> · Tableau-ready CSVs are in <code>tableau/</code>.</footer>
+</div>
+<div class="tip" id="tip"></div>
+<script>
+const D = /*__DATA__*/null;
+const $ = s => document.querySelector(s), pct = (x, d = 1) => (x * 100).toFixed(d) + "%", NS = "http://www.w3.org/2000/svg";
+const tip = $("#tip");
+function el(tag, attrs, parent, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; parent && parent.appendChild(e); return e; }
+function hover(node, html) { node.addEventListener("mousemove", e => { tip.style.display = "block"; tip.innerHTML = html; tip.style.left = e.clientX + 12 + "px"; tip.style.top = e.clientY + 12 + "px"; }); node.addEventListener("mouseleave", () => tip.style.display = "none"); }
+const NAMES = {SOD: "Segregation of duties", UNUSUAL: "Unusual for department", HIGH_RISK_RESOURCE: "High-risk resource"};
+const te = D.eval.test, dv = D.eval.dev;
+
+$("#meta").textContent = `${D.n_requests.toLocaleString()} requests · ${D.n_denied.toLocaleString()} denied (${pct(D.base_denial_rate)})`;
+const hr = D.controls.find(c => c.control === "HIGH_RISK_RESOURCE");
+$("#kpis").innerHTML = [
+  [D.ml.rf_test_auc.toFixed(3), "Test AUC, random forest", `Logistic regression ${D.ml.logreg_test_auc.toFixed(3)}. Top 5% of scores catch ${pct(D.top5pct.recall, 0)} of denials.`],
+  [hr.lift.toFixed(1) + "x", "High-risk resource lift", `${pct(hr.denial_rate)} of flagged held-out requests were denied vs ${pct(D.held_out_denial_rate)} overall.`],
+  [`${te.buckets.SILENT} / ${te.n}`, "Silent AI errors, test set", `Scored once. Dev: ${dv.buckets.SILENT} / ${dv.n}. See limitations.`]
+].map(k => `<div class="kpi"><div class="v">${k[0]}</div><div class="l">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
+
+$("#ctrl").innerHTML = "<tr><th>Control</th><th class=n>Flagged (all)</th><th class=n>Flagged (held out)</th><th class=n>Denial rate</th><th class=n>Lift</th></tr>" +
+  D.controls.map(c => `<tr><td>${NAMES[c.control]}</td><td class=n>${c.flagged_all.toLocaleString()}</td><td class=n>${c.flagged_held_out.toLocaleString()}</td><td class=n>${c.denial_rate == null ? "-" : pct(c.denial_rate)}</td><td class=n>${c.lift == null ? "-" : c.lift.toFixed(2) + "x"}</td></tr>`).join("");
+
+(function () { // control bars
+  const s = $("#ctrlbars"), rows = [["All held-out requests", D.held_out_denial_rate], ...D.controls.map(c => [NAMES[c.control], c.denial_rate || 0])];
+  const max = Math.max(...rows.map(r => r[1])) * 1.15;
+  rows.forEach((r, i) => { const y = 10 + i * 34, w = Math.max(r[1] / max * 440, 0);
+    el("text", {x: 0, y: y + 16}, s, r[0]); const b = el("rect", {x: 170, y, width: w, height: 22, rx: 4, fill: i ? "var(--a)" : "var(--ink-3)"}, s);
+    el("text", {x: 176 + w, y: y + 16}, s, pct(r[1])); hover(b, `${r[0]}: ${pct(r[1], 2)}`); });
+})();
+
+(function () { // ROC
+  const s = $("#roc"), X = v => 40 + v * 300, Y = v => 290 - v * 270;
+  [0, .5, 1].forEach(v => { el("line", {x1: 40, x2: 340, y1: Y(v), y2: Y(v), stroke: "var(--hairline)"}, s); el("text", {x: 6, y: Y(v) + 4}, s, v); el("text", {x: X(v) - 6, y: 310}, s, v); });
+  el("line", {x1: X(0), y1: Y(0), x2: X(1), y2: Y(1), stroke: "var(--ink-3)", "stroke-dasharray": "4 4"}, s);
+  el("text", {x: 150, y: 326}, s, "False positive rate"); 
+  [["logreg", "var(--b)"], ["random_forest", "var(--a)"]].forEach(([k, c]) => { const p = D.roc[k]; const path = el("path", {d: p.map((q, i) => (i ? "L" : "M") + X(q[0]) + " " + Y(q[1])).join(""), fill: "none", stroke: c, "stroke-width": 2}, s);
+    hover(path, `${k === "logreg" ? "Logistic regression" : "Random forest"}: test AUC ${D.ml[(k === "logreg" ? "logreg" : "rf") + "_test_auc"].toFixed(3)}`); });
+})();
+
+(function () { // drivers
+  const s = $("#drivers"), d = D.drivers.slice(0, 9), max = d[0].value * 1.1;
+  d.forEach((r, i) => { const y = 8 + i * 34, w = r.value / max * 170; el("text", {x: 0, y: y + 16}, s, r.name);
+    const b = el("rect", {x: 130, y, width: w, height: 22, rx: 4, fill: "var(--a)"}, s); el("text", {x: 136 + w, y: y + 16}, s, r.value.toFixed(3)); hover(b, `${r.name}: ${r.value.toFixed(4)} AUC lost when shuffled`); });
+})();
+
+(function () { // eval buckets
+  const s = $("#evalbars"), cols = {correct: "var(--a)", correct_flagged: "var(--b)", caught: "var(--ink-3)", SILENT: "var(--bad)"};
+  [["Dev", dv], ["Test (scored once)", te]].forEach(([lab, e], i) => { let x = 120; const y = 14 + i * 50; el("text", {x: 0, y: y + 18}, s, lab);
+    for (const k in e.buckets) { const w = e.buckets[k] / e.n * 230; if (!w) continue; const r = el("rect", {x, y, width: Math.max(w - 2, 1), height: 26, rx: 3, fill: cols[k]}, s); hover(r, `${k}: ${e.buckets[k]} of ${e.n}`); x += w; } });
+  $("#evalnote").textContent = `Wrong and flagged uncertain (caught): ${te.buckets.caught}. Wrong and unflagged (silent): ${te.buckets.SILENT}. Template baseline: ${te.baseline_buckets.correct} of ${te.n} correct.`;
+})();
+$("#limits").innerHTML = "<div class=eyebrow>How a finding is scored</div><ul><li>Each claim (SoD, unusual, high-risk) must equal the SQL flag.</li><li>Every quoted number must equal the SQL number; any other number in the text is an error.</li><li>An SoD case may not be rated low or auto-approved.</li><li>Wrong + uncertain = caught. Wrong + not uncertain = silent.</li></ul>";
+
+(function () { // findings explorer
+  const kinds = [...new Set(D.examples.map(e => e.kind))], sel = $("#kind"), L = {sod_conflict: "SoD conflict", high_risk_resource: "High-risk resource", unusual_for_department: "Unusual for department", model_only: "Model score only (no control)"};
+  sel.innerHTML = kinds.map(k => `<option value="${k}">${L[k]}</option>`).join("");
+  const draw = () => $("#findings").innerHTML = D.examples.filter(e => e.kind === sel.value).map(e => `<div class=finding><span class=pill>${e.severity}</span><span class=pill>${e.recommended_action.replaceAll("_", " ")}</span>${e.uncertain ? "<span class=pill>uncertain</span>" : ""}<p style="margin:6px 0">${e.finding.replace(/[<>&]/g, "")}</p><div class=eyebrow>SQL facts: resource requests ${e.numbers.resource_requests} · dept requests ${e.numbers.dept_requests} · risk percentile ${e.numbers.risk_score_percentile}</div></div>`).join("");
+  sel.onchange = draw; draw();
+})();
+</script>
+</body>
+</html>
