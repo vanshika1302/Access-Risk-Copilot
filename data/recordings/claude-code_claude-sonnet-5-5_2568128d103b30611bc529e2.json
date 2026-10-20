@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 10653 targets a high-risk resource and is unusual for the department: only 1 of the department's 129 requests involved this resource (51 requests overall). No SoD conflict was flagged. The model risk score percentile is 13, which is low. Because the resource is high-risk and atypical for the department, the resource owner should review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 51,
+   "dept_requests": 129,
+   "risk_score_percentile": 13
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

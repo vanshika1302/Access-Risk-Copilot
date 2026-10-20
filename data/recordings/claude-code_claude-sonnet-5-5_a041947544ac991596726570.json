@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 14237 is for a high-risk resource that is unusual for the requester's department: only 2 of the department's 501 requests involved it, and the resource has 40 requests overall. No SoD conflict was flagged. The model score is the 65th percentile (not a decision). Have the resource owner review the business justification before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 40,
+   "dept_requests": 501,
+   "risk_score_percentile": 65
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

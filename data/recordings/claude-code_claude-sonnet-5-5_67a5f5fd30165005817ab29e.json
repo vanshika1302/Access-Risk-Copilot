@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 8082 scores in the 99th risk percentile (model score, not a decision), yet no SoD conflict, unusual-for-department or high-risk-resource control fired. The resource has 10 requests overall; the department has 50, of which only 1 involves this resource. Because the score and controls disagree, the manager or resource owner should review before approval, and the drivers of the score should be checked.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 10,
+   "dept_requests": 50,
+   "risk_score_percentile": 99
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

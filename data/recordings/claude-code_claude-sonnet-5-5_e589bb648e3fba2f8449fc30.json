@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 4136 is flagged unusual for its department: the resource has only 1 request overall and 1 within the department, against 143 department requests. No SoD conflict or high-risk resource flag is set, and the risk score percentile is 2. Context on the resource is unavailable. Approve with monitoring, and have the manager confirm the business need.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 143,
+   "risk_score_percentile": 2
+  },
+  "uncertain": false,
+  "recommended_action": "approve_with_monitoring"
+ }
+}

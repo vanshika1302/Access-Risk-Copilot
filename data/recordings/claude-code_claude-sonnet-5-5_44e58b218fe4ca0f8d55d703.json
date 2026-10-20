@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "finding": "Request 4917 targets a resource flagged high-risk. No SoD conflict and not unusual for the department. The resource has 91 requests; the department has 42, with only 1 for this resource. Model risk percentile is 55, which is mid-range and not a decision. Because the resource is high-risk, the resource owner should review it before approval.",
+  "quoted": {
+   "resource_requests": 91,
+   "dept_requests": 42,
+   "risk_score_percentile": 55
+  },
+  "recommended_action": "review_by_owner",
+  "severity": "medium",
+  "uncertain": false
+ }
+}

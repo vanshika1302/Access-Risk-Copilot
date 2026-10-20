@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 14280 trips no SoD, unusual-for-department or high-risk-resource controls. However, the model scores it at the 98th risk percentile (higher = more likely denied). The resource has only 1 request overall, so history is very thin. Because the score conflicts with the clean controls, have the resource owner review the request before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 73,
+   "risk_score_percentile": 98
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

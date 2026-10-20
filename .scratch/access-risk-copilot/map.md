@@ -14,6 +14,7 @@ A public repo and GitHub Pages dashboard that shows controls design (SQL), ML, a
 - [03 Warehouse and SQL controls](issues/03-warehouse-sql-controls.md): SQL controls built: SoD 66 flags, unusual access 8,521 (8.8% denied vs 5.8% base), high-risk resource 949 (18.2% denied). SoD pairs illustrative.
 - [04 ML models](issues/04-ml-models.md): Logistic regression test AUC 0.851 (dev 0.858); random forest test AUC 0.863 (dev 0.865). Top RF drivers by permutation: manager, department, resource.
 - [05 AI audit findings](issues/05-ai-findings.md): ai/ generates schema-checked findings via claude -p (tools disabled, no key). 77 dev findings recorded in data/recordings (prompt v1). Test findings NOT generated yet: they are produced after the dev score, once.
+- [06 Evals](issues/06-evals.md): Test set (60 cases) scored once: 0 silent errors, 0 caught, 41 correct, 19 correct-but-flagged-uncertain. Dev (77): same, 0 errors. Rule of three: true silent rate could still be up to about 5% (test) / 2% (all 137).
 
 ## Not yet specified
 - Dashboard layout details (after the numbers exist).

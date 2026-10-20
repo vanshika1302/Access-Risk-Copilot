@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "finding": "Request 14379 shows no SoD conflict, no unusual-for-department flag and no high-risk resource flag. The resource has 3 requests, all from this department (3 dept_resource_requests of 659 department requests). The model score is the 95th percentile for denial, which conflicts with the clean controls. Have the resource owner review it before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 3,
+   "dept_requests": 659,
+   "risk_score_percentile": 95
+  },
+  "severity": "medium",
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

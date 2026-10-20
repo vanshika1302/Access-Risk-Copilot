@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 3111 is flagged unusual for the department: only 2 of the department's 366 requests involved this resource, which has 3 requests overall. No SoD conflict or high-risk resource flag, and the risk score percentile is 1. Rare department access can signal role creep, so the manager should confirm business need before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 3,
+   "dept_requests": 366,
+   "risk_score_percentile": 1
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

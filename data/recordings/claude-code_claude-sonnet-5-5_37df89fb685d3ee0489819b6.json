@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 32253 is flagged unusual for its department: the resource has 1 request overall, and the department has 143 requests, only 1 of them for this resource. No SoD conflict or high-risk resource flag. The model risk score is the 3rd percentile. Rare access patterns can signal over-provisioning, so the manager or resource owner should confirm business need; monitor after approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 143,
+   "risk_score_percentile": 3
+  },
+  "uncertain": false,
+  "recommended_action": "approve_with_monitoring"
+ }
+}

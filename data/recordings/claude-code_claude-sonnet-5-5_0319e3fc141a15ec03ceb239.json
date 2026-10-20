@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 27515 has no SoD conflict, is not unusual for the department, and the resource is not flagged high-risk. The resource has 220 requests, and 51 of the department's 1135 requests are for it. The model scores it at the 96th percentile for likely denial. Because the controls are clean but the score is high, the owner should review it before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 220,
+   "dept_requests": 1135,
+   "risk_score_percentile": 96
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

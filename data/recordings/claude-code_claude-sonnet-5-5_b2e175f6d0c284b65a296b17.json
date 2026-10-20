@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "high",
+  "finding": "Request 16190 triggers the SoD conflict control. The model risk score is in the 89th percentile (higher means more likely to be denied). The resource has 19 requests overall, and only 1 of the department's 56 requests targeted it. It is not flagged as unusual for the department or as high-risk. A segregation-of-duties conflict could allow incompatible access, so block it pending review of the conflict.",
+  "claims": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 19,
+   "dept_requests": 56,
+   "risk_score_percentile": 89
+  },
+  "uncertain": false,
+  "recommended_action": "block_pending_review"
+ }
+}
