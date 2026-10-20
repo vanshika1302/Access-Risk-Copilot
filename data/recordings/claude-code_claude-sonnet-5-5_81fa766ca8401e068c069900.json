@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The resource is also on the high-risk resource list. (Facts say high_risk_resource is false.)"
+  ]
+ }
+}

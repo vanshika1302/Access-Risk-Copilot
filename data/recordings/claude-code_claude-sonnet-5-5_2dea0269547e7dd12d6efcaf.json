@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "the resource owner should review before approval (the facts name no resource owner or policy requiring owner review)"
+  ]
+ }
+}

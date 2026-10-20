@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"Only 1 prior request exists for this department and resource pairing\" \u2013 the facts give dept_resource_requests = 1 (all requests for this resource from this department). They do not say it is a \"prior\" request, and it may be this request itself."
+  ]
+ }
+}

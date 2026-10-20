@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The 76th percentile score \"suggests a somewhat higher chance of denial\" \u2013 the facts give only a risk score percentile of 76 and say nothing about denial or what the score predicts."
+  ]
+ }
+}

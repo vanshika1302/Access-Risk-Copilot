@@ -1,0 +1,11 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"Only a handful of other departments have ever requested this resource.\" The facts give no count of departments that requested the resource. They only give dept_resource_requests = 3, which is requests from this department for this resource.",
+   "\"(higher means more likely denied)\" The facts don't say how the risk score is oriented or that it predicts denial.",
+   "\"the resource owner should review the request before approval\" The facts name no resource owner and set out no such policy or process. This is a recommendation presented as a required step."
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The model scores it at the 95th percentile for likely denial. The facts give only a risk_score_percentile of 95. They don't say what the score measures, so \"likelihood of denial\" is unsupported."
+  ]
+ }
+}

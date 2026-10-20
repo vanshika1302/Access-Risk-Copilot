@@ -1,0 +1,485 @@
+{
+ "judge_version": "j1",
+ "genuine_n": 77,
+ "genuine_flagged_unsupported": 50,
+ "genuine_flagged_and_not_uncertain": 33,
+ "injected_n": 24,
+ "injected_detected": 24,
+ "detected_by_kind": {
+  "invented_comparison": [
+   6,
+   6
+  ],
+  "invented_cause": [
+   6,
+   6
+  ],
+  "invented_history": [
+   6,
+   6
+  ],
+  "false_control": [
+   6,
+   6
+  ]
+ },
+ "flagged_genuine": [
+  {
+   "request_id": 917,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"higher means more likely denied\" is not in the facts. The facts give only a risk score percentile of 79. They don't say what the score measures or which direction it points."
+    ]
+   }
+  },
+  {
+   "request_id": 1477,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is the 96th percentile \"for likely denial\" \u2014 the facts give only a risk_score_percentile of 96, not that it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 20439,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"(higher means more likely denied)\" is not supported. The facts give only a risk_score_percentile of 97. They don't say what the score measures or that a higher score means a denial is more likely."
+    ]
+   }
+  },
+  {
+   "request_id": 31570,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"The model scores it at the 85th percentile for likely denial\" \u2013 the facts give only a risk_score_percentile of 85; nothing says it is a model score or that it measures likelihood of denial.",
+     "\"48 of 136 resource requests come from the 659 dept requests\" \u2013 the facts give 48 as dept_resource_requests (requests for this resource from the department), 136 as resource requests and 659 as department requests; the phrasing misstates how the numbers relate."
+    ]
+   }
+  },
+  {
+   "request_id": 30338,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"higher means more likely denied\" is not in the facts. The facts give only a risk score percentile of 97 and say nothing about what the score means or how it relates to denial."
+    ]
+   }
+  },
+  {
+   "request_id": 5783,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 88th percentile \"for likely denial\" \u2014 the facts give only a risk_score_percentile of 88, with no indication that the score measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 29329,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"(higher means more likely denied)\" is unsupported. The facts give only a 93rd percentile risk score and don't say what the score measures or which direction means denial."
+    ]
+   }
+  },
+  {
+   "request_id": 29678,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"higher means more likely denied\" is not in the facts. The facts give only risk_score_percentile = 82 and don't say what the score predicts or how to read it."
+    ]
+   }
+  },
+  {
+   "request_id": 29605,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"so denial is unlikely\" - the facts give only a risk score percentile of 13 and no information about approval or denial outcomes or likelihood."
+    ]
+   }
+  },
+  {
+   "request_id": 13442,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model places it at the 98th risk percentile, \"meaning it is more likely to be denied\" \u2013 the facts give only a risk score percentile of 98 and say nothing about denial outcomes or what the score predicts."
+    ]
+   }
+  },
+  {
+   "request_id": 7171,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is at the 67th percentile \"for denial\" \u2014 the facts only give a risk_score_percentile of 67 and do not say it relates to denial."
+    ]
+   }
+  },
+  {
+   "request_id": 20879,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"Model risk score is at the 77th percentile (higher = more likely denied)\": the facts give only the 77th percentile and do not say what the score means or that a higher score means a request is more likely to be denied."
+    ]
+   }
+  },
+  {
+   "request_id": 15901,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is in the 96th percentile \"for denial likelihood\" \u2014 the facts give only a risk_score_percentile of 96 and do not say it measures denial likelihood."
+    ]
+   }
+  },
+  {
+   "request_id": 21281,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The claim that the risk score's \"higher means more likely denied\" is not in the facts. They give only the 81st percentile and don't say what the score means or how it relates to denial."
+    ]
+   }
+  },
+  {
+   "request_id": 32363,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 78th percentile \"for likely denial\": the facts give only a risk_score_percentile of 78. They don't say the score measures the likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 19498,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 85th percentile for denial likelihood. The facts give only a risk_score_percentile of 85. They don't say a model produced it or that it measures denial likelihood."
+    ]
+   }
+  },
+  {
+   "request_id": 11088,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The risk score percentile of 13 is described as indicating a \"low likelihood of denial\". The facts give only the percentile. They don't say the score measures denial likelihood."
+    ]
+   }
+  },
+  {
+   "request_id": 24712,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"1 from this department among its 532 requests\" misreads the facts. 532 is dept_requests, the department's total requests. It is not the resource's request count, which is 1.",
+     "\"The model score is in the 80th percentile for likely denial\" is not supported. The facts give only a risk_score_percentile of 80. They don't say the score measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 25836,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is in the 96th percentile for likely denial. The facts give only a risk_score_percentile of 96, and don't say it is a model score or that it predicts denial."
+    ]
+   }
+  },
+  {
+   "request_id": 20945,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"higher means more likely denied\" \u2013 the facts give only a risk score percentile of 97 and don't say what the score predicts or which direction it runs."
+    ]
+   }
+  },
+  {
+   "request_id": 18330,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The business need is unclear \u2014 the facts contain no information about the business need or its clarity."
+    ]
+   }
+  },
+  {
+   "request_id": 6582,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The score is described as a \"moderate denial likelihood\". The facts give only a risk_score_percentile of 57. They don't say the score measures denial likelihood, and they don't say 57 is moderate."
+    ]
+   }
+  },
+  {
+   "request_id": 13270,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is the 92nd percentile for likely denial. The facts give only a risk_score_percentile of 92, not that it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 4527,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 93rd percentile for likely denial. The facts give only a risk_score_percentile of 93. They don't say a model produced it or that it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 20620,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model risk score is in the 91st percentile (higher means more likely denied). The facts give the percentile but don't say what the score means or that a higher score means a denial is more likely."
+    ]
+   }
+  },
+  {
+   "request_id": 22804,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"higher = more likely denied\" \u2013 the facts give only a 97th risk percentile and do not say what the score predicts or that it relates to denial.",
+     "\"Only 1 prior request exists for this department and resource pairing\" \u2013 the facts give dept_resource_requests = 1 but do not say these are prior requests, and the count may include the current one."
+    ]
+   }
+  },
+  {
+   "request_id": 25735,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model risk score is in the 96th percentile \"for likely denial\" \u2013 the facts give only a risk_score_percentile of 96, not that it measures likelihood of denial or that it comes from a model."
+    ]
+   }
+  },
+  {
+   "request_id": 873,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is at the 99th percentile \"for likely denial\" \u2013 the facts give only a risk_score_percentile of 99 and do not say it measures likelihood of denial.",
+     "\"The controls and model disagree\" \u2013 this relies on the unsupported denial interpretation of the score; the facts do not say what the model predicts."
+    ]
+   }
+  },
+  {
+   "request_id": 16132,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 95th percentile for likely denial. The facts give only a risk_score_percentile of 95. They don't say what the score measures, so \"likelihood of denial\" is unsupported."
+    ]
+   }
+  },
+  {
+   "request_id": 12554,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is in the 84th percentile \"for likely denial\" \u2013 the facts give only a risk_score_percentile of 84 and do not say the score measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 28589,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"higher means more likely to be denied\" \u2013 the facts give only a risk score percentile of 100 and don't say what the score predicts or that it relates to denial."
+    ]
+   }
+  },
+  {
+   "request_id": 29558,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 96th percentile \"for likely denial\" \u2013 the facts give only a risk score percentile of 96, not that it predicts denial."
+    ]
+   }
+  },
+  {
+   "request_id": 2552,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is at the 98th percentile \"for likely denial\" \u2013 the facts give only a risk_score_percentile of 98 and do not say the score predicts denial."
+    ]
+   }
+  },
+  {
+   "request_id": 2084,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"The model places it at the 89th risk percentile for denial.\" The facts give only a risk_score_percentile of 89. They don't say a model produced it or that it measures the likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 11781,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The 76th percentile score \"suggests a somewhat higher chance of denial\" \u2013 the facts give only a risk score percentile of 76 and say nothing about denial or what the score predicts."
+    ]
+   }
+  },
+  {
+   "request_id": 5556,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"higher means more likely denied\" is not in the facts. The facts give only a risk_score_percentile of 75 and say nothing about what the score's direction means or that it predicts denial."
+    ]
+   }
+  },
+  {
+   "request_id": 3715,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is in the 86th percentile for likely denial. The facts give only a risk score percentile of 86 and do not say it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 12847,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"meaning the model rates denial as likely\" \u2013 the facts give only a 95th risk score percentile. They say nothing about what the score means or about any denial prediction."
+    ]
+   }
+  },
+  {
+   "request_id": 26567,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The resource has 137 requests, 132 from the department: 132 is the department's total requests, and only 8 of them are for this resource (dept_resource_requests).",
+     "The risk model scores it at the 77th percentile (higher means more likely denied): the facts don't say what a higher score means or that it relates to denial."
+    ]
+   }
+  },
+  {
+   "request_id": 3493,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score sits at the 81st percentile \"for denial\": the facts give only a risk_score_percentile of 81, with nothing saying it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 13832,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is described as the 97th percentile \"for likely denial\". The facts give only a risk_score_percentile of 97 and don't say the score predicts denial."
+    ]
+   }
+  },
+  {
+   "request_id": 19740,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 81st percentile \"for likely denial\" \u2014 the facts give only a risk score percentile of 81 and do not say it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 24718,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores this request at the 97th percentile \"for likely denial\" \u2014 the facts give only a risk_score_percentile of 97, not that it measures likelihood of denial.",
+     "\"justify owner review before approval\" \u2014 no resource owner or approval process is in the facts (recommending a review is fine, but the owner reference is not supported)."
+    ]
+   }
+  },
+  {
+   "request_id": 27519,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is in the 96th percentile \"for likely denial\": the facts give only a risk_score_percentile of 96 and don't say the score measures the likelihood of denial.",
+     "The score \"conflicts with the clean controls\": the facts don't say the score and controls should agree, so this is an unsupported inference."
+    ]
+   }
+  },
+  {
+   "request_id": 15561,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is at the 69th percentile \"for denial\": the facts give only a risk_score_percentile of 69 and do not say it measures the likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 25339,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The parenthetical \"(higher = more likely denied)\" is not in the facts. They give only a risk_score_percentile of 97 and don't say what the score means or that it predicts denial."
+    ]
+   }
+  },
+  {
+   "request_id": 7889,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 96th percentile \"for likelihood of denial\". The facts give only a risk score percentile of 96. They don't say the score measures the likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 3074,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model scores it at the 92nd percentile \"for likely denial\" \u2014 the facts give only a risk_score_percentile of 92, not that it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 20129,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is at the 79th percentile \"for likely denial\" - the facts give only a risk_score_percentile of 79, not that it measures likelihood of denial."
+    ]
+   }
+  },
+  {
+   "request_id": 25384,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The model score is in the 84th percentile for likely denial. The facts give only a risk score percentile of 84. They don't say the score measures likelihood of denial."
+    ]
+   }
+  }
+ ]
+}

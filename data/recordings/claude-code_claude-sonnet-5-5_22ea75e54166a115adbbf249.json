@@ -1,0 +1,12 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"This requester was previously denied access to this resource last year.\" The facts contain no request history or prior denial.",
+   "\"The model scores it at the 85th percentile for likely denial.\" The facts give a risk_score_percentile of 85. They don't say it measures likelihood of denial.",
+   "\"48 of 136 resource requests come from the 659 dept requests\" garbles the numbers. The facts give 48 dept-resource requests, 136 resource requests and 659 department requests. They don't say the 48 are a share of the 136 that come from the 659.",
+   "\"have the resource owner review the request\" refers to a resource owner role. The facts don't mention one, although this is a recommendation."
+  ]
+ }
+}

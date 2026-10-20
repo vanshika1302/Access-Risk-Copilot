@@ -1,0 +1,11 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This requester was previously denied access to this resource last year. (The facts contain no history of prior requests or denials.)",
+   "The model scores it at the 78th percentile \"for likely denial\" (the facts give only a risk_score_percentile of 78, not that it measures likelihood of denial).",
+   "The resource owner should review before approval (the facts do not mention a resource owner or such a review requirement)."
+  ]
+ }
+}

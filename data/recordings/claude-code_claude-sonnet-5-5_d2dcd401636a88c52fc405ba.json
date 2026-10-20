@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The model risk score is in the 91st percentile (higher means more likely denied). The facts give the percentile but don't say what the score means or that a higher score means a denial is more likely."
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The claim that the risk score's \"higher means more likely denied\" is not in the facts. They give only the 81st percentile and don't say what the score means or how it relates to denial."
+  ]
+ }
+}

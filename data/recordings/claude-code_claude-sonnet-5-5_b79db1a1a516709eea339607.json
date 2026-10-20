@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"1 from this department among its 532 requests\" misreads the facts. 532 is dept_requests, the department's total requests. It is not the resource's request count, which is 1.",
+   "\"The model score is in the 80th percentile for likely denial\" is not supported. The facts give only a risk_score_percentile of 80. They don't say the score measures likelihood of denial."
+  ]
+ }
+}

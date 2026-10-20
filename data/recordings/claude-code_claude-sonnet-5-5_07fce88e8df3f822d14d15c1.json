@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"The model scores it at the 85th percentile for likely denial\" \u2013 the facts give only a risk_score_percentile of 85; nothing says it is a model score or that it measures likelihood of denial.",
+   "\"48 of 136 resource requests come from the 659 dept requests\" \u2013 the facts give 48 as dept_resource_requests (requests for this resource from the department), 136 as resource requests and 659 as department requests; the phrasing misstates how the numbers relate."
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "Only a handful of other departments have ever requested this resource. The facts give no data on other departments or how many have requested this resource.",
+   "The resource owner should review the business need. The facts name no resource owner or policy that assigns this review to one."
+  ]
+ }
+}

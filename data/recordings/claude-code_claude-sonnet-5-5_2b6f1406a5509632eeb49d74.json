@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"higher = more likely denied\" \u2013 the facts give only a 97th risk percentile and do not say what the score predicts or that it relates to denial.",
+   "\"Only 1 prior request exists for this department and resource pairing\" \u2013 the facts give dept_resource_requests = 1 but do not say these are prior requests, and the count may include the current one."
+  ]
+ }
+}

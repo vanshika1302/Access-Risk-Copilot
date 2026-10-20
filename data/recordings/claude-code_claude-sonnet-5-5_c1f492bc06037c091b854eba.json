@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"so denial is unlikely\" - the facts give only a risk score percentile of 13 and no information about approval or denial outcomes or likelihood."
+  ]
+ }
+}

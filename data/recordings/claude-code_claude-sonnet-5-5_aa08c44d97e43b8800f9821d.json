@@ -1,0 +1,11 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"Only a handful of other departments have ever requested this resource.\" The facts give no data on how many other departments requested the resource. They only give 5 total requests and 1 from this department.",
+   "\"low likelihood of denial\" is an interpretation of the risk score percentile of 13. The facts don't say what the score means, or whether a low score means a low likelihood of denial.",
+   "\"Approve with monitoring\" is a decision the facts don't support. They contain no approval policy and no monitoring mechanism."
+  ]
+ }
+}

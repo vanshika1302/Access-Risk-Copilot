@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The model scores this request at the 97th percentile \"for likely denial\" \u2014 the facts give only a risk_score_percentile of 97, not that it measures likelihood of denial.",
+   "\"justify owner review before approval\" \u2014 no resource owner or approval process is in the facts (recommending a review is fine, but the owner reference is not supported)."
+  ]
+ }
+}

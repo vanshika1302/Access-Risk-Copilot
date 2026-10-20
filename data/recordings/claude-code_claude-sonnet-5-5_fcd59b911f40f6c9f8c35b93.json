@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This requester was previously denied access to this resource last year. (No prior request history or denial outcome is in the facts.)",
+   "\"48 of 136 resource requests come from the 659 dept requests\" garbles the numbers: 48 is this resource from this department, 136 is all requests for the resource, 659 is all department requests."
+  ]
+ }
+}

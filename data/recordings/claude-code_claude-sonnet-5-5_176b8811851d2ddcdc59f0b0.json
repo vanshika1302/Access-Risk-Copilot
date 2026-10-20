@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The business need is unclear \u2014 the facts contain no information about the business need or its clarity."
+  ]
+ }
+}

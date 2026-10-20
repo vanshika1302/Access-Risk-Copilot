@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"The resource has 137 requests, 132 from the department\" is wrong. 132 is the department's total requests across all resources (dept_requests). The facts give 8 requests for this resource from this department.",
+   "\"Resource owner should review the conflict before approval\" names a resource owner as the reviewer. The facts don't mention a resource owner or any review process."
+  ]
+ }
+}

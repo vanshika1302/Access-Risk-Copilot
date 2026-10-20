@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The parenthetical \"(higher = more likely denied)\" is not in the facts. They give only a risk_score_percentile of 97 and don't say what the score means or that it predicts denial."
+  ]
+ }
+}

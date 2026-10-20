@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The resource has 137 requests, 132 from the department: 132 is the department's total requests, and only 8 of them are for this resource (dept_resource_requests).",
+   "The risk model scores it at the 77th percentile (higher means more likely denied): the facts don't say what a higher score means or that it relates to denial."
+  ]
+ }
+}

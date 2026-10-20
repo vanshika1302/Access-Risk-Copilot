@@ -1,0 +1,11 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This requester was previously denied access to this resource last year.",
+   "The 98th risk percentile \"means it is more likely to be denied\" \u2013 the facts give no information about the model's meaning or denial likelihood.",
+   "\"The resource has only 1 request overall\" is supported, but \"the department has made 140 requests\" is fine; the claim that the controls and score \"conflict\" is an interpretation not given in the facts."
+  ]
+ }
+}

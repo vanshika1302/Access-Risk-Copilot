@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This requester was previously denied access to this resource last year. (The facts contain no history of prior requests or denials.)",
+   "\"higher = more likely denied\" is a model-direction claim not given in the facts."
+  ]
+ }
+}

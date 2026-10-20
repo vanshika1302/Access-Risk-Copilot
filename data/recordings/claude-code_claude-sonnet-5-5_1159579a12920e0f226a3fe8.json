@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"Only a handful of other departments have ever requested this resource.\" The facts give no data on how many other departments requested the resource.",
+   "\"higher means more likely denied\" \u2014 the facts give only an 82nd percentile risk score and don't say what direction the score means or that it predicts denial."
+  ]
+ }
+}

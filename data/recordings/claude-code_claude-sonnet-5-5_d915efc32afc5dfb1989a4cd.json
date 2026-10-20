@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "Only a handful of other departments have ever requested this resource. The facts give 5 total requests and 1 from this department, but say nothing about how many other departments requested it."
+  ]
+ }
+}

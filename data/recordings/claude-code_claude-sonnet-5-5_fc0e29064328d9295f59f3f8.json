@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This requester was previously denied access to this resource last year. (No request history or outcomes for the requester are in the facts.)",
+   "The resource owner should review before approval. (No resource owner or policy requiring this review is in the facts.)"
+  ]
+ }
+}

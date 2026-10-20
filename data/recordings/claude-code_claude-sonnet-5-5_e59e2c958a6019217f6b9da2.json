@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"the resource owner should review the request before approval\" \u2013 no resource owner or policy requiring such review appears in the facts.",
+   "\"Only a handful of other departments have ever requested this resource\" \u2013 the facts give no data on other departments requesting the resource. They only give dept_resource_requests=3 for this department."
+  ]
+ }
+}

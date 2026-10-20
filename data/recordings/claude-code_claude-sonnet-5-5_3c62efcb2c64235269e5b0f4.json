@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The manager is known to approve requests without review, which explains the pattern.",
+   "The model scores it at the 85th percentile for denial likelihood (facts give only a risk_score_percentile of 85, not that it measures denial likelihood)."
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "Only a handful of other departments have ever requested this resource.",
+   "The resource owner should review the request before approval (a specific reviewer role not in the facts, though recommending review is allowed)."
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The risk score percentile of 13 is described as indicating a \"low likelihood of denial\". The facts give only the percentile. They don't say the score measures denial likelihood."
+  ]
+ }
+}

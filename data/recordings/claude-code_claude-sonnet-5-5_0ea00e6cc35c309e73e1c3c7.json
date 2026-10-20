@@ -1,0 +1,11 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"The model scores it at the 88th percentile for likely denial\" \u2013 the facts give only a risk_score_percentile of 88, with no mention of denial likelihood.",
+   "\"Only a handful of other departments have ever requested this resource\" \u2013 the facts give no information about other departments or their requests for this resource.",
+   "\"the resource owner should review the business need before approval\" is presented as a required step because of high risk; the facts mention no resource owner or policy requiring this."
+  ]
+ }
+}

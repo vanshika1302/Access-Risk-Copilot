@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "Only a handful of other departments have ever requested this resource. The facts give no data on other departments' requests for the resource, so this is unsupported.",
+   "\"block pending owner review\" is a recommendation, but it is fine; however the claim that the 15 requests overall and 13 of 36 are presented as the basis is supported. (No other unsupported statements.)"
+  ]
+ }
+}

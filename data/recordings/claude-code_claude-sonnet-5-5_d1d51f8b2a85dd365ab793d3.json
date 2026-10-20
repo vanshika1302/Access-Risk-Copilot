@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The manager is known to approve requests without review, which explains the pattern. The facts contain no history of the manager's approval behavior and give no cause for the pattern."
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"the resource owner should review it before approval\" \u2013 the facts identify no resource owner (only a manager ID and role IDs), so naming this reviewer is unsupported."
+  ]
+ }
+}

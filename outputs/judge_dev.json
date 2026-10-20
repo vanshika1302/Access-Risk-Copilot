@@ -1,0 +1,92 @@
+{
+ "judge_version": "j2",
+ "genuine_n": 77,
+ "genuine_flagged_unsupported": 7,
+ "genuine_flagged_and_not_uncertain": 5,
+ "injected_n": 24,
+ "injected_detected": 24,
+ "detected_by_kind": {
+  "false_control": [
+   6,
+   6
+  ],
+  "invented_history": [
+   6,
+   6
+  ],
+  "invented_cause": [
+   6,
+   6
+  ],
+  "invented_comparison": [
+   6,
+   6
+  ]
+ },
+ "flagged_genuine": [
+  {
+   "request_id": 32363,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "the resource owner should review before approval (the facts name no resource owner or policy requiring owner review)"
+    ]
+   }
+  },
+  {
+   "request_id": 13270,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The resource owner should review before approval: a \"resource owner\" role is not in the facts, which give no owner or reviewer."
+    ]
+   }
+  },
+  {
+   "request_id": 22804,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"Only 1 prior request exists for this department and resource pairing\" \u2013 the facts give dept_resource_requests = 1 (all requests for this resource from this department). They do not say it is a \"prior\" request, and it may be this request itself."
+    ]
+   }
+  },
+  {
+   "request_id": 18226,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The resource owner should review before approval. The facts name no resource owner, and they give no review process or policy that assigns this review to that role."
+    ]
+   }
+  },
+  {
+   "request_id": 12554,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The resource owner should review it before approval. The facts name no resource owner and give no review process or approval workflow."
+    ]
+   }
+  },
+  {
+   "request_id": 26567,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"The resource has 137 requests, 132 from the department\" is wrong. 132 is the department's total requests across all resources (dept_requests). The facts give 8 requests for this resource from this department.",
+     "\"Resource owner should review the conflict before approval\" names a resource owner as the reviewer. The facts don't mention a resource owner or any review process."
+    ]
+   }
+  },
+  {
+   "request_id": 7889,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"the resource owner should review it before approval\" \u2013 the facts identify no resource owner (only a manager ID and role IDs), so naming this reviewer is unsupported."
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The score is described as a \"moderate denial likelihood\". The facts give only a risk_score_percentile of 57. They don't say the score measures denial likelihood, and they don't say 57 is moderate."
+  ]
+ }
+}

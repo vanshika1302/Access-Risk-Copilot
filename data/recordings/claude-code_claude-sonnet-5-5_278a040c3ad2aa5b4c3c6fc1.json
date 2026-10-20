@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "A segregation-of-duties conflict was also detected for this request. (The facts show sod_conflict is false.)",
+   "Risk score percentile is 13, so denial is unlikely. (The facts give no information on denial likelihood or outcomes; this is an unsupported inference.)"
+  ]
+ }
+}

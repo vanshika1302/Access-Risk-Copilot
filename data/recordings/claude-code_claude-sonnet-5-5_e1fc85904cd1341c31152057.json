@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The model places it at the 98th risk percentile, \"meaning it is more likely to be denied\" \u2013 the facts give only a risk score percentile of 98 and say nothing about denial outcomes or what the score predicts."
+  ]
+ }
+}

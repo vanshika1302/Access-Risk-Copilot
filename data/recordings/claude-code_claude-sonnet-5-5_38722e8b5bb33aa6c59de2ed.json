@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "A segregation-of-duties conflict was also detected for this request. (The facts show sod_conflict is false, and the finding contradicts its own earlier statement.)"
+  ]
+ }
+}
