@@ -1,8 +1,7 @@
 {
  "model": "claude-sonnet-5-5",
  "output": {
-  "severity": "medium",
-  "finding": "Request 3493 targets resource 20299, flagged high-risk. No SoD conflict and not unusual for the department; the department has 17 prior requests for this resource (597 department total, 73 resource-wide). The model score is at the 81st percentile for likely denial. High-risk access warrants owner review before approval to confirm business need.",
+  "finding": "Request 3493 targets a resource flagged as high risk. No separation-of-duties conflict and no unusual-for-department signal were found. The resource has 73 requests overall; the department has 597 requests, 17 of them for this resource. The model score sits at the 81st percentile for denial. Route to the resource owner for review before approval.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,
@@ -13,6 +12,7 @@
    "dept_requests": 597,
    "risk_score_percentile": 81
   },
+  "severity": "medium",
   "uncertain": false,
   "recommended_action": "review_by_owner"
  }

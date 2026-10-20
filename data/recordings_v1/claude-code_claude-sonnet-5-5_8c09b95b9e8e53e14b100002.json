@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 3074 targets a resource flagged high risk. No SoD conflict or unusual-for-department pattern was found; the department has 22 of the resource's 33 requests. The model score is in the 92nd percentile for likely denial. Because the resource is high risk, the resource owner should review the request before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 33,
+   "dept_requests": 659,
+   "risk_score_percentile": 92
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

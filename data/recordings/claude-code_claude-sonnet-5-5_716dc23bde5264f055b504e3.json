@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 8454 is flagged unusual for its department: resource 42891 has only 1 request overall and 1 within the department (525 department requests total). No SoD conflict or high-risk resource flag, and the risk score percentile is 3. Low concern, but rarity means the manager should confirm business need; approve with monitoring.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 525,
+   "risk_score_percentile": 3
+  },
+  "uncertain": false,
+  "recommended_action": "approve_with_monitoring"
+ }
+}

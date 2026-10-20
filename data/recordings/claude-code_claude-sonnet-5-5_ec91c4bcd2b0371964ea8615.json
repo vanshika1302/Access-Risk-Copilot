@@ -1,19 +1,19 @@
 {
  "model": "claude-sonnet-5-5",
  "output": {
-  "severity": "medium",
-  "finding": "Request 28532 triggers the SoD conflict control. It is not unusual for the department (21 of 543 department requests involve this resource; 295 requests overall) and the resource is not flagged high-risk. Model risk score percentile is 36, a low-to-moderate denial likelihood. Because the SoD conflict conflicts with the role, the resource owner should review it before approval. The conflicting duties are not specified in the facts.",
   "claims": {
    "sod_conflict": true,
    "unusual_for_department": false,
    "high_risk_resource": false
   },
+  "finding": "Request 28532 triggers a segregation-of-duties conflict. It is not unusual for the department (21 of 543 department requests involve this resource; 295 requests overall) and the resource is not flagged high-risk. The model risk score is the 36th percentile, which is not a decision. The SoD conflict could allow incompatible duties, so the resource owner should review it before approval.",
   "quoted": {
    "resource_requests": 295,
    "dept_requests": 543,
    "risk_score_percentile": 36
   },
-  "uncertain": true,
-  "recommended_action": "review_by_owner"
+  "recommended_action": "review_by_owner",
+  "severity": "medium",
+  "uncertain": true
  }
 }

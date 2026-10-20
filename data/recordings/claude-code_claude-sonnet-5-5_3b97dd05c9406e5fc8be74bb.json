@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "finding": "Request 14237 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department. The resource has 40 requests; the department made 501 requests overall. The model risk percentile is 65, a score and not a decision. Because the resource is high risk, have the resource owner review the request before approval.",
+  "quoted": {
+   "resource_requests": 40,
+   "dept_requests": 501,
+   "risk_score_percentile": 65
+  },
+  "recommended_action": "review_by_owner",
+  "severity": "medium",
+  "uncertain": false
+ }
+}

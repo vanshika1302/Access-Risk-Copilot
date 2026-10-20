@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 19498 targets a resource flagged high risk. No SoD conflict and not unusual for the department. The resource has 91 requests; the department has 597, of which 7 were for this resource. The model places the request at the 85th risk percentile (higher means more likely denied). Because the resource is high risk, have the resource owner review before approval.",
+  "finding": "Request 19498 targets a resource flagged high-risk. No SoD conflict or unusual-for-department signal fired. The resource has 91 requests overall, 597 in the department, and 7 from this department for it. The model scores it at the 85th percentile for denial likelihood. High-risk access warrants owner confirmation of business need before approval, then monitoring.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

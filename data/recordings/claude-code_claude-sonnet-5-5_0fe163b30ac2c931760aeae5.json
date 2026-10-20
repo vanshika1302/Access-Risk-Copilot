@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 3232 triggered no SoD, unusual-for-department or high-risk-resource controls. However, the model scores it at the 98th risk percentile (higher = more likely denied). Only 1 prior request exists for this department-resource pair, though the resource has 84 requests overall. The drivers of the score are not provided. Owner should review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 84,
+   "dept_requests": 90,
+   "risk_score_percentile": 98
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

@@ -1,7 +1,8 @@
 {
  "model": "claude-sonnet-5-5",
  "output": {
-  "finding": "Request 1884 for resource 79141 triggers a segregation-of-duties conflict. It is not unusual for the department (3 of 68 department requests involve this resource) and is not flagged high-risk. The model score is mid-range (48th percentile). An SoD conflict can allow incompatible duties, so the resource owner should review before approval. The conflicting duties are not identified in the facts.",
+  "severity": "medium",
+  "finding": "Request 1884 triggers a segregation-of-duties conflict. It is not unusual for the department (3 of the department's 68 requests were for this resource; the resource had 16 requests overall), and it is not flagged high-risk. The model score is the 48th percentile, which is mid-range. An SoD conflict can allow incompatible duties, so the resource owner should review it and confirm the conflicting access before approval.",
   "claims": {
    "sod_conflict": true,
    "unusual_for_department": false,
@@ -12,8 +13,7 @@
    "dept_requests": 68,
    "risk_score_percentile": 48
   },
-  "severity": "medium",
-  "uncertain": true,
+  "uncertain": false,
   "recommended_action": "review_by_owner"
  }
 }

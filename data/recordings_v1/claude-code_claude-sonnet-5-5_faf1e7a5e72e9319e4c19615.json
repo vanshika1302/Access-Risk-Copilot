@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 23332 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department: 48 of the department's 659 requests involved this resource, which has 136 requests overall. The model score is the 62nd percentile for denial, a moderate signal. Because the resource is high risk, have the resource owner review the request before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 136,
+   "dept_requests": 659,
+   "risk_score_percentile": 62
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

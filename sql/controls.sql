@@ -14,14 +14,14 @@ where exists (
     and o.role_family = case when r.role_family = p.fam_a then p.fam_b else p.fam_a end);
 
 -- C2 Unusual access for a department: the (department, resource) pair is under 1% of that
--- department's requests and seen fewer than 3 times in total.
+-- (department, resource) pair seen exactly once, in a department with at least 300 requests.
 create or replace view ctrl_unusual as
 with pair as (select role_deptname, resource, count(*) n from requests group by 1, 2),
      dept as (select role_deptname, count(*) n from requests group by 1)
 select r.request_id, 'UNUSUAL' as control,
        'dept ' || r.role_deptname || ' used resource ' || r.resource || ' in ' || p.n || ' of ' || d.n || ' requests' as detail
 from requests r join pair p using (role_deptname, resource) join dept d using (role_deptname)
-where p.n < 3 and p.n * 1.0 / d.n < 0.01;
+where p.n = 1 and d.n >= 300;
 
 -- C3 High-risk resource: top decile of resources by denial rate (train labels, >= 20 train requests).
 create or replace table high_risk_resources as

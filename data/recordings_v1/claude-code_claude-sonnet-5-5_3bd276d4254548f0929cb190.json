@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "high",
+  "finding": "Request 12554 triggers the segregation-of-duties conflict control. It is not unusual for the department (13 of its 335 requests involve this resource; 35 requests overall) and the resource is not flagged high-risk. The model score is at the 84th percentile for likely denial. A SoD conflict can allow one person to control conflicting duties, so hold the grant until the owner reviews the conflict.",
+  "claims": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 35,
+   "dept_requests": 335,
+   "risk_score_percentile": 84
+  },
+  "uncertain": false,
+  "recommended_action": "block_pending_review"
+ }
+}

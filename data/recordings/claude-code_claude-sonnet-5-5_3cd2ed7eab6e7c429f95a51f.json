@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 16132 has no SoD conflict, unusual-for-department or high-risk-resource flags. However, the resource has only 1 request overall and 1 within the department (dept total 267), so there is little history to compare against. The model scores it at the 95th percentile for likely denial. Recommend owner review to confirm business need before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 267,
+   "risk_score_percentile": 95
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

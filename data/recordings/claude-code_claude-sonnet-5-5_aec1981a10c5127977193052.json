@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 13221 is for a resource flagged high risk. No separation-of-duties conflict or unusual-for-department signal was raised. The resource has 136 requests overall, and the department has 154 requests. The model risk score is the 34th percentile, which is relatively low. Because the resource is high risk, the resource owner should review the request before approval.",
+  "finding": "Request 13221 targets resource 18072, flagged as high-risk. No SoD conflict or unusual-for-department signal fired. The resource has 136 requests; the department has 154, with 5 for this resource. The model risk percentile is 34 (a score, not a decision). High-risk resources warrant owner confirmation of business need before approval, with monitoring afterward.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

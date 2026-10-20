@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "finding": "Request 11495 triggered no SoD, unusual-for-department or high-risk-resource controls. Resource 967 has 19 requests; the department has 45. However, the model scores it at the 95th percentile for likely denial. This is a score, not a decision. Because controls are clean but the score is high, the resource owner should review the request before approval.",
+  "quoted": {
+   "resource_requests": 19,
+   "dept_requests": 45,
+   "risk_score_percentile": 95
+  },
+  "recommended_action": "review_by_owner",
+  "severity": "medium",
+  "uncertain": true
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "finding": "Request 18330 is flagged unusual for the department: only 1 of the department's 317 requests involved this resource, which has 9 requests overall. No SoD conflict or high-risk resource flag is set. The model score is the 51st percentile, which is mid-range. The business need is unclear, so the resource owner should review it.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 9,
+   "dept_requests": 317,
+   "risk_score_percentile": 51
+  },
+  "severity": "medium",
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

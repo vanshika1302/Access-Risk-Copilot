@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 22664 targets a resource flagged high-risk. No SoD conflict or department-unusual flag was raised, and the department has 8 prior requests for this resource (resource total 33). The model score is at the 96th percentile, meaning a higher likelihood of denial. Because the resource is high-risk, the resource owner should review the request before approval.",
+  "finding": "Request 22664 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department (8 of 284 department requests involve this resource; 33 overall). The model scores it at the 96th percentile for likely denial. Resource owner should review the justification before approval.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

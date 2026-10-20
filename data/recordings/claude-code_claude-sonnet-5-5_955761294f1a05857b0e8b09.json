@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 21332 is for resource 18913, flagged as a high-risk resource. No segregation-of-duties conflict and not unusual for the department (14 of 546 department requests, 65 requests overall for this resource). Model risk score is at the 58th percentile, a middling score, not a decision. Because the resource is high-risk, have the resource owner review the request before approval.",
+  "finding": "Request 21332 targets a resource flagged high-risk. No segregation-of-duties conflict and not unusual for the department (14 of 546 department requests involved this resource; 65 requests overall). The model score sits at the 58th percentile, a moderate denial likelihood. Because the resource is high-risk, the resource owner should review and confirm business need before approval, with monitoring afterward.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

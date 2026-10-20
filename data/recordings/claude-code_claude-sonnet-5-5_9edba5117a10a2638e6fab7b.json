@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 13832 has no SoD conflict, is not unusual for the department and involves no high-risk resource. The resource has 3 requests, all from this department (140 total). The model scores it at the 97th percentile for likely denial. Controls conflict with the score, so have the resource owner review it and confirm the business need.",
+  "finding": "Request 13832 has no SoD conflict, is not unusual for the department, and targets a resource not flagged high-risk. The resource has 3 requests overall, all from this department (140 department requests). The model score is the 97th percentile for likely denial, which conflicts with the clean controls. Owner review is advised to understand the score; the drivers are not provided.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

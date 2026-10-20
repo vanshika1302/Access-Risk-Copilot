@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 18296 targets a resource flagged high-risk. No separation-of-duties conflict and not unusual for the department. The resource has 45 requests overall; the department has 179 requests, 5 of them for this resource. The model risk score percentile is 7, a low denial likelihood. Because the resource is high-risk, approve with monitoring.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 45,
+   "dept_requests": 179,
+   "risk_score_percentile": 7
+  },
+  "uncertain": false,
+  "recommended_action": "approve_with_monitoring"
+ }
+}

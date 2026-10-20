@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "finding": "Request 13442 raised no SoD, unusual-for-department or high-risk-resource flags. The resource has only 1 request overall, and the department has made 140 requests. The model places it at the 98th risk percentile, meaning it is more likely to be denied. The controls and the score conflict, and there is little history. Owner review is advised before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 140,
+   "risk_score_percentile": 98
+  },
+  "severity": "medium",
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

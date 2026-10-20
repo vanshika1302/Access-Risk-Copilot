@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "finding": "Request 31236 targets a resource flagged high-risk. No separation-of-duties conflict and not unusual for the department (17 of 597 department requests involved this resource; 73 requests overall). The model score is the 61st percentile for denial, which is moderate. Because the resource is high-risk, the resource owner should review before approval.",
+  "quoted": {
+   "resource_requests": 73,
+   "dept_requests": 597,
+   "risk_score_percentile": 61
+  },
+  "recommended_action": "review_by_owner",
+  "severity": "medium",
+  "uncertain": false
+ }
+}

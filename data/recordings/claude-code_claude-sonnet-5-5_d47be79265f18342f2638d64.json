@@ -1,7 +1,8 @@
 {
  "model": "claude-sonnet-5-5",
  "output": {
-  "finding": "Request 4527 targets resource 14570, flagged high-risk. No separation-of-duties conflict and not unusual for the department (10 of the department's 179 requests involve this resource; 91 requests overall). The model score is in the 93rd percentile for likely denial. Because the resource is high-risk, the owner should review before approval.",
+  "severity": "medium",
+  "finding": "Request 4527 is for a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department (10 of the department's 179 requests were for this resource; 91 requests overall). The model scores it at the 93rd percentile for likely denial. Because the resource is high risk, the resource owner should review it before approval.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,
@@ -12,7 +13,6 @@
    "dept_requests": 179,
    "risk_score_percentile": 93
   },
-  "severity": "medium",
   "uncertain": false,
   "recommended_action": "review_by_owner"
  }

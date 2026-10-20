@@ -1,0 +1,60 @@
+{
+ "dev": {
+  "prompt_version": "v1",
+  "claude": {
+   "n": 77,
+   "buckets": {
+    "correct": 53,
+    "correct_flagged": 24,
+    "caught": 0,
+    "SILENT": 0
+   },
+   "silent_error_rate": 0.0,
+   "any_error_rate": 0.0,
+   "catch_rate": null,
+   "error_cases": []
+  },
+  "template_baseline": {
+   "n": 77,
+   "buckets": {
+    "correct": 77,
+    "correct_flagged": 0,
+    "caught": 0,
+    "SILENT": 0
+   },
+   "silent_error_rate": 0.0,
+   "any_error_rate": 0.0,
+   "catch_rate": null,
+   "error_cases": []
+  }
+ },
+ "test": {
+  "prompt_version": "v1",
+  "claude": {
+   "n": 60,
+   "buckets": {
+    "correct": 41,
+    "correct_flagged": 19,
+    "caught": 0,
+    "SILENT": 0
+   },
+   "silent_error_rate": 0.0,
+   "any_error_rate": 0.0,
+   "catch_rate": null,
+   "error_cases": []
+  },
+  "template_baseline": {
+   "n": 60,
+   "buckets": {
+    "correct": 60,
+    "correct_flagged": 0,
+    "caught": 0,
+    "SILENT": 0
+   },
+   "silent_error_rate": 0.0,
+   "any_error_rate": 0.0,
+   "catch_rate": null,
+   "error_cases": []
+  }
+ }
+}

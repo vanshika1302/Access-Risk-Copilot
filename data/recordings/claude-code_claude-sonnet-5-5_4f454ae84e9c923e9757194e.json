@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 5410 is flagged unusual for its department: resource 3059 has 1 request overall and 1 within the department, which has 597 requests. The model places it at the 94th risk percentile (higher means more likely denied). No SoD conflict or high-risk resource flag. Rare access can indicate over-provisioning, so the resource owner should review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 597,
+   "risk_score_percentile": 94
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

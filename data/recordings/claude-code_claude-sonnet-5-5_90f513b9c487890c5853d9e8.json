@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 12107 is flagged unusual for its department: only 1 of the department's 317 requests involved this resource, which has 7 requests overall. No SoD conflict or high-risk resource flag is set, and the model risk percentile is 6, so denial is unlikely. Unusual access can still drift from role need, so the resource owner should confirm the business justification and monitor.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 7,
+   "dept_requests": 317,
+   "risk_score_percentile": 6
+  },
+  "uncertain": false,
+  "recommended_action": "approve_with_monitoring"
+ }
+}

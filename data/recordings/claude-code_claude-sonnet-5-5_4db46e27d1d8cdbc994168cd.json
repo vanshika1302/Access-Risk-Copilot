@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "high",
-  "finding": "Request 6173 triggers a segregation-of-duties conflict. The model places it at the 85th risk percentile, meaning it is more likely to be denied. It is not unusual for the department (3 of 65 department requests were for this resource) and the resource is not flagged high-risk. An SoD conflict can allow incompatible duties, so block it until the owner reviews it and approves or documents a mitigating control.",
+  "finding": "Request 6173 triggers a segregation-of-duties conflict control. The model score is at the 85th percentile for likely denial. The resource has 5 requests; the department has 65, with 3 for this resource. It is not flagged unusual for the department or high-risk. An SoD conflict can allow incompatible duties, so hold it for review. The conflicting entitlements are not identified in the facts.",
   "claims": {
    "sod_conflict": true,
    "unusual_for_department": false,
@@ -13,7 +13,7 @@
    "dept_requests": 65,
    "risk_score_percentile": 85
   },
-  "uncertain": false,
+  "uncertain": true,
   "recommended_action": "block_pending_review"
  }
 }

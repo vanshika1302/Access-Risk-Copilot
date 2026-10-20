@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 18386 is flagged unusual for the department: resource 34257 has only 1 request overall, and 1 within the department's 366 requests. No SoD conflict or high-risk resource flag. Model risk percentile is 61, a moderate denial likelihood. Rarely requested access warrants the manager or resource owner confirming business need before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 366,
+   "risk_score_percentile": 61
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

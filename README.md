@@ -31,7 +31,7 @@ The 0 / 60 is a small sample: with no events in 60 cases the true silent-error r
 
 ### The three controls
 - **Segregation of duties (SoD).** A manager's approved requests for the same resource come from both roles of a conflicting `ROLE_FAMILY` pair. Without an employee ID, "one person holds both" cannot be tested; manager plus resource is the closest real signal. The 6 conflict pairs are an **illustrative, seeded list** (`etl/sod_pairs.py`), not real policy. 66 flags.
-- **Unusual access for a department.** The department/resource pair is under 1% of the department's requests and seen fewer than 3 times. 8,521 flags (too many to review in practice; see limitations).
+- **Unusual access for a department.** The department/resource pair appears exactly once, in a department with at least 300 requests. 2,506 flags (7.6%); 8.8% of the 997 held-out ones were denied (1.5x). My first version flagged 8,521 (26%), too many to review, so I tightened it (see below).
 - **High-risk resource.** Top decile of resources by denial rate, using only training rows. 949 flags.
 
 ### ML
@@ -40,20 +40,25 @@ Chosen on dev, test scored once. Random forest: dev AUC 0.865, **test 0.863**. L
 ### AI layer and evals
 Claude (`claude-sonnet-5-5`) runs through Claude Code headless mode, no API key: `--tools ""`, no skills or MCP, no settings, empty working directory, API keys removed from the environment, JSON schema output, recordings replayed from `data/recordings/`. Each finding must set three claims (SoD, unusual, high-risk), quote three numbers, and say if it is uncertain.
 
-The scorer buckets every finding: correct, correct but flagged uncertain, **caught** (wrong, flagged uncertain), **silent** (wrong, not flagged). Errors are: a claim that differs from the SQL flag, a quoted number that differs, any other number in the text, or an SoD case rated low or auto-approved. Prompt v1 was run on 77 dev cases and **not changed**; 60 test cases were then generated and scored once (a second scoring is refused in code).
+The scorer buckets every finding: correct, correct but flagged uncertain, **caught** (wrong, flagged uncertain), **silent** (wrong, not flagged). Errors are: a claim that differs from the SQL flag, a quoted number that differs, any other number in the text, or an SoD case rated low or auto-approved. Prompt v1 was never changed. 77 dev cases and 60 test cases were generated, then the test set was scored once (a second scoring is refused in code).
+
+**Re-run history.** I first ran everything with a looser unusual-access control (26% of requests flagged): 0 silent errors on 77 dev and 60 test cases. I judged that control unreviewable, tightened it, discarded those findings and ran again (kept in `outputs/discarded_v1/`). Because I had seen the first test result, the second test run is not blind in the strict sense. The result did not change.
 
 | Set | Cases | Correct | Correct, flagged uncertain | Caught | Silent |
 |---|---|---|---|---|---|
-| Dev | 77 | 53 | 24 | 0 | 0 |
-| **Test, scored once** | 60 | 41 | 19 | 0 | **0** |
+| Dev | 77 | 56 | 21 | 0 | 0 |
+| **Test, scored once** | 60 | 42 | 18 | 0 | **0** |
 
 ## Limitations
 - **Small sample.** 0 silent errors in 60 does not mean zero; the 95% upper bound is about 5% (about 2% over all 137).
 - The scorer checks structured claims and numbers. It does **not** judge free-text reasoning or tone; I read a sample by eye.
 - The template baseline (fills a sentence from the facts) is correct by construction, so the LLM adds readable explanation, not accuracy. Findings are only as good as the SQL facts they are given.
-- Controls are rules I wrote on anonymised IDs. SoD pairs are illustrative; SoD flags only approved requests, so their denial rate is 0 by design.
+- Controls are rules I wrote on anonymised IDs. SoD pairs are illustrative; SoD flags only approved requests, so their denial rate is 0 by design. The unusual-access control is weakest in large departments (lift falls as department size rises).
 - Findings were written for a sample (137 cases), not all flagged requests, and through a subscription, not the API.
 - ML drivers are anonymised IDs and the data is from 2010-2011.
+
+## Tableau
+Connect Tableau Public to `tableau/access_requests_scored.csv` (one row per request). Useful fields: `outcome`, `risk_band`, `risk_percentile`, `flag_sod`, `flag_unusual`, `flag_high_risk_resource`, `p_denied_rf`, `split`. Filter `model_scored_out_of_sample = 1` for fair model views (train rows were used to fit the models). Join `ai_findings_test.csv` on `request_id` for the findings.
 
 ## Run it
 ```bash

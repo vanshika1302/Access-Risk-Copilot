@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 7171 is flagged unusual for its department: resource 80850 has only 2 requests overall and 1 within the department's 532 requests. No SoD conflict or high-risk resource flag is set. The model score is at the 67th percentile for denial. Rare access may not match role needs, so the resource owner should review the business justification before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 2,
+   "dept_requests": 532,
+   "risk_score_percentile": 67
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

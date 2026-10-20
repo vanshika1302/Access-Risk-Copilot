@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 22804 raised no SoD, unusual-department or high-risk-resource flags. The resource has 57 requests, the department 60, but only 1 dept_resource_requests, so this pairing is rare locally. The model risk score is in the 97th percentile (denial likelihood, not a decision). Owner should review the business need before granting.",
+  "finding": "No SoD conflict, unusual-for-department or high-risk resource flags were raised. However, the model scores this request at the 97th risk percentile (higher = more likely denied). Only 1 prior request exists for this department and resource pairing, despite 57 resource requests overall and 60 department requests. Owner review is advised to confirm the need; the score is not a decision.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

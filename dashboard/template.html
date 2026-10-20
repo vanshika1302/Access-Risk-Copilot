@@ -56,7 +56,7 @@
 
 <section><h2>3. AI audit findings, checked against SQL</h2>
 <p>An LLM (Claude via headless <code>claude -p</code>, all tools disabled) writes one finding per flagged case. A scorer then checks every claim and number against the SQL facts. A <b>silent error</b> is a wrong finding that did not say it was uncertain.</p>
-<div class="grid2"><div class="card"><div class="eyebrow">Outcome of each finding</div><svg id="evalbars" width="100%" viewBox="0 0 360 150" role="img" aria-label="Evaluation buckets"></svg>
+<div class="grid2"><div class="card"><div class="eyebrow">Outcome of each finding</div><svg id="evalbars" width="100%" viewBox="0 0 360 120" role="img" aria-label="Evaluation buckets"></svg>
 <div class="legend"><span><i class="sw" style="background:var(--a)"></i>Correct</span><span><i class="sw" style="background:var(--b)"></i>Correct, flagged uncertain</span></div><div id="evalnote" class="s" style="color:var(--ink-3);font-size:13px"></div></div>
 <div class="card" id="limits"></div></div>
 <div class="card" style="margin-top:12px"><label>Show findings for <select id="kind"></select></label><div id="findings"></div></div></section>
@@ -65,7 +65,7 @@
 <li>Test findings: 60 cases, 0 silent errors. With zero events in 60, the true rate could still be about 5% (rule of three).</li>
 <li>The scorer checks structured claims, quoted numbers and every number in the text. It does not judge free-text reasoning or tone.</li>
 <li>The template baseline is correct by construction, so the model is not "beating" it on accuracy; it adds readable explanation.</li>
-<li>Controls are rules I wrote on anonymised IDs. Unusual access flags 26% of requests, which is too many to review in practice and would be tightened.</li>
+<li>Controls are rules I wrote on anonymised IDs. Unusual access flags 7.6% of requests (an earlier, looser version flagged 26% and was replaced); its lift is weakest in large departments.</li>
 <li>SoD flags only requests that were approved, so their denial rate is 0 by design: they are policy conflicts, not denial predictors.</li>
 <li>Findings come from Claude Code headless mode on a subscription, not the API. No API key was used.</li></ul></div></section>
 

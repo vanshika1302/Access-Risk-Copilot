@@ -2,16 +2,16 @@
  "prompt_version": "v1",
  "items": [
   {
-   "request_id": 31659,
+   "request_id": 30150,
    "facts": {
-    "request_id": 31659,
+    "request_id": 30150,
     "split": "test",
     "ids": {
-     "resource": 40680,
-     "mgr_id": 23144,
-     "role_deptname": 118403,
-     "role_family": 118638,
-     "role_title": 119849
+     "resource": 23096,
+     "mgr_id": 15376,
+     "role_deptname": 117945,
+     "role_family": 118131,
+     "role_title": 122927
     },
     "controls": {
      "sod_conflict": false,
@@ -19,24 +19,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 1,
-     "dept_requests": 532,
+     "resource_requests": 126,
+     "dept_requests": 659,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 40
+     "risk_score_percentile": 70
     }
    },
    "finding": {
-    "severity": "low",
-    "finding": "Request 31659 is flagged unusual for its department: the resource has only 1 request overall and 1 within the department (dept_requests: 532). No SoD conflict or high-risk resource flag is set, and the model risk score is at the 40th percentile. Rarely requested access warrants a check; the resource owner or manager should confirm business need before approval, with monitoring.",
+    "severity": "medium",
+    "finding": "Request 30150 is flagged unusual for the department: only 1 of the department's 659 requests involved this resource, which has 126 requests overall. No SoD conflict or high-risk resource flag. The model risk score is the 70th percentile (a score, not a decision). Resource owner or manager should confirm business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 1,
-     "dept_requests": 532,
-     "risk_score_percentile": 40
+     "resource_requests": 126,
+     "dept_requests": 659,
+     "risk_score_percentile": 70
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
@@ -68,7 +68,7 @@
    },
    "finding": {
     "severity": "low",
-    "finding": "Request 18296 targets a resource flagged high-risk. No separation-of-duties conflict and not unusual for the department. The resource has 45 requests overall; the department has 179 requests, 5 of them for this resource. The model risk score percentile is 7, a low denial likelihood. Because the resource is high-risk, approve with monitoring.",
+    "finding": "Request 18296 targets a resource flagged high-risk. No separation-of-duties conflict and not unusual for the department: 5 of the department's 179 requests were for this resource, out of 45 overall. The model's risk score percentile is 7, so denial is unlikely. Because the resource is high-risk, approve with monitoring and keep the usual access review.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -84,16 +84,16 @@
    }
   },
   {
-   "request_id": 17056,
+   "request_id": 2487,
    "facts": {
-    "request_id": 17056,
+    "request_id": 2487,
     "split": "test",
     "ids": {
-     "resource": 18418,
-     "mgr_id": 17728,
-     "role_deptname": 119986,
-     "role_family": 118205,
-     "role_title": 118318
+     "resource": 79299,
+     "mgr_id": 2855,
+     "role_deptname": 119262,
+     "role_family": 292795,
+     "role_title": 117946
     },
     "controls": {
      "sod_conflict": false,
@@ -101,24 +101,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 192,
-     "dept_requests": 84,
+     "resource_requests": 83,
+     "dept_requests": 24,
      "dept_resource_requests": 2,
-     "risk_score_percentile": 96
+     "risk_score_percentile": 97
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 17056 has no SoD conflict, is not unusual for the department and involves no high-risk resource. However, the model risk score is in the 96th percentile (higher means more likely denied). The resource has 192 requests, the department 84, and only 2 are for this department-resource pair. Owner review is advised to explain the score before approval.",
+    "finding": "Request 2487 has no SoD conflict, is not unusual for the department, and the resource is not flagged high-risk. However, the model scores it at the 97th risk percentile (higher means more likely to be denied). The resource has 83 requests; the department has 24, with 2 for this resource. Owner review is advised to explain the score before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 192,
-     "dept_requests": 84,
-     "risk_score_percentile": 96
+     "resource_requests": 83,
+     "dept_requests": 24,
+     "risk_score_percentile": 97
     },
     "uncertain": true,
     "recommended_action": "review_by_owner"
@@ -138,7 +138,7 @@
     },
     "controls": {
      "sod_conflict": true,
-     "unusual_for_department": true,
+     "unusual_for_department": false,
      "high_risk_resource": false
     },
     "numbers": {
@@ -150,10 +150,10 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 24265 triggers a segregation-of-duties conflict and is unusual for the department: the resource has 3 requests overall, and only 1 from this department, which has 136 requests. The resource is not flagged high-risk, and the model score is the 42nd percentile. An SoD conflict undermines least privilege, so the resource owner should review it before approval.",
+    "finding": "Request 24265 triggers a segregation-of-duties conflict. The resource has 3 requests overall, and the department has 136 requests. The request is not unusual for the department and the resource is not flagged high-risk. The model risk score is the 42nd percentile. An SoD conflict can allow incompatible duties, so the resource owner should review it before approval. The facts don't specify which duties conflict.",
     "claims": {
      "sod_conflict": true,
-     "unusual_for_department": true,
+     "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
@@ -161,7 +161,7 @@
      "dept_requests": 136,
      "risk_score_percentile": 42
     },
-    "uncertain": false,
+    "uncertain": true,
     "recommended_action": "review_by_owner"
    }
   },
@@ -190,8 +190,7 @@
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 20031 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department (17 of its 597 requests involve this resource; 73 requests overall). Model risk score is the 40th percentile, a modest denial likelihood. Because the resource is high risk, have the resource owner review the request and keep monitoring after approval.",
+    "finding": "Request 20031 is for resource 20299, flagged high-risk. No SoD conflict or unusual-for-department flag is raised. The department has made 17 requests for this resource, out of 597 department requests and 73 total for the resource. The model score is at the 40th percentile. Because the resource is high-risk, the resource owner should review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -202,6 +201,7 @@
      "dept_requests": 597,
      "risk_score_percentile": 40
     },
+    "severity": "medium",
     "uncertain": false,
     "recommended_action": "review_by_owner"
    }
@@ -232,7 +232,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 21332 is for resource 18913, flagged as a high-risk resource. No segregation-of-duties conflict and not unusual for the department (14 of 546 department requests, 65 requests overall for this resource). Model risk score is at the 58th percentile, a middling score, not a decision. Because the resource is high-risk, have the resource owner review the request before approval.",
+    "finding": "Request 21332 targets a resource flagged high-risk. No segregation-of-duties conflict and not unusual for the department (14 of 546 department requests involved this resource; 65 requests overall). The model score sits at the 58th percentile, a moderate denial likelihood. Because the resource is high-risk, the resource owner should review and confirm business need before approval, with monitoring afterward.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -248,16 +248,16 @@
    }
   },
   {
-   "request_id": 27515,
+   "request_id": 3233,
    "facts": {
-    "request_id": 27515,
+    "request_id": 3233,
     "split": "test",
     "ids": {
-     "resource": 13878,
-     "mgr_id": 56604,
-     "role_deptname": 117878,
-     "role_family": 19721,
-     "role_title": 117879
+     "resource": 35347,
+     "mgr_id": 4997,
+     "role_deptname": 121108,
+     "role_family": 117887,
+     "role_title": 119502
     },
     "controls": {
      "sod_conflict": false,
@@ -265,40 +265,40 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 220,
-     "dept_requests": 1135,
-     "dept_resource_requests": 51,
-     "risk_score_percentile": 96
+     "resource_requests": 1,
+     "dept_requests": 79,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 99
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 27515 has no SoD conflict, is not unusual for the department, and the resource is not flagged high-risk. The resource has 220 requests, and 51 of the department's 1135 requests are for it. The model scores it at the 96th percentile for likely denial. Because the controls are clean but the score is high, the owner should review it before approval.",
+    "finding": "Request 3233 has no SoD conflict, is not unusual for its department and the resource is not high-risk. However, the model scores it at the 99th risk percentile (likely denial). The resource has only 1 request overall, all from this department's 79. Drivers of the score are not given. Owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 220,
-     "dept_requests": 1135,
-     "risk_score_percentile": 96
+     "resource_requests": 1,
+     "dept_requests": 79,
+     "risk_score_percentile": 99
     },
     "uncertain": true,
     "recommended_action": "review_by_owner"
    }
   },
   {
-   "request_id": 25104,
+   "request_id": 18544,
    "facts": {
-    "request_id": 25104,
+    "request_id": 18544,
     "split": "test",
     "ids": {
-     "resource": 1969,
-     "mgr_id": 2163,
-     "role_deptname": 120694,
-     "role_family": 118638,
-     "role_title": 118636
+     "resource": 42093,
+     "mgr_id": 5228,
+     "role_deptname": 168533,
+     "role_family": 118424,
+     "role_title": 120789
     },
     "controls": {
      "sod_conflict": false,
@@ -306,23 +306,23 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 40,
-     "dept_requests": 48,
-     "dept_resource_requests": 3,
+     "resource_requests": 204,
+     "dept_requests": 15,
+     "dept_resource_requests": 1,
      "risk_score_percentile": 96
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 25104 triggers no SoD, unusual-for-department or high-risk-resource controls. Resource 1969 has 40 requests; the department has 48, with 3 for this resource. The model scores risk at the 96th percentile (higher means more likely denied). Controls and model disagree, so the reason is unclear. Have the resource owner review before approval.",
+    "finding": "Request 18544 scores in the 96th risk percentile (model score, not a decision), yet no SoD conflict, unusual-for-department or high-risk-resource control fired. The resource has 204 requests overall, but only 1 of the department's 15 requests involved it. The score is unexplained by controls, so the resource owner should review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 40,
-     "dept_requests": 48,
+     "resource_requests": 204,
+     "dept_requests": 15,
      "risk_score_percentile": 96
     },
     "uncertain": true,
@@ -330,16 +330,16 @@
    }
   },
   {
-   "request_id": 32253,
+   "request_id": 4070,
    "facts": {
-    "request_id": 32253,
+    "request_id": 4070,
     "split": "test",
     "ids": {
-     "resource": 33626,
-     "mgr_id": 7539,
-     "role_deptname": 119987,
-     "role_family": 290919,
-     "role_title": 117905
+     "resource": 99552,
+     "mgr_id": 7411,
+     "role_deptname": 118746,
+     "role_family": 118453,
+     "role_title": 118747
     },
     "controls": {
      "sod_conflict": false,
@@ -348,14 +348,14 @@
     },
     "numbers": {
      "resource_requests": 1,
-     "dept_requests": 143,
+     "dept_requests": 415,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 3
+     "risk_score_percentile": 28
     }
    },
    "finding": {
     "severity": "low",
-    "finding": "Request 32253 is flagged unusual for its department: the resource has 1 request overall, and the department has 143 requests, only 1 of them for this resource. No SoD conflict or high-risk resource flag. The model risk score is the 3rd percentile. Rare access patterns can signal over-provisioning, so the manager or resource owner should confirm business need; monitor after approval.",
+    "finding": "Request 4070 is flagged unusual for its department: resource 99552 has only 1 request overall, and that one is the sole request from the department (415 department requests). No SoD conflict or high-risk resource flag. Model risk percentile is 28, which is low. Unusual access can signal privilege creep, so the resource owner should review it. Resource sensitivity is not stated.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
@@ -363,11 +363,11 @@
     },
     "quoted": {
      "resource_requests": 1,
-     "dept_requests": 143,
-     "risk_score_percentile": 3
+     "dept_requests": 415,
+     "risk_score_percentile": 28
     },
-    "uncertain": false,
-    "recommended_action": "approve_with_monitoring"
+    "uncertain": true,
+    "recommended_action": "review_by_owner"
    }
   },
   {
@@ -384,7 +384,7 @@
     },
     "controls": {
      "sod_conflict": false,
-     "unusual_for_department": true,
+     "unusual_for_department": false,
      "high_risk_resource": true
     },
     "numbers": {
@@ -395,11 +395,10 @@
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 10653 targets a high-risk resource and is unusual for the department: only 1 of the department's 129 requests involved this resource (51 requests overall). No SoD conflict was flagged. The model risk score percentile is 13, which is low. Because the resource is high-risk and atypical for the department, the resource owner should review before approval.",
+    "finding": "Request 10653 is for a resource flagged high risk. No SoD conflict or unusual-for-department flag is set. The resource has 51 requests, and only 1 of the department's 129 requests involved it. The model's risk score percentile is 13, which is low. Because the resource is high risk, the resource owner should review the request. Approve only if it is justified, and keep monitoring.",
     "claims": {
      "sod_conflict": false,
-     "unusual_for_department": true,
+     "unusual_for_department": false,
      "high_risk_resource": true
     },
     "quoted": {
@@ -407,6 +406,7 @@
      "dept_requests": 129,
      "risk_score_percentile": 13
     },
+    "severity": "medium",
     "uncertain": false,
     "recommended_action": "review_by_owner"
    }
@@ -437,7 +437,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 25973 triggers a separation-of-duties conflict. It is not unusual for the department (13 of its 335 requests involve this resource; the resource has 35 requests overall) and is not flagged high-risk. The model score is the 74th percentile, indicating moderate denial likelihood. An SoD conflict can allow incompatible duties, so the resource owner should review before approval. The conflicting duties are not specified.",
+    "finding": "Request 25973 triggers a segregation-of-duties conflict. It is not unusual for the department (13 of 335 department requests involve this resource; 35 requests overall) and the resource is not flagged high-risk. The model score is the 74th percentile for denial. An SoD conflict can allow incompatible duties, so the resource owner should review before approval. The conflicting duties are not specified in the facts.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -453,96 +453,14 @@
    }
   },
   {
-   "request_id": 31380,
+   "request_id": 30581,
    "facts": {
-    "request_id": 31380,
+    "request_id": 30581,
     "split": "test",
     "ids": {
-     "resource": 16639,
-     "mgr_id": 5701,
-     "role_deptname": 118821,
-     "role_family": 118638,
-     "role_title": 118636
-    },
-    "controls": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "numbers": {
-     "resource_requests": 42,
-     "dept_requests": 178,
-     "dept_resource_requests": 1,
-     "risk_score_percentile": 66
-    }
-   },
-   "finding": {
-    "severity": "medium",
-    "finding": "Request 31380 is flagged unusual for the department: only 1 of the department's 178 requests involved this resource, though the resource has 42 requests overall. No SoD conflict or high-risk resource flag. Model risk percentile is 66. Unusual access can indicate privilege creep, so the resource owner should confirm business need before approval.",
-    "claims": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "quoted": {
-     "resource_requests": 42,
-     "dept_requests": 178,
-     "risk_score_percentile": 66
-    },
-    "uncertain": false,
-    "recommended_action": "review_by_owner"
-   }
-  },
-  {
-   "request_id": 3111,
-   "facts": {
-    "request_id": 3111,
-    "split": "test",
-    "ids": {
-     "resource": 35343,
-     "mgr_id": 1913,
+     "resource": 36954,
+     "mgr_id": 16737,
      "role_deptname": 118783,
-     "role_family": 118453,
-     "role_title": 120952
-    },
-    "controls": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "numbers": {
-     "resource_requests": 3,
-     "dept_requests": 366,
-     "dept_resource_requests": 2,
-     "risk_score_percentile": 1
-    }
-   },
-   "finding": {
-    "severity": "low",
-    "finding": "Request 3111 is flagged unusual for the department: only 2 of the department's 366 requests involved this resource, which has 3 requests overall. No SoD conflict or high-risk resource flag, and the risk score percentile is 1. Rare department access can signal role creep, so the manager should confirm business need before approval.",
-    "claims": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "quoted": {
-     "resource_requests": 3,
-     "dept_requests": 366,
-     "risk_score_percentile": 1
-    },
-    "uncertain": false,
-    "recommended_action": "review_by_owner"
-   }
-  },
-  {
-   "request_id": 24065,
-   "facts": {
-    "request_id": 24065,
-    "split": "test",
-    "ids": {
-     "resource": 75633,
-     "mgr_id": 8126,
-     "role_deptname": 118320,
      "role_family": 290919,
      "role_title": 117905
     },
@@ -553,14 +471,14 @@
     },
     "numbers": {
      "resource_requests": 1,
-     "dept_requests": 435,
+     "dept_requests": 366,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 26
+     "risk_score_percentile": 21
     }
    },
    "finding": {
     "severity": "low",
-    "finding": "Request 24065 is flagged unusual for its department: the resource has only 1 request overall, and that single request is from this department, which has 435 requests in total. No SoD conflict or high-risk resource flag. Model risk score percentile is 26 (low). Unfamiliar resource usage warrants a quick resource owner review to confirm business need before approval.",
+    "finding": "Request 30581 is flagged unusual for its department: the resource has only 1 request overall, and that single request is from this department (dept_resource_requests 1) among 366 department requests. No SoD conflict or high-risk resource flag is set, and the risk score percentile is 21. Have the manager or resource owner confirm business need, then approve with monitoring.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
@@ -568,7 +486,89 @@
     },
     "quoted": {
      "resource_requests": 1,
-     "dept_requests": 435,
+     "dept_requests": 366,
+     "risk_score_percentile": 21
+    },
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
+   }
+  },
+  {
+   "request_id": 18386,
+   "facts": {
+    "request_id": 18386,
+    "split": "test",
+    "ids": {
+     "resource": 34257,
+     "mgr_id": 8234,
+     "role_deptname": 118783,
+     "role_family": 290919,
+     "role_title": 118321
+    },
+    "controls": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "numbers": {
+     "resource_requests": 1,
+     "dept_requests": 366,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 61
+    }
+   },
+   "finding": {
+    "severity": "medium",
+    "finding": "Request 18386 is flagged unusual for the department: resource 34257 has only 1 request overall, and 1 within the department's 366 requests. No SoD conflict or high-risk resource flag. Model risk percentile is 61, a moderate denial likelihood. Rarely requested access warrants the manager or resource owner confirming business need before approval.",
+    "claims": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "quoted": {
+     "resource_requests": 1,
+     "dept_requests": 366,
+     "risk_score_percentile": 61
+    },
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
+   }
+  },
+  {
+   "request_id": 20991,
+   "facts": {
+    "request_id": 20991,
+    "split": "test",
+    "ids": {
+     "resource": 25236,
+     "mgr_id": 3113,
+     "role_deptname": 119598,
+     "role_family": 118424,
+     "role_title": 119433
+    },
+    "controls": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "numbers": {
+     "resource_requests": 1,
+     "dept_requests": 543,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 26
+    }
+   },
+   "finding": {
+    "severity": "low",
+    "finding": "Request 20991 is flagged unusual for its department: the resource has only 1 request overall and 1 within the department, against 543 department requests. No SoD conflict or high-risk resource flag is set, and the model risk percentile is 26. Resource details are unknown. Ask the resource owner to confirm business need before approval, then monitor.",
+    "claims": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "quoted": {
+     "resource_requests": 1,
+     "dept_requests": 543,
      "risk_score_percentile": 26
     },
     "uncertain": false,
@@ -576,16 +576,16 @@
    }
   },
   {
-   "request_id": 28287,
+   "request_id": 12107,
    "facts": {
-    "request_id": 28287,
+    "request_id": 12107,
     "split": "test",
     "ids": {
-     "resource": 45904,
-     "mgr_id": 2327,
-     "role_deptname": 119181,
-     "role_family": 4673,
-     "role_title": 128230
+     "resource": 80483,
+     "mgr_id": 6232,
+     "role_deptname": 118437,
+     "role_family": 120518,
+     "role_title": 120516
     },
     "controls": {
      "sod_conflict": false,
@@ -593,40 +593,40 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 65,
-     "dept_requests": 525,
-     "dept_resource_requests": 2,
-     "risk_score_percentile": 49
+     "resource_requests": 7,
+     "dept_requests": 317,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 6
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 28287 is flagged unusual for the department: only 2 of the department's 525 requests involved this resource, which has 65 requests overall. No SoD conflict or high-risk resource flag. Model risk score percentile is 49, mid-range. Unusual access can indicate over-provisioning, so the resource owner should confirm business need before approval.",
+    "severity": "low",
+    "finding": "Request 12107 is flagged unusual for its department: only 1 of the department's 317 requests involved this resource, which has 7 requests overall. No SoD conflict or high-risk resource flag is set, and the model risk percentile is 6, so denial is unlikely. Unusual access can still drift from role need, so the resource owner should confirm the business justification and monitor.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 65,
-     "dept_requests": 525,
-     "risk_score_percentile": 49
+     "resource_requests": 7,
+     "dept_requests": 317,
+     "risk_score_percentile": 6
     },
     "uncertain": false,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "approve_with_monitoring"
    }
   },
   {
-   "request_id": 11121,
+   "request_id": 31427,
    "facts": {
-    "request_id": 11121,
+    "request_id": 31427,
     "split": "test",
     "ids": {
-     "resource": 14354,
-     "mgr_id": 56606,
-     "role_deptname": 117878,
-     "role_family": 19721,
-     "role_title": 117879
+     "resource": 31441,
+     "mgr_id": 17261,
+     "role_deptname": 118833,
+     "role_family": 117887,
+     "role_title": 118054
     },
     "controls": {
      "sod_conflict": false,
@@ -634,23 +634,23 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 127,
-     "dept_requests": 1135,
-     "dept_resource_requests": 16,
+     "resource_requests": 79,
+     "dept_requests": 151,
+     "dept_resource_requests": 3,
      "risk_score_percentile": 95
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 11121 triggers no SoD, unusual-for-department or high-risk-resource controls. Resource has 127 requests; the department has 1135, 16 of them for this resource. However, the model scores it at the 95th percentile for likely denial. The score is not a decision, and the facts don't explain it. Owner should review the request before approval.",
+    "finding": "Request 31427 scores in the 95th risk percentile (model score, higher = more likely denied), yet no SoD conflict, unusual-for-department or high-risk-resource control fired. The resource has 79 requests; the department has 151, of which 3 are for this resource. The score and controls disagree, and the model's drivers are not given. Have the resource owner review before granting.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 127,
-     "dept_requests": 1135,
+     "resource_requests": 79,
+     "dept_requests": 151,
      "risk_score_percentile": 95
     },
     "uncertain": true,
@@ -682,7 +682,8 @@
     }
    },
    "finding": {
-    "finding": "Request 28178 triggers a separation-of-duties conflict. It is not flagged as unusual for the department or as a high-risk resource. The resource has 36 requests overall, and the department has 54 requests. The model risk percentile is 71, which is a score and not a decision. An SoD conflict can allow incompatible duties, so the resource owner should review it before approval. The facts don't say which duties conflict.",
+    "severity": "high",
+    "finding": "Request 28178 triggers a segregation-of-duties conflict. It is not flagged unusual for the department or as a high-risk resource. The resource has 36 requests, the department 54, and the model score is at the 71st percentile (higher means more likely denied). An SoD conflict can allow incompatible duties, so block pending owner and compliance review.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -693,9 +694,8 @@
      "dept_requests": 54,
      "risk_score_percentile": 71
     },
-    "severity": "medium",
-    "uncertain": true,
-    "recommended_action": "review_by_owner"
+    "uncertain": false,
+    "recommended_action": "block_pending_review"
    }
   },
   {
@@ -724,7 +724,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 29937 targets a resource flagged high risk. No SoD conflict or unusual-for-department flag was raised. The resource has 78 requests overall, 46 in the department, and the model score is at the 87th percentile (higher means more likely denied). Because the resource is high risk, have the resource owner review before approval.",
+    "finding": "Request 29937 targets a resource flagged high risk. No separation-of-duties conflict and not unusual for the department (4 of 46 department requests involved this resource; 78 requests overall). The model scores it at the 87th percentile for likely denial, which is a score, not a decision. Because the resource is high risk, the resource owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -740,16 +740,16 @@
    }
   },
   {
-   "request_id": 5681,
+   "request_id": 18596,
    "facts": {
-    "request_id": 5681,
+    "request_id": 18596,
     "split": "test",
     "ids": {
-     "resource": 74412,
-     "mgr_id": 16756,
-     "role_deptname": 139677,
-     "role_family": 290919,
-     "role_title": 117905
+     "resource": 15716,
+     "mgr_id": 18073,
+     "role_deptname": 118623,
+     "role_family": 292795,
+     "role_title": 118995
     },
     "controls": {
      "sod_conflict": false,
@@ -757,24 +757,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 3,
-     "dept_requests": 12,
-     "dept_resource_requests": 3,
-     "risk_score_percentile": 97
+     "resource_requests": 79,
+     "dept_requests": 284,
+     "dept_resource_requests": 16,
+     "risk_score_percentile": 96
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 5681 triggers no SoD, department-unusual or high-risk-resource controls. Resource 74412 has 3 requests, and the department has 12 (3 for this resource). However, the model scores it at the 97th percentile for likely denial, which conflicts with the clean controls. The reason for the score is not in the facts. Owner review is advised before approval.",
+    "finding": "Request 18596 triggers no SoD, unusual-for-department or high-risk-resource controls. The resource has 79 requests, the department 284, and 16 are dept-resource pairs. However, the model scores it at the 96th percentile for likely denial. Controls and model disagree, so the owner should review before approval, and the score drivers are not provided.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 3,
-     "dept_requests": 12,
-     "risk_score_percentile": 97
+     "resource_requests": 79,
+     "dept_requests": 284,
+     "risk_score_percentile": 96
     },
     "uncertain": true,
     "recommended_action": "review_by_owner"
@@ -806,7 +806,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 20949 triggers a segregation-of-duties conflict. It is not unusual for the department (4 of 54 department requests involve this resource, and resource_requests is 4) and the resource is not flagged high-risk. The model score is at the 68th percentile for denial. An SoD conflict undermines separation of duties, so the resource owner should review before approval. The conflicting duties are not specified in the facts.",
+    "finding": "Request 20949 triggers a segregation-of-duties conflict. It is not flagged as unusual for the department or a high-risk resource. The resource has 4 requests, all from this department (dept_requests: 54). The model score is at the 68th percentile for denial. An SoD conflict can allow incompatible duties, so the resource owner should review it before approval. The facts don't say which duties conflict.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -846,20 +846,20 @@
     }
    },
    "finding": {
+    "severity": "medium",
+    "finding": "Request 31236 targets resource 20299, flagged high-risk. No SoD conflict and not unusual for the department: 17 of the department's 597 requests involved this resource, and the resource has 73 requests overall. The model's risk score percentile is 61, a moderate signal. Because the resource is high-risk, have the resource owner review before approval, and monitor use afterward.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": true
     },
-    "finding": "Request 31236 targets a resource flagged high-risk. No separation-of-duties conflict and not unusual for the department (17 of 597 department requests involved this resource; 73 requests overall). The model score is the 61st percentile for denial, which is moderate. Because the resource is high-risk, the resource owner should review before approval.",
     "quoted": {
      "resource_requests": 73,
      "dept_requests": 597,
      "risk_score_percentile": 61
     },
-    "recommended_action": "review_by_owner",
-    "severity": "medium",
-    "uncertain": false
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
    }
   },
   {
@@ -888,7 +888,7 @@
    },
    "finding": {
     "severity": "high",
-    "finding": "Request 13390 triggers the segregation-of-duties conflict control. It is not flagged as unusual for the department or as a high-risk resource. The model score is at the 81st percentile (higher means more likely to be denied). Resource has 161 requests; department has 296. An SoD conflict can allow incompatible duties, so block pending review by the owner.",
+    "finding": "Request 13390 triggers the segregation-of-duties conflict control. The model risk score is in the 81st percentile (higher means more likely to be denied). The department has made only 4 requests for this resource, out of 296 department requests and 161 for the resource overall. An SoD conflict can allow one person to carry out incompatible duties, so hold the request until the owner has reviewed it.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -904,16 +904,16 @@
    }
   },
   {
-   "request_id": 8082,
+   "request_id": 16356,
    "facts": {
-    "request_id": 8082,
+    "request_id": 16356,
     "split": "test",
     "ids": {
-     "resource": 36050,
-     "mgr_id": 2612,
-     "role_deptname": 123901,
+     "resource": 42202,
+     "mgr_id": 3838,
+     "role_deptname": 119924,
      "role_family": 290919,
-     "role_title": 117905
+     "role_title": 118321
     },
     "controls": {
      "sod_conflict": false,
@@ -921,26 +921,26 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 10,
-     "dept_requests": 50,
+     "resource_requests": 1,
+     "dept_requests": 230,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 99
+     "risk_score_percentile": 98
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 8082 scores in the 99th risk percentile (model score, not a decision), yet no SoD conflict, unusual-for-department or high-risk-resource control fired. The resource has 10 requests overall; the department has 50, of which only 1 involves this resource. Because the score and controls disagree, the manager or resource owner should review before approval, and the drivers of the score should be checked.",
+    "finding": "Request 16356 has no SoD conflict, is not unusual for the department, and is not a high-risk resource. However, the model scores it at the 98th percentile for likely denial. The resource has only 1 request overall, and the department has 230 requests. Rarely requested access with a high score warrants resource-owner review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 10,
-     "dept_requests": 50,
-     "risk_score_percentile": 99
+     "resource_requests": 1,
+     "dept_requests": 230,
+     "risk_score_percentile": 98
     },
-    "uncertain": true,
+    "uncertain": false,
     "recommended_action": "review_by_owner"
    }
   },
@@ -970,7 +970,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 3815 targets a resource flagged high-risk. No SoD conflict or unusual-for-department signal fired. The resource has 78 requests overall, 20 of them from this department (659 requests). The model score is the 68th percentile, a moderate denial likelihood. Because the resource is high-risk, the resource owner should review the request before approval, and access should be monitored.",
+    "finding": "Request 3815 targets a resource flagged high-risk. No SoD conflict or unusual-for-department pattern was found; the resource has 78 requests, 20 of them from this department (659 total). The model scores it at the 68th percentile for denial likelihood, which is not a decision. Because the resource is high-risk, the resource owner should review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -986,16 +986,16 @@
    }
   },
   {
-   "request_id": 15209,
+   "request_id": 564,
    "facts": {
-    "request_id": 15209,
+    "request_id": 564,
     "split": "test",
     "ids": {
-     "resource": 16639,
-     "mgr_id": 8784,
-     "role_deptname": 119890,
-     "role_family": 118424,
-     "role_title": 118834
+     "resource": 920,
+     "mgr_id": 1398,
+     "role_deptname": 120722,
+     "role_family": 290919,
+     "role_title": 118784
     },
     "controls": {
      "sod_conflict": false,
@@ -1003,24 +1003,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 42,
-     "dept_requests": 111,
+     "resource_requests": 6,
+     "dept_requests": 501,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 30
+     "risk_score_percentile": 91
     }
    },
    "finding": {
-    "severity": "low",
-    "finding": "Request 15209 is flagged unusual for its department: only 1 of the department's 111 requests involved this resource, though the resource has 42 requests overall. No SoD conflict or high-risk resource flag, and the model risk percentile is 30. Atypical access can signal privilege creep, so the manager or resource owner should confirm business need before approval.",
+    "severity": "medium",
+    "finding": "Request 564 is flagged unusual for the department: the resource has only 6 requests overall and 1 from a department with 501 requests. The model scores it at the 91st percentile for likely denial. No SoD conflict or high-risk resource flag. Unusual access weakens least-privilege, so the resource owner should review the business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 42,
-     "dept_requests": 111,
-     "risk_score_percentile": 30
+     "resource_requests": 6,
+     "dept_requests": 501,
+     "risk_score_percentile": 91
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
@@ -1052,7 +1052,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 2556 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department (43 of 763 department requests involve this resource; 99 requests overall). The model score is in the 80th percentile for likely denial. Because the resource is high risk, the resource owner should review the request before approval.",
+    "finding": "Request 2556 targets a resource flagged high risk. No separation-of-duties conflict and not unusual for the department: 43 of the department's 763 requests involved this resource, which has 99 requests overall. The model score is at the 80th percentile (higher means more likely denied). Because the resource is high risk, the resource owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -1092,33 +1092,33 @@
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 28532 triggers the SoD conflict control. It is not unusual for the department (21 of 543 department requests involve this resource; 295 requests overall) and the resource is not flagged high-risk. Model risk score percentile is 36, a low-to-moderate denial likelihood. Because the SoD conflict conflicts with the role, the resource owner should review it before approval. The conflicting duties are not specified in the facts.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
+    "finding": "Request 28532 triggers a segregation-of-duties conflict. It is not unusual for the department (21 of 543 department requests involve this resource; 295 requests overall) and the resource is not flagged high-risk. The model risk score is the 36th percentile, which is not a decision. The SoD conflict could allow incompatible duties, so the resource owner should review it before approval.",
     "quoted": {
      "resource_requests": 295,
      "dept_requests": 543,
      "risk_score_percentile": 36
     },
-    "uncertain": true,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "review_by_owner",
+    "severity": "medium",
+    "uncertain": true
    }
   },
   {
-   "request_id": 29421,
+   "request_id": 21626,
    "facts": {
-    "request_id": 29421,
+    "request_id": 21626,
     "split": "test",
     "ids": {
-     "resource": 27844,
-     "mgr_id": 26170,
-     "role_deptname": 117884,
-     "role_family": 19721,
-     "role_title": 117879
+     "resource": 41228,
+     "mgr_id": 6232,
+     "role_deptname": 118437,
+     "role_family": 120518,
+     "role_title": 120516
     },
     "controls": {
      "sod_conflict": false,
@@ -1126,24 +1126,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 2,
-     "dept_requests": 546,
+     "resource_requests": 1,
+     "dept_requests": 317,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 93
+     "risk_score_percentile": 29
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 29421 is flagged unusual for the department: the resource has only 2 requests overall and 1 within the department's 546 requests. No SoD conflict or high-risk resource flag is raised. The model places it at the 93rd risk percentile (a score, not a decision). Rarely used access can signal excess privilege, so route to the resource owner for review before granting.",
+    "severity": "low",
+    "finding": "Request 21626 is flagged unusual for its department: the resource has only 1 request overall, and the department made 317 requests, with just 1 for this resource. No SoD conflict or high-risk resource flag is set, and the risk score percentile is 29. Rarely requested access can indicate unneeded privilege, so the resource owner should confirm business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 2,
-     "dept_requests": 546,
-     "risk_score_percentile": 93
+     "resource_requests": 1,
+     "dept_requests": 317,
+     "risk_score_percentile": 29
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
@@ -1163,7 +1163,7 @@
     },
     "controls": {
      "sod_conflict": false,
-     "unusual_for_department": true,
+     "unusual_for_department": false,
      "high_risk_resource": true
     },
     "numbers": {
@@ -1174,33 +1174,33 @@
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 14237 is for a high-risk resource that is unusual for the requester's department: only 2 of the department's 501 requests involved it, and the resource has 40 requests overall. No SoD conflict was flagged. The model score is the 65th percentile (not a decision). Have the resource owner review the business justification before approval.",
     "claims": {
      "sod_conflict": false,
-     "unusual_for_department": true,
+     "unusual_for_department": false,
      "high_risk_resource": true
     },
+    "finding": "Request 14237 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department. The resource has 40 requests; the department made 501 requests overall. The model risk percentile is 65, a score and not a decision. Because the resource is high risk, have the resource owner review the request before approval.",
     "quoted": {
      "resource_requests": 40,
      "dept_requests": 501,
      "risk_score_percentile": 65
     },
-    "uncertain": false,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "review_by_owner",
+    "severity": "medium",
+    "uncertain": false
    }
   },
   {
-   "request_id": 28848,
+   "request_id": 17045,
    "facts": {
-    "request_id": 28848,
+    "request_id": 17045,
     "split": "test",
     "ids": {
-     "resource": 44976,
-     "mgr_id": 51778,
-     "role_deptname": 118556,
-     "role_family": 292795,
-     "role_title": 117946
+     "resource": 15723,
+     "mgr_id": 3270,
+     "role_deptname": 122870,
+     "role_family": 270488,
+     "role_title": 118563
     },
     "controls": {
      "sod_conflict": false,
@@ -1208,23 +1208,23 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 8,
-     "dept_requests": 91,
-     "dept_resource_requests": 2,
+     "resource_requests": 12,
+     "dept_requests": 106,
+     "dept_resource_requests": 1,
      "risk_score_percentile": 99
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 28848 triggers no SoD, department-unusualness or high-risk-resource controls. However, the risk model scores it at the 99th percentile (higher = more likely denied). Resource has 8 requests overall; the department has 91 requests, 2 for this resource. Score and controls disagree, and the drivers are not provided. Have the resource owner review before approval.",
+    "finding": "Request 17045 triggers no SoD, unusual-for-department or high-risk-resource controls. However, the model scores it at the 99th risk percentile (higher = more likely denied). The resource has 12 requests overall, and only 1 of the department's 106 requests was for it. This conflict is unexplained, so the manager or resource owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 8,
-     "dept_requests": 91,
+     "resource_requests": 12,
+     "dept_requests": 106,
      "risk_score_percentile": 99
     },
     "uncertain": true,
@@ -1257,7 +1257,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 21423 targets a resource flagged high-risk. No SoD conflict and not unusual for the department. The resource has 73 requests overall; the department made 191 requests, only 4 for this resource. The model risk score is the 79th percentile (higher means more likely denied). Because the resource is high-risk, have the resource owner review before approval.",
+    "finding": "Request 21423 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department. The resource has 73 requests overall; the department has 191 requests, only 4 for this resource. Model risk percentile is 79 (a denial-likelihood score, not a decision). Owner should review the justification before approval, with monitoring.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -1298,7 +1298,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 28173 targets a resource flagged high risk. No SoD conflict and not unusual for the department (11 dept requests for this resource; 29 overall; 1135 department total). Model risk score is the 66th percentile, a score and not a decision. Because the resource is high risk, the resource owner should review before approval.",
+    "finding": "Request 28173 targets resource 38392, flagged high risk. No segregation-of-duties conflict and not unusual for the department (11 of the department's 1135 requests involve this resource; 29 requests overall). The model risk score is the 66th percentile, a moderate denial likelihood. Because the resource is high risk, the resource owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -1314,16 +1314,16 @@
    }
   },
   {
-   "request_id": 10838,
+   "request_id": 32191,
    "facts": {
-    "request_id": 10838,
+    "request_id": 32191,
     "split": "test",
     "ids": {
-     "resource": 23921,
-     "mgr_id": 7411,
-     "role_deptname": 118746,
-     "role_family": 118453,
-     "role_title": 118747
+     "resource": 6855,
+     "mgr_id": 6876,
+     "role_deptname": 117920,
+     "role_family": 121069,
+     "role_title": 121067
     },
     "controls": {
      "sod_conflict": false,
@@ -1331,24 +1331,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 167,
-     "dept_requests": 415,
+     "resource_requests": 1,
+     "dept_requests": 597,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 25
+     "risk_score_percentile": 75
     }
    },
    "finding": {
-    "severity": "low",
-    "finding": "Request 10838 is flagged unusual for its department: only 1 of the department's 415 requests involved this resource, though the resource has 167 requests overall. No SoD conflict or high-risk resource flag, and the model risk percentile is 25. Unusual access can signal privilege creep, so the resource owner should confirm business need before approval.",
+    "severity": "medium",
+    "finding": "Request 32191 is flagged unusual for the department: resource 6855 has only 1 request overall, and 1 from this department among 597 department requests. No SoD conflict or high-risk resource flag. The model score is the 75th percentile (higher means more likely denied). Rare access can indicate excess privilege, so the resource owner should review the business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 167,
-     "dept_requests": 415,
-     "risk_score_percentile": 25
+     "resource_requests": 1,
+     "dept_requests": 597,
+     "risk_score_percentile": 75
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
@@ -1379,33 +1379,33 @@
     }
    },
    "finding": {
+    "severity": "medium",
+    "finding": "Request 4917 targets a resource flagged high risk. No separation-of-duties conflict and not unusual for the department. The resource has 91 requests overall, but only 1 from this department's 42 requests. Model risk score is the 55th percentile (a score, not a decision). Resource owner should review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": true
     },
-    "finding": "Request 4917 targets a resource flagged high-risk. No SoD conflict and not unusual for the department. The resource has 91 requests; the department has 42, with only 1 for this resource. Model risk percentile is 55, which is mid-range and not a decision. Because the resource is high-risk, the resource owner should review it before approval.",
     "quoted": {
      "resource_requests": 91,
      "dept_requests": 42,
      "risk_score_percentile": 55
     },
-    "recommended_action": "review_by_owner",
-    "severity": "medium",
-    "uncertain": false
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
    }
   },
   {
-   "request_id": 14280,
+   "request_id": 30462,
    "facts": {
-    "request_id": 14280,
+    "request_id": 30462,
     "split": "test",
     "ids": {
-     "resource": 37620,
-     "mgr_id": 858,
-     "role_deptname": 118529,
-     "role_family": 308574,
-     "role_title": 118777
+     "resource": 32270,
+     "mgr_id": 19832,
+     "role_deptname": 123757,
+     "role_family": 290919,
+     "role_title": 118321
     },
     "controls": {
      "sod_conflict": false,
@@ -1413,27 +1413,27 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 1,
-     "dept_requests": 73,
+     "resource_requests": 295,
+     "dept_requests": 47,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 98
+     "risk_score_percentile": 96
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 14280 trips no SoD, unusual-for-department or high-risk-resource controls. However, the model scores it at the 98th risk percentile (higher = more likely denied). The resource has only 1 request overall, so history is very thin. Because the score conflicts with the clean controls, have the resource owner review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
+    "finding": "Request 30462 triggered no SoD, unusual-for-department or high-risk-resource controls. However, the model scores it at the 96th risk percentile (higher means more likely denied). The resource has 295 requests overall, but only 1 from this department's 47 requests. Because the controls and score conflict, the owner should review the request before approval.",
     "quoted": {
-     "resource_requests": 1,
-     "dept_requests": 73,
-     "risk_score_percentile": 98
+     "resource_requests": 295,
+     "dept_requests": 47,
+     "risk_score_percentile": 96
     },
-    "uncertain": true,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "review_by_owner",
+    "severity": "medium",
+    "uncertain": true
    }
   },
   {
@@ -1462,7 +1462,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 22664 targets a resource flagged high-risk. No SoD conflict or department-unusual flag was raised, and the department has 8 prior requests for this resource (resource total 33). The model score is at the 96th percentile, meaning a higher likelihood of denial. Because the resource is high-risk, the resource owner should review the request before approval.",
+    "finding": "Request 22664 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department (8 of 284 department requests involve this resource; 33 overall). The model scores it at the 96th percentile for likely denial. Resource owner should review the justification before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -1478,98 +1478,16 @@
    }
   },
   {
-   "request_id": 5511,
+   "request_id": 4949,
    "facts": {
-    "request_id": 5511,
+    "request_id": 4949,
     "split": "test",
     "ids": {
-     "resource": 16271,
-     "mgr_id": 5730,
-     "role_deptname": 118833,
-     "role_family": 118762,
-     "role_title": 120578
-    },
-    "controls": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "numbers": {
-     "resource_requests": 5,
-     "dept_requests": 151,
-     "dept_resource_requests": 1,
-     "risk_score_percentile": 13
-    }
-   },
-   "finding": {
-    "severity": "low",
-    "finding": "Request 5511 is flagged unusual for its department: only 1 of the department's 151 requests involved this resource, which has 5 requests overall. No SoD conflict or high-risk resource flag is set, and the model risk percentile is 13, so denial is unlikely. Unusual access can still drift from role needs; have the manager or resource owner confirm the business need, then approve with monitoring.",
-    "claims": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "quoted": {
-     "resource_requests": 5,
-     "dept_requests": 151,
-     "risk_score_percentile": 13
-    },
-    "uncertain": false,
-    "recommended_action": "approve_with_monitoring"
-   }
-  },
-  {
-   "request_id": 16989,
-   "facts": {
-    "request_id": 16989,
-    "split": "test",
-    "ids": {
-     "resource": 5764,
-     "mgr_id": 7002,
-     "role_deptname": 123125,
+     "resource": 35824,
+     "mgr_id": 111936,
+     "role_deptname": 118783,
      "role_family": 290919,
-     "role_title": 118278
-    },
-    "controls": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "numbers": {
-     "resource_requests": 9,
-     "dept_requests": 159,
-     "dept_resource_requests": 1,
-     "risk_score_percentile": 14
-    }
-   },
-   "finding": {
-    "severity": "low",
-    "finding": "Request 16989 is flagged unusual for the department: only 1 of the department's 159 requests involved this resource, which has 9 requests overall. No SoD conflict or high-risk resource flag is raised, and the model score is the 14th percentile (low denial likelihood). Approve, but monitor use and have the manager confirm business need.",
-    "claims": {
-     "sod_conflict": false,
-     "unusual_for_department": true,
-     "high_risk_resource": false
-    },
-    "quoted": {
-     "resource_requests": 9,
-     "dept_requests": 159,
-     "risk_score_percentile": 14
-    },
-    "uncertain": false,
-    "recommended_action": "approve_with_monitoring"
-   }
-  },
-  {
-   "request_id": 4136,
-   "facts": {
-    "request_id": 4136,
-    "split": "test",
-    "ids": {
-     "resource": 80095,
-     "mgr_id": 7539,
-     "role_deptname": 119987,
-     "role_family": 290919,
-     "role_title": 117905
+     "role_title": 118784
     },
     "controls": {
      "sod_conflict": false,
@@ -1578,14 +1496,13 @@
     },
     "numbers": {
      "resource_requests": 1,
-     "dept_requests": 143,
+     "dept_requests": 366,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 2
+     "risk_score_percentile": 65
     }
    },
    "finding": {
-    "severity": "low",
-    "finding": "Request 4136 is flagged unusual for its department: the resource has only 1 request overall and 1 within the department, against 143 department requests. No SoD conflict or high-risk resource flag is set, and the risk score percentile is 2. Context on the resource is unavailable. Approve with monitoring, and have the manager confirm the business need.",
+    "finding": "Request 4949 is flagged unusual for the department: resource 35824 has only 1 request overall and 1 within the department, against 366 department requests. No SoD conflict or high-risk resource flag. Model score is the 65th percentile (a score, not a decision). Resource owner or manager should review the business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
@@ -1593,50 +1510,133 @@
     },
     "quoted": {
      "resource_requests": 1,
-     "dept_requests": 143,
-     "risk_score_percentile": 2
-    },
-    "uncertain": false,
-    "recommended_action": "approve_with_monitoring"
-   }
-  },
-  {
-   "request_id": 14379,
-   "facts": {
-    "request_id": 14379,
-    "split": "test",
-    "ids": {
-     "resource": 42481,
-     "mgr_id": 124033,
-     "role_deptname": 117945,
-     "role_family": 292795,
-     "role_title": 280788
-    },
-    "controls": {
-     "sod_conflict": false,
-     "unusual_for_department": false,
-     "high_risk_resource": false
-    },
-    "numbers": {
-     "resource_requests": 3,
-     "dept_requests": 659,
-     "dept_resource_requests": 3,
-     "risk_score_percentile": 95
-    }
-   },
-   "finding": {
-    "finding": "Request 14379 shows no SoD conflict, no unusual-for-department flag and no high-risk resource flag. The resource has 3 requests, all from this department (3 dept_resource_requests of 659 department requests). The model score is the 95th percentile for denial, which conflicts with the clean controls. Have the resource owner review it before approval.",
-    "claims": {
-     "sod_conflict": false,
-     "unusual_for_department": false,
-     "high_risk_resource": false
-    },
-    "quoted": {
-     "resource_requests": 3,
-     "dept_requests": 659,
-     "risk_score_percentile": 95
+     "dept_requests": 366,
+     "risk_score_percentile": 65
     },
     "severity": "medium",
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
+   }
+  },
+  {
+   "request_id": 30824,
+   "facts": {
+    "request_id": 30824,
+    "split": "test",
+    "ids": {
+     "resource": 35498,
+     "mgr_id": 15450,
+     "role_deptname": 117941,
+     "role_family": 19721,
+     "role_title": 117879
+    },
+    "controls": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "numbers": {
+     "resource_requests": 36,
+     "dept_requests": 763,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 92
+    }
+   },
+   "finding": {
+    "severity": "medium",
+    "finding": "Request 30824 is flagged unusual for its department: only 1 of the department's 763 requests involved this resource, which has 36 requests overall. The model's risk score is in the 92nd percentile (higher means more likely denied). No SoD conflict or high-risk resource flag. Have the resource owner review the business need before approval.",
+    "claims": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "quoted": {
+     "resource_requests": 36,
+     "dept_requests": 763,
+     "risk_score_percentile": 92
+    },
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
+   }
+  },
+  {
+   "request_id": 31582,
+   "facts": {
+    "request_id": 31582,
+    "split": "test",
+    "ids": {
+     "resource": 31441,
+     "mgr_id": 19986,
+     "role_deptname": 118403,
+     "role_family": 118960,
+     "role_title": 120773
+    },
+    "controls": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "numbers": {
+     "resource_requests": 79,
+     "dept_requests": 532,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 49
+    }
+   },
+   "finding": {
+    "severity": "medium",
+    "finding": "Request 31582 is flagged unusual for the department: only 1 of the department's 532 requests involved this resource, though the resource has 79 requests overall. No SoD conflict or high-risk resource flag is set, and the risk score is at the 49th percentile. Unusual access can signal excess privilege, so the resource owner should confirm business need before approval.",
+    "claims": {
+     "sod_conflict": false,
+     "unusual_for_department": true,
+     "high_risk_resource": false
+    },
+    "quoted": {
+     "resource_requests": 79,
+     "dept_requests": 532,
+     "risk_score_percentile": 49
+    },
+    "uncertain": false,
+    "recommended_action": "review_by_owner"
+   }
+  },
+  {
+   "request_id": 3232,
+   "facts": {
+    "request_id": 3232,
+    "split": "test",
+    "ids": {
+     "resource": 33248,
+     "mgr_id": 4341,
+     "role_deptname": 118957,
+     "role_family": 290919,
+     "role_title": 118321
+    },
+    "controls": {
+     "sod_conflict": false,
+     "unusual_for_department": false,
+     "high_risk_resource": false
+    },
+    "numbers": {
+     "resource_requests": 84,
+     "dept_requests": 90,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 98
+    }
+   },
+   "finding": {
+    "severity": "medium",
+    "finding": "Request 3232 triggered no SoD, unusual-for-department or high-risk-resource controls. However, the model scores it at the 98th risk percentile (higher = more likely denied). Only 1 prior request exists for this department-resource pair, though the resource has 84 requests overall. The drivers of the score are not provided. Owner should review before approval.",
+    "claims": {
+     "sod_conflict": false,
+     "unusual_for_department": false,
+     "high_risk_resource": false
+    },
+    "quoted": {
+     "resource_requests": 84,
+     "dept_requests": 90,
+     "risk_score_percentile": 98
+    },
     "uncertain": true,
     "recommended_action": "review_by_owner"
    }
@@ -1667,7 +1667,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 23332 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department: 48 of the department's 659 requests involved this resource, which has 136 requests overall. The model score is the 62nd percentile for denial, a moderate signal. Because the resource is high risk, have the resource owner review the request before approval.",
+    "finding": "Request 23332 targets resource 18072, flagged high risk. No separation-of-duties conflict and not unusual for the department (48 of 659 department requests involve this resource; 136 requests overall). Model risk score percentile is 62, a score rather than a decision. Because the resource is high risk, the resource owner should review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -1683,16 +1683,16 @@
    }
   },
   {
-   "request_id": 3909,
+   "request_id": 8454,
    "facts": {
-    "request_id": 3909,
+    "request_id": 8454,
     "split": "test",
     "ids": {
-     "resource": 28149,
-     "mgr_id": 5330,
-     "role_deptname": 118867,
-     "role_family": 308574,
-     "role_title": 118685
+     "resource": 42891,
+     "mgr_id": 18449,
+     "role_deptname": 119181,
+     "role_family": 118467,
+     "role_title": 118465
     },
     "controls": {
      "sod_conflict": false,
@@ -1700,38 +1700,38 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 137,
-     "dept_requests": 136,
+     "resource_requests": 1,
+     "dept_requests": 525,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 55
+     "risk_score_percentile": 3
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 3909 is flagged unusual for its department: only 1 of the department's 136 requests involved this resource, though the resource has 137 requests overall. No SoD conflict or high-risk resource flag. Model risk score is at the 55th percentile. Unusual access can signal privilege creep, so the resource owner should confirm business need before approval.",
+    "severity": "low",
+    "finding": "Request 8454 is flagged unusual for its department: resource 42891 has only 1 request overall and 1 within the department (525 department requests total). No SoD conflict or high-risk resource flag, and the risk score percentile is 3. Low concern, but rarity means the manager should confirm business need; approve with monitoring.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 137,
-     "dept_requests": 136,
-     "risk_score_percentile": 55
+     "resource_requests": 1,
+     "dept_requests": 525,
+     "risk_score_percentile": 3
     },
     "uncertain": false,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "approve_with_monitoring"
    }
   },
   {
-   "request_id": 7729,
+   "request_id": 22309,
    "facts": {
-    "request_id": 7729,
+    "request_id": 22309,
     "split": "test",
     "ids": {
-     "resource": 31661,
-     "mgr_id": 4084,
-     "role_deptname": 118992,
+     "resource": 37439,
+     "mgr_id": 25,
+     "role_deptname": 122224,
      "role_family": 290919,
      "role_title": 118321
     },
@@ -1741,24 +1741,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 16,
-     "dept_requests": 206,
-     "dept_resource_requests": 8,
-     "risk_score_percentile": 98
+     "resource_requests": 12,
+     "dept_requests": 47,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 96
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 7729 has no SoD conflict, is not unusual for the department, and the resource is not high-risk. However, the model scores it at the 98th risk percentile (higher means more likely to be denied). Resource has 16 requests; the department has 206, of which 8 are for this resource. Score conflicts with clean controls, so the resource owner should review before approval.",
+    "finding": "Request 22309 has no SoD conflict, unusual-for-department or high-risk-resource flags. However, the model scores it at the 96th risk percentile (higher means more likely to be denied). The resource has 12 requests overall, and only 1 of the department's 47 requests was for it. Owner should review the justification before approval; the score's drivers are not provided.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 16,
-     "dept_requests": 206,
-     "risk_score_percentile": 98
+     "resource_requests": 12,
+     "dept_requests": 47,
+     "risk_score_percentile": 96
     },
     "uncertain": true,
     "recommended_action": "review_by_owner"
@@ -1789,7 +1789,8 @@
     }
    },
    "finding": {
-    "finding": "Request 1884 for resource 79141 triggers a segregation-of-duties conflict. It is not unusual for the department (3 of 68 department requests involve this resource) and is not flagged high-risk. The model score is mid-range (48th percentile). An SoD conflict can allow incompatible duties, so the resource owner should review before approval. The conflicting duties are not identified in the facts.",
+    "severity": "medium",
+    "finding": "Request 1884 triggers a segregation-of-duties conflict. It is not unusual for the department (3 of the department's 68 requests were for this resource; the resource had 16 requests overall), and it is not flagged high-risk. The model score is the 48th percentile, which is mid-range. An SoD conflict can allow incompatible duties, so the resource owner should review it and confirm the conflicting access before approval.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -1800,8 +1801,7 @@
      "dept_requests": 68,
      "risk_score_percentile": 48
     },
-    "severity": "medium",
-    "uncertain": true,
+    "uncertain": false,
     "recommended_action": "review_by_owner"
    }
   },
@@ -1831,7 +1831,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 6571 is for resource 18072, flagged high-risk. No SoD conflict and not unusual for the department. The resource has 136 requests overall, but only 1 of the department's 30 requests targeted it. The model score sits at the 73rd percentile (higher means more likely denied). Because the resource is high-risk, the resource owner should review before approval.",
+    "finding": "Request 6571 targets a resource flagged high risk. No SoD conflict or unusual-for-department signal fired. The resource has 136 requests overall, but only 1 of 30 department requests involved it, so department precedent is thin. The model score is the 73rd percentile (denial likelihood, not a decision). Have the resource owner review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -1847,16 +1847,16 @@
    }
   },
   {
-   "request_id": 24971,
+   "request_id": 9497,
    "facts": {
-    "request_id": 24971,
+    "request_id": 9497,
     "split": "test",
     "ids": {
-     "resource": 29116,
-     "mgr_id": 7001,
-     "role_deptname": 118933,
-     "role_family": 4673,
-     "role_title": 121594
+     "resource": 80663,
+     "mgr_id": 49772,
+     "role_deptname": 118746,
+     "role_family": 118453,
+     "role_title": 118747
     },
     "controls": {
      "sod_conflict": false,
@@ -1864,27 +1864,27 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 1,
-     "dept_requests": 195,
+     "resource_requests": 3,
+     "dept_requests": 415,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 63
+     "risk_score_percentile": 13
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 24971 is flagged unusual for the department: the resource has 1 request overall, and the department has 195 requests, of which 1 is for this resource. No SoD conflict or high-risk resource flag is set. Risk model percentile is 63, a score rather than a decision. Rare access outside peer norms weakens least-privilege assurance; have the resource owner or manager review the business need.",
+    "severity": "low",
+    "finding": "Request 9497 is flagged unusual for its department: only 1 of the department's 415 requests involved this resource, which has 3 requests overall. No SoD conflict or high-risk resource flag was raised, and the model risk score percentile is 13. Low risk, but the owner should confirm the business need for this atypical access and monitor its use.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 1,
-     "dept_requests": 195,
-     "risk_score_percentile": 63
+     "resource_requests": 3,
+     "dept_requests": 415,
+     "risk_score_percentile": 13
     },
     "uncertain": false,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "approve_with_monitoring"
    }
   },
   {
@@ -1912,8 +1912,8 @@
     }
    },
    "finding": {
-    "severity": "high",
-    "finding": "Request 7734 triggers a segregation-of-duties conflict. It is not unusual for the department (16 of 296 department requests were for this resource; 31 requests overall) and the resource is not flagged high-risk. The model risk percentile is 55. An SoD conflict can allow incompatible duties, so block the grant pending review by the resource owner and manager. The conflicting duties are not specified in the facts.",
+    "severity": "medium",
+    "finding": "Request 7734 for resource 28315 triggers a segregation-of-duties conflict. It is not unusual for the department (16 of 296 department requests were for this resource) and the resource is not high-risk. The model score is the 55th percentile, which is mid-range. An SoD conflict can allow conflicting duties, so the resource owner should review it before approval. The facts don't say which duties conflict.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -1925,20 +1925,20 @@
      "risk_score_percentile": 55
     },
     "uncertain": true,
-    "recommended_action": "block_pending_review"
+    "recommended_action": "review_by_owner"
    }
   },
   {
-   "request_id": 7093,
+   "request_id": 20492,
    "facts": {
-    "request_id": 7093,
+    "request_id": 20492,
     "split": "test",
     "ids": {
-     "resource": 100028,
-     "mgr_id": 1583,
-     "role_deptname": 118507,
-     "role_family": 117887,
-     "role_title": 179731
+     "resource": 20733,
+     "mgr_id": 71566,
+     "role_deptname": 117884,
+     "role_family": 19721,
+     "role_title": 117879
     },
     "controls": {
      "sod_conflict": false,
@@ -1946,40 +1946,40 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 1,
-     "dept_requests": 267,
+     "resource_requests": 23,
+     "dept_requests": 546,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 56
+     "risk_score_percentile": 83
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 7093 is flagged unusual for its department: the resource has only 1 request overall and 1 within the department, which has 267 requests. No SoD conflict or high-risk resource flag is set. The model score is the 56th percentile (a score, not a decision). Rare access may be over-provisioning, so the resource owner should confirm business need before approval.",
+    "finding": "Request 20492 is flagged unusual for the department: resource 20733 has only 1 request from this department's 546, and 23 overall. The risk model places it at the 83rd percentile for likely denial. No SoD conflict or high-risk resource flag. Owner should confirm business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 1,
-     "dept_requests": 267,
-     "risk_score_percentile": 56
+     "resource_requests": 23,
+     "dept_requests": 546,
+     "risk_score_percentile": 83
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
    }
   },
   {
-   "request_id": 8621,
+   "request_id": 11495,
    "facts": {
-    "request_id": 8621,
+    "request_id": 11495,
     "split": "test",
     "ids": {
-     "resource": 13878,
-     "mgr_id": 119058,
-     "role_deptname": 117878,
-     "role_family": 19721,
-     "role_title": 117879
+     "resource": 967,
+     "mgr_id": 15510,
+     "role_deptname": 118171,
+     "role_family": 119784,
+     "role_title": 130479
     },
     "controls": {
      "sod_conflict": false,
@@ -1987,40 +1987,40 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 220,
-     "dept_requests": 1135,
-     "dept_resource_requests": 51,
-     "risk_score_percentile": 96
+     "resource_requests": 19,
+     "dept_requests": 45,
+     "dept_resource_requests": 2,
+     "risk_score_percentile": 95
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 8621 triggers no SoD, unusual-for-department or high-risk-resource controls. The resource has 220 requests, and the department has 1135 requests, 51 of them for this resource. However, the model scores it at the 96th percentile for likely denial. The controls and model disagree, and the drivers of the score are not shown. Have the resource owner review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
+    "finding": "Request 11495 triggered no SoD, unusual-for-department or high-risk-resource controls. Resource 967 has 19 requests; the department has 45. However, the model scores it at the 95th percentile for likely denial. This is a score, not a decision. Because controls are clean but the score is high, the resource owner should review the request before approval.",
     "quoted": {
-     "resource_requests": 220,
-     "dept_requests": 1135,
-     "risk_score_percentile": 96
+     "resource_requests": 19,
+     "dept_requests": 45,
+     "risk_score_percentile": 95
     },
-    "uncertain": true,
-    "recommended_action": "review_by_owner"
+    "recommended_action": "review_by_owner",
+    "severity": "medium",
+    "uncertain": true
    }
   },
   {
-   "request_id": 11304,
+   "request_id": 5410,
    "facts": {
-    "request_id": 11304,
+    "request_id": 5410,
     "split": "test",
     "ids": {
-     "resource": 391,
-     "mgr_id": 16049,
-     "role_deptname": 81476,
-     "role_family": 117887,
-     "role_title": 179731
+     "resource": 3059,
+     "mgr_id": 50814,
+     "role_deptname": 117920,
+     "role_family": 19721,
+     "role_title": 118568
     },
     "controls": {
      "sod_conflict": false,
@@ -2028,24 +2028,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 63,
-     "dept_requests": 119,
+     "resource_requests": 1,
+     "dept_requests": 597,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 78
+     "risk_score_percentile": 94
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 11304 is flagged unusual for the department: only 1 of the department's 119 requests involved this resource, which has 63 requests overall. No SoD conflict or high-risk resource flag. The model score is at the 78th percentile for likely denial. Unusual access weakens least-privilege, so the manager or resource owner should confirm business need before approval.",
+    "finding": "Request 5410 is flagged unusual for its department: resource 3059 has 1 request overall and 1 within the department, which has 597 requests. The model places it at the 94th risk percentile (higher means more likely denied). No SoD conflict or high-risk resource flag. Rare access can indicate over-provisioning, so the resource owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 63,
-     "dept_requests": 119,
-     "risk_score_percentile": 78
+     "resource_requests": 1,
+     "dept_requests": 597,
+     "risk_score_percentile": 94
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
@@ -2077,7 +2077,7 @@
    },
    "finding": {
     "severity": "high",
-    "finding": "Request 6173 triggers a segregation-of-duties conflict. The model places it at the 85th risk percentile, meaning it is more likely to be denied. It is not unusual for the department (3 of 65 department requests were for this resource) and the resource is not flagged high-risk. An SoD conflict can allow incompatible duties, so block it until the owner reviews it and approves or documents a mitigating control.",
+    "finding": "Request 6173 triggers a segregation-of-duties conflict control. The model score is at the 85th percentile for likely denial. The resource has 5 requests; the department has 65, with 3 for this resource. It is not flagged unusual for the department or high-risk. An SoD conflict can allow incompatible duties, so hold it for review. The conflicting entitlements are not identified in the facts.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -2088,21 +2088,21 @@
      "dept_requests": 65,
      "risk_score_percentile": 85
     },
-    "uncertain": false,
+    "uncertain": true,
     "recommended_action": "block_pending_review"
    }
   },
   {
-   "request_id": 20751,
+   "request_id": 25702,
    "facts": {
-    "request_id": 20751,
+    "request_id": 25702,
     "split": "test",
     "ids": {
-     "resource": 17278,
-     "mgr_id": 46526,
-     "role_deptname": 119984,
-     "role_family": 118398,
-     "role_title": 118396
+     "resource": 27904,
+     "mgr_id": 2072,
+     "role_deptname": 131868,
+     "role_family": 119184,
+     "role_title": 119192
     },
     "controls": {
      "sod_conflict": false,
@@ -2110,24 +2110,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 57,
-     "dept_requests": 148,
-     "dept_resource_requests": 2,
-     "risk_score_percentile": 98
+     "resource_requests": 2,
+     "dept_requests": 65,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 95
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 20751 has no SoD conflict, is not unusual for the department, and is not on a high-risk resource. However, the model scores it at the 98th percentile for likely denial. The resource has 57 requests, and the department has 148 requests, only 2 of them for this resource. Have the resource owner review it before approval, because the model score conflicts with the clean controls.",
+    "finding": "Request 25702 triggers no SoD, unusual-for-department or high-risk-resource controls. The resource has only 2 requests, 1 of them from this department (65 department requests). The model scores it at the 95th percentile for likely denial. The score is not a decision. Low volume limits context, so the resource owner should review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 57,
-     "dept_requests": 148,
-     "risk_score_percentile": 98
+     "resource_requests": 2,
+     "dept_requests": 65,
+     "risk_score_percentile": 95
     },
     "uncertain": true,
     "recommended_action": "review_by_owner"
@@ -2159,7 +2159,7 @@
    },
    "finding": {
     "severity": "high",
-    "finding": "Request 16190 triggers the SoD conflict control. The model risk score is in the 89th percentile (higher means more likely to be denied). The resource has 19 requests overall, and only 1 of the department's 56 requests targeted it. It is not flagged as unusual for the department or as high-risk. A segregation-of-duties conflict could allow incompatible access, so block it pending review of the conflict.",
+    "finding": "Request 16190 triggers a segregation-of-duties conflict. The model scores it at the 89th risk percentile (higher means more likely to be denied). It is not unusual for the department and the resource is not high-risk. The resource has 19 requests and the department has 56. An SoD conflict can allow incompatible duties. Block until the resource owner and manager review the conflict.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -2199,8 +2199,7 @@
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 29928 targets a resource flagged high risk. No SoD conflict or unusual-for-department signal was raised. The resource has 65 requests, 11 from this department's 763. The model score is the 79th percentile for likely denial. Because the resource is high risk, the resource owner should review before approval, with monitoring if granted.",
+    "finding": "Request 29928 targets resource 18913, flagged high-risk. No SoD conflict or unusual-for-department signal fired. The resource has 65 requests; the department has 11 of its 763 requests for it. The model score is at the 79th percentile (higher means more likely denied). Because the resource is high-risk, have the resource owner review before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -2211,6 +2210,7 @@
      "dept_requests": 763,
      "risk_score_percentile": 79
     },
+    "severity": "medium",
     "uncertain": false,
     "recommended_action": "review_by_owner"
    }
@@ -2241,7 +2241,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 11716 targets resource 18913, flagged high-risk. No SoD conflict and not unusual for the department (7 of 191 department requests were for this resource; 65 requests overall). The model scores it at the 87th percentile for likely denial. Because the resource is high-risk, have the resource owner review the business need before approval.",
+    "finding": "Request 11716 targets a resource flagged high risk. No SoD conflict or unusual-for-department signal was found. The resource has 65 requests, 7 of them from this department (191 total requests). The model scores it at the 87th percentile for likely denial. Because the resource is high risk, the resource owner should review the request before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -2281,8 +2281,7 @@
     }
    },
    "finding": {
-    "severity": "medium",
-    "finding": "Request 6484 targets a high-risk resource. No segregation-of-duties conflict and not unusual for the department: 24 of the department's 1135 requests involved this resource (40 overall). The model score is the 63rd percentile, moderately elevated for denial. Because the resource is high-risk, have the resource owner review the request before approval.",
+    "finding": "Request 6484 targets a resource flagged high risk. No segregation-of-duties conflict and not unusual for the department: 24 of the resource's 40 requests come from a department with 1135 requests. Model risk percentile is 63, a moderate denial likelihood. Because the resource is high risk, the resource owner should review it, and access should be monitored.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": false,
@@ -2293,21 +2292,22 @@
      "dept_requests": 1135,
      "risk_score_percentile": 63
     },
+    "severity": "medium",
     "uncertain": false,
     "recommended_action": "review_by_owner"
    }
   },
   {
-   "request_id": 3961,
+   "request_id": 25357,
    "facts": {
-    "request_id": 3961,
+    "request_id": 25357,
     "split": "test",
     "ids": {
-     "resource": 74615,
-     "mgr_id": 17790,
-     "role_deptname": 119924,
-     "role_family": 290919,
-     "role_title": 118321
+     "resource": 75951,
+     "mgr_id": 8785,
+     "role_deptname": 118910,
+     "role_family": 117887,
+     "role_title": 118368
     },
     "controls": {
      "sod_conflict": false,
@@ -2316,14 +2316,14 @@
     },
     "numbers": {
      "resource_requests": 2,
-     "dept_requests": 230,
-     "dept_resource_requests": 2,
-     "risk_score_percentile": 85
+     "dept_requests": 325,
+     "dept_resource_requests": 1,
+     "risk_score_percentile": 65
     }
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 3961 is flagged unusual for its department: the resource has only 2 requests overall, and all 2 come from this department, which has 230 requests. The model places it at the 85th risk percentile (a score, not a decision). No SoD conflict or high-risk resource flag. Manager should confirm business need before approval.",
+    "finding": "Request 25357 is flagged as unusual for the department: the resource has only 2 requests overall, and 1 from this department among its 325 requests. No SoD conflict or high-risk resource flag. The model score is at the 65th percentile (higher means more likely denied). Rare access can indicate unneeded privilege, so the resource owner should confirm business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
@@ -2331,8 +2331,8 @@
     },
     "quoted": {
      "resource_requests": 2,
-     "dept_requests": 230,
-     "risk_score_percentile": 85
+     "dept_requests": 325,
+     "risk_score_percentile": 65
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"
@@ -2363,8 +2363,7 @@
     }
    },
    "finding": {
-    "severity": "high",
-    "finding": "Request 28300 triggers a segregation-of-duties conflict. The model places it at the 92nd risk percentile (higher means more likely to be denied). It isn't flagged as unusual for the department or as a high-risk resource. The resource has 409 requests overall, and the department has made 4 requests for it. An SoD conflict can allow incompatible duties, so block the request until the owner reviews the conflict. The facts don't say which duties conflict.",
+    "finding": "Request 28300 triggers a segregation-of-duties conflict. The resource has 409 requests overall; the department has 54 requests, 4 of them for this resource. The model risk score is in the 92nd percentile for denial. It isn't flagged as unusual for the department or as high-risk. The SoD conflict needs resolution, so the resource owner should review before approval.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -2375,8 +2374,9 @@
      "dept_requests": 54,
      "risk_score_percentile": 92
     },
+    "severity": "high",
     "uncertain": false,
-    "recommended_action": "block_pending_review"
+    "recommended_action": "review_by_owner"
    }
   },
   {
@@ -2405,7 +2405,7 @@
    },
    "finding": {
     "severity": "medium",
-    "finding": "Request 31101 triggers a segregation-of-duties conflict. The resource has 3 requests overall, all from this department (3 of the department's 40), and it is not flagged unusual or high-risk. The model score is the 65th percentile, which is not a decision. An SoD conflict can allow incompatible duties to combine, so the resource owner should review before approval. The conflicting duties are not specified in the facts.",
+    "finding": "Request 31101 triggers a segregation-of-duties conflict. It is not unusual for the department (3 of 40 department requests involve this resource) and the resource is not flagged high-risk. The model score is the 65th percentile for denial. An SoD conflict can allow one person to hold incompatible permissions, so the resource owner should review it before approval.",
     "claims": {
      "sod_conflict": true,
      "unusual_for_department": false,
@@ -2416,21 +2416,21 @@
      "dept_requests": 40,
      "risk_score_percentile": 65
     },
-    "uncertain": true,
+    "uncertain": false,
     "recommended_action": "review_by_owner"
    }
   },
   {
-   "request_id": 27378,
+   "request_id": 14954,
    "facts": {
-    "request_id": 27378,
+    "request_id": 14954,
     "split": "test",
     "ids": {
-     "resource": 31974,
-     "mgr_id": 2113,
-     "role_deptname": 117920,
-     "role_family": 19721,
-     "role_title": 118568
+     "resource": 22281,
+     "mgr_id": 2904,
+     "role_deptname": 117945,
+     "role_family": 292795,
+     "role_title": 117946
     },
     "controls": {
      "sod_conflict": false,
@@ -2438,24 +2438,24 @@
      "high_risk_resource": false
     },
     "numbers": {
-     "resource_requests": 2,
-     "dept_requests": 597,
+     "resource_requests": 7,
+     "dept_requests": 659,
      "dept_resource_requests": 1,
-     "risk_score_percentile": 37
+     "risk_score_percentile": 93
     }
    },
    "finding": {
-    "severity": "low",
-    "finding": "Request 27378 is flagged unusual for the department: the resource has only 2 requests overall and 1 within the department, which has 597 requests. No SoD conflict or high-risk resource flag is set, and the risk score percentile is 37. Rarity weakens peer-based justification, so the resource owner should confirm business need before approval.",
+    "severity": "medium",
+    "finding": "Request 14954 is flagged unusual for its department: only 1 of the department's 659 requests involved this resource, which has 7 requests overall. The model risk score is in the 93rd percentile (higher means more likely denied). No SoD conflict or high-risk resource flag. Resource owner or manager should review business need before approval.",
     "claims": {
      "sod_conflict": false,
      "unusual_for_department": true,
      "high_risk_resource": false
     },
     "quoted": {
-     "resource_requests": 2,
-     "dept_requests": 597,
-     "risk_score_percentile": 37
+     "resource_requests": 7,
+     "dept_requests": 659,
+     "risk_score_percentile": 93
     },
     "uncertain": false,
     "recommended_action": "review_by_owner"

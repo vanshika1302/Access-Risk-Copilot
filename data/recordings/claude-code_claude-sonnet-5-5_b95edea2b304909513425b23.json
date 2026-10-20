@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 13270 targets a resource flagged high risk. The model scores it at the 92nd percentile for likely denial. No separation-of-duties conflict and no unusual-for-department flag were raised. Only 1 department request exists, so peer comparison is thin. Resource owner should review the justification before approval.",
+  "finding": "Request 13270 is for a resource flagged high risk. No separation-of-duties conflict and not unusual for the department. The resource has 104 requests overall, but the department has only 1 request, and it is this one. The model score is the 92nd percentile for likely denial. Because the resource is high risk and the department has little history, the resource owner should review before approval.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,
@@ -13,7 +13,7 @@
    "dept_requests": 1,
    "risk_score_percentile": 92
   },
-  "uncertain": true,
+  "uncertain": false,
   "recommended_action": "review_by_owner"
  }
 }

@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 20945 has no SoD conflict, unusual-for-department or high-risk-resource flags. However, the model places it at the 97th risk percentile (higher means more likely denied). Resource 5764 has 9 requests overall, and only 1 of the department's 47 requests is for it. Because the controls are clear but the score is high, have the resource owner review the request. The facts don't explain the score.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 9,
+   "dept_requests": 47,
+   "risk_score_percentile": 97
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

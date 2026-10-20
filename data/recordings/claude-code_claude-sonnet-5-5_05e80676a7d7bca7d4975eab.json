@@ -2,7 +2,7 @@
  "model": "claude-sonnet-5-5",
  "output": {
   "severity": "medium",
-  "finding": "Request 1477 targets a resource flagged high-risk. No SoD conflict and not unusual for the department are flagged. The model score is in the 96th percentile (higher means more likely denied). The resource has 136 requests overall, but only 1 from this department's 46 requests. High-risk access with a high score warrants owner review before approval.",
+  "finding": "Request 1477 is for a resource flagged high risk. No SoD conflict and no unusual-for-department flag were raised. The resource has 136 requests overall, but only 1 from this department (46 total department requests). The model score is the 96th percentile for likely denial. Because the resource is high risk, the resource owner should review the request before approval.",
   "claims": {
    "sod_conflict": false,
    "unusual_for_department": false,

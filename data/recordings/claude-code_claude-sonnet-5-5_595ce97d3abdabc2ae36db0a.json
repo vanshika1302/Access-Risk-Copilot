@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 32000 is flagged unusual for its department: the resource has only 1 request overall, and it is that department's only request for it, out of 532 department requests. No SoD conflict or high-risk resource flag. Risk score percentile is 49, a model score and not a decision. Rarity makes need hard to confirm, so the manager or resource owner should review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 532,
+   "risk_score_percentile": 49
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

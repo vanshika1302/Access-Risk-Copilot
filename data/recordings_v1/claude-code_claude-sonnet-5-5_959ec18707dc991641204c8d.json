@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 25973 triggers a separation-of-duties conflict. It is not unusual for the department (13 of its 335 requests involve this resource; the resource has 35 requests overall) and is not flagged high-risk. The model score is the 74th percentile, indicating moderate denial likelihood. An SoD conflict can allow incompatible duties, so the resource owner should review before approval. The conflicting duties are not specified.",
+  "claims": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 35,
+   "dept_requests": 335,
+   "risk_score_percentile": 74
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

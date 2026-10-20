@@ -4,8 +4,8 @@
   "claude": {
    "n": 77,
    "buckets": {
-    "correct": 53,
-    "correct_flagged": 24,
+    "correct": 56,
+    "correct_flagged": 21,
     "caught": 0,
     "SILENT": 0
    },
@@ -33,8 +33,8 @@
   "claude": {
    "n": 60,
    "buckets": {
-    "correct": 41,
-    "correct_flagged": 19,
+    "correct": 42,
+    "correct_flagged": 18,
     "caught": 0,
     "SILENT": 0
    },
