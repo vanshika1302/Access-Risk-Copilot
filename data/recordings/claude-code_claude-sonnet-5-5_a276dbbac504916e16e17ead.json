@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The manager is known to approve requests without review, which explains the pattern.",
+   "Implied causal claim that a manager's approval behavior explains the pattern or score; no manager history or approval behavior is in the facts."
+  ]
+ }
+}

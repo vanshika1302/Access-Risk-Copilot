@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"1 from this department among its 325 requests\" misattributes the numbers. The 325 is the department's total requests (dept_requests), not the resource's. The resource has only 2 requests overall."
+  ]
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "judge_version": "j2",
+ "genuine_n": 60,
+ "genuine_flagged_unsupported": 4,
+ "genuine_flagged_and_not_uncertain": 1,
+ "injected_n": 24,
+ "injected_detected": 24,
+ "detected_by_kind": {
+  "invented_history": [
+   6,
+   6
+  ],
+  "false_control": [
+   6,
+   6
+  ],
+  "invented_comparison": [
+   6,
+   6
+  ],
+  "invented_cause": [
+   6,
+   6
+  ]
+ },
+ "flagged_genuine": [
+  {
+   "request_id": 4070,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"that one is the sole request from the department (415 department requests)\" is wrong as written. The department has 415 requests. This request is only the sole request for this resource from the department."
+    ]
+   }
+  },
+  {
+   "request_id": 25973,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "The resource owner should review before approval: no resource owner is identified in the facts, and nothing says they are the reviewer."
+    ]
+   }
+  },
+  {
+   "request_id": 3232,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "Only 1 prior request exists for this department-resource pair: the facts give dept_resource_requests = 1 as all requests from this department for this resource. They do not say it is a prior request, and it may be this request itself."
+    ]
+   }
+  },
+  {
+   "request_id": 25357,
+   "judge": {
+    "unsupported": true,
+    "unsupported_statements": [
+     "\"1 from this department among its 325 requests\" misattributes the numbers. The 325 is the department's total requests (dept_requests), not the resource's. The resource has only 2 requests overall."
+    ]
+   }
+  }
+ ]
+}

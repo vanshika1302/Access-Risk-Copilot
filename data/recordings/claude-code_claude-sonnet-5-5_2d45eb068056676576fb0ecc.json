@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "Only a handful of other departments have ever requested this resource. The facts give no data on other departments; resource_requests is 3 total and dept_resource_requests is 1, so the number of other departments is not given.",
+   "The resource owner should review it before approval. The facts mention no resource owner, so this is an unsupported person/role."
+  ]
+ }
+}

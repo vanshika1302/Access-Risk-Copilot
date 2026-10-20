@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The manager is known to approve requests without review, which explains the pattern.",
+   "\"Rarely requested access\" is mildly inferential, but the key unsupported claim is the manager's approval behavior; no manager history is in the facts."
+  ]
+ }
+}

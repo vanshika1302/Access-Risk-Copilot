@@ -57,13 +57,13 @@
 <section><h2>3. AI audit findings, checked against SQL</h2>
 <p>An LLM (Claude via headless <code>claude -p</code>, all tools disabled) writes one finding per flagged case. A scorer then checks every claim and number against the SQL facts. A <b>silent error</b> is a wrong finding that did not say it was uncertain.</p>
 <div class="grid2"><div class="card"><div class="eyebrow">Outcome of each finding</div><svg id="evalbars" width="100%" viewBox="0 0 360 120" role="img" aria-label="Evaluation buckets"></svg>
-<div class="legend"><span><i class="sw" style="background:var(--a)"></i>Correct</span><span><i class="sw" style="background:var(--b)"></i>Correct, flagged uncertain</span></div><div id="evalnote" class="s" style="color:var(--ink-3);font-size:13px"></div></div>
+<div class="legend"><span><i class="sw" style="background:var(--a)"></i>Correct</span><span><i class="sw" style="background:var(--b)"></i>Correct, flagged uncertain</span></div><div id="evalnote" class="s" style="color:var(--ink-3);font-size:13px"></div><div id="judgenote" class="s" style="color:var(--ink-3);font-size:13px;margin-top:6px"></div></div>
 <div class="card" id="limits"></div></div>
 <div class="card" style="margin-top:12px"><label>Show findings for <select id="kind"></select></label><div id="findings"></div></div></section>
 
 <section><h2>Limitations</h2><div class="card"><ul>
 <li>Test findings: 60 cases, 0 silent errors. With zero events in 60, the true rate could still be about 5% (rule of three).</li>
-<li>The scorer checks structured claims, quoted numbers and every number in the text. It does not judge free-text reasoning or tone.</li>
+<li>The number scorer misses a sentence whose numbers are all real but misrelated (found once on dev). The free-text judge catches blatant injected errors (24 of 24) but its recall on subtle ones is not measured, and it missed a garbled sentence an earlier version caught.</li>
 <li>The template baseline is correct by construction, so the model is not "beating" it on accuracy; it adds readable explanation.</li>
 <li>Controls are rules I wrote on anonymised IDs. Unusual access flags 7.6% of requests (an earlier, looser version flagged 26% and was replaced); its lift is weakest in large departments.</li>
 <li>SoD flags only requests that were approved, so their denial rate is 0 by design: they are policy conflicts, not denial predictors.</li>
@@ -119,6 +119,8 @@ $("#ctrl").innerHTML = "<tr><th>Control</th><th class=n>Flagged (all)</th><th cl
   const s = $("#evalbars"), cols = {correct: "var(--a)", correct_flagged: "var(--b)", caught: "var(--ink-3)", SILENT: "var(--bad)"};
   [["Dev", dv], ["Test (scored once)", te]].forEach(([lab, e], i) => { let x = 120; const y = 14 + i * 50; el("text", {x: 0, y: y + 18}, s, lab);
     for (const k in e.buckets) { const w = e.buckets[k] / e.n * 230; if (!w) continue; const r = el("rect", {x, y, width: Math.max(w - 2, 1), height: 26, rx: 3, fill: cols[k]}, s); hover(r, `${k}: ${e.buckets[k]} of ${e.n}`); x += w; } });
+  const jt = D.judge.test, jd = D.judge.dev;
+  $("#judgenote").textContent = `Free-text check (second LLM call): flagged ${jt.genuine_flagged_unsupported} of ${jt.genuine_n} test findings and ${jt.injected_detected} of ${jt.injected_n} deliberately corrupted ones. I read the flags: 1 likely real error on test (already flagged uncertain), 3 over-strict or ambiguous. On dev it found 1 real silent error the number check missed.`;
   $("#evalnote").textContent = `Wrong and flagged uncertain (caught): ${te.buckets.caught}. Wrong and unflagged (silent): ${te.buckets.SILENT}. Template baseline: ${te.baseline_buckets.correct} of ${te.n} correct.`;
 })();
 $("#limits").innerHTML = "<div class=eyebrow>How a finding is scored</div><ul><li>Each claim (SoD, unusual, high-risk) must equal the SQL flag.</li><li>Every quoted number must equal the SQL number; any other number in the text is an error.</li><li>An SoD case may not be rated low or auto-approved.</li><li>Wrong + uncertain = caught. Wrong + not uncertain = silent.</li></ul>";

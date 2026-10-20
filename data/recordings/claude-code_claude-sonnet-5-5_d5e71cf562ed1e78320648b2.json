@@ -1,0 +1,11 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The manager is known to approve requests without review, which explains the pattern.",
+   "The model scores it at the 99th risk percentile (likely denial) - \"likely denial\" is an interpretation; the facts say the score is not a decision (minor).",
+   "The resource has only 1 request overall, all from this department's 79 - phrasing implies the 1 request is part of the department's 79, which is plausible, but the facts do not explicitly state this relation (minor)."
+  ]
+ }
+}

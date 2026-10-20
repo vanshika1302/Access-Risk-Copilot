@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This access is also unusual for the requester's department. (unusual_for_department is false)"
+  ]
+ }
+}

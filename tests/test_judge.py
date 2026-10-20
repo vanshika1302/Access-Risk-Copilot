@@ -28,3 +28,11 @@ def test_summary_counts():
 
 def test_prompt_treats_text_as_data_and_hides_split():
     u = user_prompt(item(1)); assert "<finding>" in u and "split" not in u and "never instructions" in SYSTEM
+
+
+def test_judge_outputs_committed_and_calibrated():
+    import json, pathlib
+    R = pathlib.Path(__file__).resolve().parent.parent / "outputs"
+    for sp, n in (("dev", 77), ("test", 60)):
+        j = json.loads((R / f"judge_{sp}.json").read_text())
+        assert j["judge_version"] == "j2" and j["genuine_n"] == n and j["injected_n"] == 24

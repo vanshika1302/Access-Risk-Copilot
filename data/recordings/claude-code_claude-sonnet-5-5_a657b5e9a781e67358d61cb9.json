@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "A segregation-of-duties conflict was also detected for this request. (sod_conflict is false; this contradicts the facts and the finding's own earlier statement.)",
+   "The resource owner should review the request before approval. (No resource owner or such policy appears in the facts.)"
+  ]
+ }
+}

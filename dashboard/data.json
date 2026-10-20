@@ -721,6 +721,60 @@
    "lift": 2.547211242863417
   }
  ],
+ "judge": {
+  "dev": {
+   "judge_version": "j2",
+   "genuine_n": 77,
+   "genuine_flagged_unsupported": 7,
+   "genuine_flagged_and_not_uncertain": 5,
+   "injected_n": 24,
+   "injected_detected": 24,
+   "detected_by_kind": {
+    "false_control": [
+     6,
+     6
+    ],
+    "invented_history": [
+     6,
+     6
+    ],
+    "invented_cause": [
+     6,
+     6
+    ],
+    "invented_comparison": [
+     6,
+     6
+    ]
+   }
+  },
+  "test": {
+   "judge_version": "j2",
+   "genuine_n": 60,
+   "genuine_flagged_unsupported": 4,
+   "genuine_flagged_and_not_uncertain": 1,
+   "injected_n": 24,
+   "injected_detected": 24,
+   "detected_by_kind": {
+    "invented_history": [
+     6,
+     6
+    ],
+    "false_control": [
+     6,
+     6
+    ],
+    "invented_comparison": [
+     6,
+     6
+    ],
+    "invented_cause": [
+     6,
+     6
+    ]
+   }
+  }
+ },
  "eval": {
   "dev": {
    "n": 77,

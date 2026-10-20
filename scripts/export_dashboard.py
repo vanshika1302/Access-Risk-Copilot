@@ -57,6 +57,7 @@ def build():
             "held_out_denial_rate": base, "ml": {"logreg_test_auc": ml["logreg"]["test_auc"], "rf_test_auc": ml["random_forest"]["test_auc"],
             "logreg_dev_auc": ml["logreg"]["dev_auc"], "rf_dev_auc": ml["random_forest"]["dev_auc"]}, "roc": roc, "top5pct": top5,
             "drivers": drivers, "controls": ctrl,
+            "judge": {sp: {k: v for k, v in json.loads((ROOT / "outputs" / f"judge_{sp}.json").read_text()).items() if k != "flagged_genuine"} for sp in ("dev", "test")},
             "eval": {s: {"n": ev[s]["claude"]["n"], "buckets": ev[s]["claude"]["buckets"], "silent_error_rate": ev[s]["claude"]["silent_error_rate"],
                          "baseline_buckets": ev[s]["template_baseline"]["buckets"]} for s in ("dev", "test")}, "examples": examples}
     (ROOT / "dashboard" / "data.json").write_text(json.dumps(data, indent=1))

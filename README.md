@@ -49,9 +49,21 @@ The scorer buckets every finding: correct, correct but flagged uncertain, **caug
 | Dev | 77 | 56 | 21 | 0 | 0 |
 | **Test, scored once** | 60 | 42 | 18 | 0 | **0** |
 
+### Free-text check (LLM judge)
+The number scorer cannot see a sentence whose numbers are all real but misused (e.g. "137 requests, 132 from the department", where 132 is the department's total, not its share). So a second `claude -p` call judges whether each finding's *text* is supported by the facts. To know whether the judge can see errors at all, I also ran it on 24 genuine findings per split with one false sentence appended (a control that was not triggered, invented history, an invented cause, or an invented comparison).
+
+| Set | Genuine flagged unsupported | Injected errors caught | My reading of the flags |
+|---|---|---|---|
+| Dev (judge developed here) | 7 of 77 | 24 of 24 | 1 real silent error, 1 borderline, 5 over-strict |
+| **Test, run once, judge frozen** | 4 of 60 | 24 of 24 | 1 likely real (already flagged uncertain, so caught), 1 borderline, 1 ambiguous, 1 over-strict |
+
+Judge history: the first version (j1) flagged 50 of 77 genuine findings because it was not told what the writer was told (that a higher risk percentile means a denial is more likely, and what each count field means). Fixing that gave j2, which was then frozen before the test set. The remaining over-strict flags are mostly "the resource owner should review", a recommendation, not a fact. The flags are **adjudicated by me, one reader**, not by a second reviewer. The injected errors are blatant, so 24 of 24 says the judge works on obvious errors, not on subtle ones: for example j1 caught one garbled-number sentence that j2 did not.
+
+**Net:** on the held-out test set there are **0 silent errors by the number scorer** and **no silent free-text error that I found**. On dev there was one free-text silent error (1 of 77) that only the judge found.
+
 ## Limitations
 - **Small sample.** 0 silent errors in 60 does not mean zero; the 95% upper bound is about 5% (about 2% over all 137).
-- The scorer checks structured claims and numbers. It does **not** judge free-text reasoning or tone; I read a sample by eye.
+- The number scorer checks claims and numbers, not wording. A second, LLM-based judge checks the text (below), but its recall on subtle errors is unmeasured and it is itself an LLM.
 - The template baseline (fills a sentence from the facts) is correct by construction, so the LLM adds readable explanation, not accuracy. Findings are only as good as the SQL facts they are given.
 - Controls are rules I wrote on anonymised IDs. SoD pairs are illustrative; SoD flags only approved requests, so their denial rate is 0 by design. The unusual-access control is weakest in large departments (lift falls as department size rises).
 - Findings were written for a sample (137 cases), not all flagged requests, and through a subscription, not the API.

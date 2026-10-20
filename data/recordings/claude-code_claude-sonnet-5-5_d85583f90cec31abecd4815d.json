@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "\"that one is the sole request from the department (415 department requests)\" is wrong as written. The department has 415 requests. This request is only the sole request for this resource from the department."
+  ]
+ }
+}

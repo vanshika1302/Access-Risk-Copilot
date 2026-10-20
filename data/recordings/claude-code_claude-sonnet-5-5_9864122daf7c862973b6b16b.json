@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "A segregation-of-duties conflict was also detected for this request. (sod_conflict is false.)",
+   "\"that one is the sole request from the department (415 department requests)\" is contradictory. The facts say dept_requests is 415, and the one request for this resource from the department is not the department's only request."
+  ]
+ }
+}

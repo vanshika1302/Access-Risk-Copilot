@@ -1,0 +1,9 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "This requester was previously denied access to this resource last year. (No prior request history or denial outcome is in the facts.)"
+  ]
+ }
+}

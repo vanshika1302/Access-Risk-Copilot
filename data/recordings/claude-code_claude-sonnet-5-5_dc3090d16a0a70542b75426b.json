@@ -1,0 +1,10 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "unsupported": true,
+  "unsupported_statements": [
+   "The manager is known to approve requests without review, which explains the pattern.",
+   "\"13 of 335 department requests involve this resource\" is fine, but the claim that the resource owner should review is a recommendation only; the manager-approval history and causal explanation are not in the facts."
+  ]
+ }
+}

@@ -7,3 +7,4 @@
 5. **Tableau**: `tableau/access_requests_scored.csv` (4.6 MB, one row per request) is the main extract; `ai_findings_test.csv` is the findings.
 6. **Committed model outputs**: `data/recordings/` (137 Claude Code replays) and `outputs/`. Raw data and the DuckDB file are gitignored.
 7. Note: the dev run needed two retries after timeouts (fixed in `ai/client.py`); the prompt was not changed.
+8. **Free-text judge** (`ai/judge.py`, README section). Flags were adjudicated by me alone; re-read `outputs/judge_test.json` and `outputs/judge_dev.json`. The judge's recall on subtle errors is unmeasured.
