@@ -1,0 +1,6 @@
+duckdb
+pandas
+numpy
+scikit-learn
+pytest
+jsonschema
