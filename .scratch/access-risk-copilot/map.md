@@ -12,6 +12,7 @@ A public repo and GitHub Pages dashboard that shows controls design (SQL), ML, a
 - [01 Scope and decisions](issues/01-scope-decisions.md): see DECISIONS.md rows 1-14.
 - [02 Data source](issues/02-data-source.md): OpenML did 4135, verified 32,769 rows, saved to data/raw/.
 - [03 Warehouse and SQL controls](issues/03-warehouse-sql-controls.md): SQL controls built: SoD 66 flags, unusual access 8,521 (8.8% denied vs 5.8% base), high-risk resource 949 (18.2% denied). SoD pairs illustrative.
+- [04 ML models](issues/04-ml-models.md): Logistic regression test AUC 0.851 (dev 0.858); random forest test AUC 0.863 (dev 0.865). Top RF drivers by permutation: manager, department, resource.
 
 ## Not yet specified
 - Dashboard layout details (after the numbers exist).

@@ -1,0 +1,112 @@
+{
+  "n": {
+    "train": 19661,
+    "dev": 6554,
+    "test": 6554
+  },
+  "denied_rate": 0.05789007903811529,
+  "logreg": {
+    "C": 1.0,
+    "dev_auc": 0.8583976584448741,
+    "top_risk_values": [
+      {
+        "feature": "resource_20897",
+        "coef": 3.098772004081563
+      },
+      {
+        "feature": "mgr_id_70062",
+        "coef": 2.7283375448730793
+      },
+      {
+        "feature": "mgr_id_46526",
+        "coef": 2.5851064840887403
+      },
+      {
+        "feature": "role_family_desc_121926",
+        "coef": 2.396175051503572
+      },
+      {
+        "feature": "mgr_id_4341",
+        "coef": 2.3440309484868633
+      },
+      {
+        "feature": "role_family_desc_118443",
+        "coef": 2.3286388086374235
+      },
+      {
+        "feature": "mgr_id_4589",
+        "coef": 2.2722834447476177
+      },
+      {
+        "feature": "role_deptname_118481",
+        "coef": 2.265734579820981
+      },
+      {
+        "feature": "mgr_id_2837",
+        "coef": 2.236296662226287
+      },
+      {
+        "feature": "mgr_id_3838",
+        "coef": 2.2053908534931037
+      }
+    ],
+    "top_safe_values": [
+      {
+        "feature": "resource_75078",
+        "coef": -2.5904563213425837
+      },
+      {
+        "feature": "resource_4675",
+        "coef": -2.15732639363957
+      },
+      {
+        "feature": "role_deptname_117895",
+        "coef": -2.0006932723650217
+      },
+      {
+        "feature": "role_deptname_121961",
+        "coef": -1.8071804927354247
+      },
+      {
+        "feature": "role_deptname_117904",
+        "coef": -1.633061733353204
+      },
+      {
+        "feature": "resource_73756",
+        "coef": -1.5685589174205032
+      },
+      {
+        "feature": "role_deptname_122273",
+        "coef": -1.5488168449656667
+      },
+      {
+        "feature": "mgr_id_17640",
+        "coef": -1.5449694558344398
+      },
+      {
+        "feature": "role_family_desc_130913",
+        "coef": -1.52864802840491
+      },
+      {
+        "feature": "role_deptname_119954",
+        "coef": -1.5106294533792644
+      }
+    ],
+    "test_auc": 0.8508690945049701
+  },
+  "random_forest": {
+    "dev_auc": 0.8650527170371636,
+    "permutation_importance_by_column": {
+      "mgr_id": 0.03770514778930267,
+      "role_deptname": 0.02954551184130401,
+      "resource": 0.02720746050228051,
+      "role_rollup_2": 0.02488009144029124,
+      "role_family_desc": 0.021958958691634577,
+      "role_rollup_1": 0.021759242840203676,
+      "role_family": 0.012714088855180284,
+      "role_title": 0.007688675718116,
+      "role_code": 0.005634858406417753
+    },
+    "test_auc": 0.8632303547985611
+  }
+}
