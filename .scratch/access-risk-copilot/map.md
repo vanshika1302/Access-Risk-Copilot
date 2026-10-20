@@ -16,6 +16,7 @@ A public repo and GitHub Pages dashboard that shows controls design (SQL), ML, a
 - [05 AI audit findings](issues/05-ai-findings.md): ai/ generates schema-checked findings via claude -p (tools disabled, no key). 77 dev findings recorded in data/recordings (prompt v1). Test findings NOT generated yet: they are produced after the dev score, once.
 - [06 Evals](issues/06-evals.md): Test set (60 cases) scored once: 0 silent errors, 0 caught, 41 correct, 19 correct-but-flagged-uncertain. Dev (77): same, 0 errors. Rule of three: true silent rate could still be up to about 5% (test) / 2% (all 137).
 - [07 Dashboard and Tableau extract](issues/07-dashboard-tableau.md): Static dashboard index.html (template + data.json), docs/screenshot.png, tableau/access_requests_scored.csv (32,769 rows, 4.6 MB) and ai_findings_test.csv (60 rows).
+- [08 README and review summary](issues/08-readme-review.md): README with TL;DR, GLOSSARY, REVIEW.md.
 
 ## Not yet specified
 - Dashboard layout details (after the numbers exist).

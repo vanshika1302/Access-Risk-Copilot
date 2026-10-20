@@ -15,7 +15,6 @@ def test_dashboard_numbers_match_source_results():
     ev = json.loads((R / "outputs" / "eval_results.json").read_text())
     assert d["ml"]["rf_test_auc"] == ml["random_forest"]["test_auc"]
     assert d["eval"]["test"]["buckets"] == ev["test"]["claude"]["buckets"]
-    assert str(round(d["ml"]["rf_test_auc"], 3)) in (R / "index.html").read_text() or True
 
 
 def test_tableau_extract_shape_and_no_target_column():
