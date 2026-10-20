@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 12966 scores in the 98th risk percentile (model score, not a decision), yet no SoD, unusual-for-department or high-risk-resource control fired. The resource has 2 requests overall, 1 from this department, which has 66 requests. Rare resource use limits the baseline. Owner should review the request; the reason for the high score is not explained by the facts.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 2,
+   "dept_requests": 66,
+   "risk_score_percentile": 98
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

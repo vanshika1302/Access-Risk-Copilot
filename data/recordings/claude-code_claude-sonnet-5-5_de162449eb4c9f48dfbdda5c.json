@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 9998 triggers a segregation-of-duties conflict. The resource is not flagged high-risk or unusual for the department (13 of 36 department requests, 15 total requests for this resource). The model risk percentile is 52, a score rather than a decision. An SoD conflict can allow incompatible duties, so the resource owner should review before approval. The conflicting duties are not specified in the facts.",
+  "claims": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 15,
+   "dept_requests": 36,
+   "risk_score_percentile": 52
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

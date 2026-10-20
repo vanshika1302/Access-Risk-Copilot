@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "finding": "Request 8540 is flagged unusual for the department: resource 80687 was requested only 1 time within the department's 296 requests (4 requests overall). No separation-of-duties conflict and not a high-risk resource. Model risk percentile is 50, a mid-range score, not a decision. Recommend the manager (71401) or resource owner confirm business need before approval.",
+  "quoted": {
+   "resource_requests": 4,
+   "dept_requests": 296,
+   "risk_score_percentile": 50
+  },
+  "recommended_action": "review_by_owner",
+  "severity": "medium",
+  "uncertain": false
+ }
+}

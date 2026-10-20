@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 7272 targets a resource flagged high-risk. No SoD conflict or unusual-for-department signal fired. The resource has 40 requests overall, the department 46, and the model's risk score percentile is 20 (low likelihood of denial). Because the resource is high-risk, the resource owner should review the request before approval, and access should be monitored afterwards.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 40,
+   "dept_requests": 46,
+   "risk_score_percentile": 20
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

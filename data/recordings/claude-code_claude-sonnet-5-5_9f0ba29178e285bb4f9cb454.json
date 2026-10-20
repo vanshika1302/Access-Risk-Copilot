@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 8690 triggers the SoD conflict control. It is not flagged as unusual for the department or as a high-risk resource. The resource has 16 requests, the department 68, and the model risk percentile is 49 (mid-range, not a decision). A segregation-of-duties conflict can allow incompatible access, so the resource owner should review it before approval. The conflicting duties aren't specified in the facts.",
+  "claims": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 16,
+   "dept_requests": 68,
+   "risk_score_percentile": 49
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

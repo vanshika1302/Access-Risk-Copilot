@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 29422 triggers no SoD, unusual-for-department or high-risk-resource controls. However, the resource has only 1 request overall (the same one within the department's 83), so there is little history to compare against. The model scores it at the 99th percentile for likely denial. Because the controls and the model disagree, the resource owner should review it before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 83,
+   "risk_score_percentile": 99
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

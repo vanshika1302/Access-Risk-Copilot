@@ -1,0 +1,1696 @@
+[
+ {
+  "request_id": 13221,
+  "split": "dev",
+  "ids": {
+   "resource": 18072,
+   "mgr_id": 3281,
+   "role_deptname": 120323,
+   "role_family": 119095,
+   "role_title": 120591
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 136,
+   "dept_requests": 154,
+   "dept_resource_requests": 5,
+   "risk_score_percentile": 34
+  }
+ },
+ {
+  "request_id": 25627,
+  "split": "dev",
+  "ids": {
+   "resource": 52684,
+   "mgr_id": 79476,
+   "role_deptname": 117941,
+   "role_family": 117887,
+   "role_title": 117885
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 8,
+   "dept_requests": 763,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 43
+  }
+ },
+ {
+  "request_id": 12610,
+  "split": "dev",
+  "ids": {
+   "resource": 73535,
+   "mgr_id": 5604,
+   "role_deptname": 119598,
+   "role_family": 308574,
+   "role_title": 118685
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 3,
+   "dept_requests": 543,
+   "dept_resource_requests": 3,
+   "risk_score_percentile": 22
+  }
+ },
+ {
+  "request_id": 1477,
+  "split": "dev",
+  "ids": {
+   "resource": 18072,
+   "mgr_id": 72209,
+   "role_deptname": 124948,
+   "role_family": 118453,
+   "role_title": 118451
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 136,
+   "dept_requests": 46,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 96
+  }
+ },
+ {
+  "request_id": 15626,
+  "split": "dev",
+  "ids": {
+   "resource": 78966,
+   "mgr_id": 23200,
+   "role_deptname": 123125,
+   "role_family": 308574,
+   "role_title": 118685
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 159,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 58
+  }
+ },
+ {
+  "request_id": 31570,
+  "split": "dev",
+  "ids": {
+   "resource": 18072,
+   "mgr_id": 2607,
+   "role_deptname": 117945,
+   "role_family": 292795,
+   "role_title": 259173
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 136,
+   "dept_requests": 659,
+   "dept_resource_requests": 48,
+   "risk_score_percentile": 85
+  }
+ },
+ {
+  "request_id": 10859,
+  "split": "dev",
+  "ids": {
+   "resource": 38388,
+   "mgr_id": 4743,
+   "role_deptname": 120663,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 335,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 100
+  }
+ },
+ {
+  "request_id": 5783,
+  "split": "dev",
+  "ids": {
+   "resource": 18072,
+   "mgr_id": 4361,
+   "role_deptname": 118623,
+   "role_family": 292795,
+   "role_title": 118995
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 136,
+   "dept_requests": 284,
+   "dept_resource_requests": 17,
+   "risk_score_percentile": 88
+  }
+ },
+ {
+  "request_id": 24803,
+  "split": "dev",
+  "ids": {
+   "resource": 80990,
+   "mgr_id": 31436,
+   "role_deptname": 117895,
+   "role_family": 19721,
+   "role_title": 117899
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 2,
+   "dept_requests": 431,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 60
+  }
+ },
+ {
+  "request_id": 10699,
+  "split": "dev",
+  "ids": {
+   "resource": 14899,
+   "mgr_id": 8717,
+   "role_deptname": 118403,
+   "role_family": 118453,
+   "role_title": 118451
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 2,
+   "dept_requests": 532,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 33
+  }
+ },
+ {
+  "request_id": 15504,
+  "split": "dev",
+  "ids": {
+   "resource": 18072,
+   "mgr_id": 23340,
+   "role_deptname": 120663,
+   "role_family": 122032,
+   "role_title": 122030
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 136,
+   "dept_requests": 335,
+   "dept_resource_requests": 3,
+   "risk_score_percentile": 36
+  }
+ },
+ {
+  "request_id": 20943,
+  "split": "dev",
+  "ids": {
+   "resource": 39262,
+   "mgr_id": 69225,
+   "role_deptname": 118821,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 129,
+   "dept_requests": 178,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 88
+  }
+ },
+ {
+  "request_id": 4044,
+  "split": "dev",
+  "ids": {
+   "resource": 16201,
+   "mgr_id": 7346,
+   "role_deptname": 123125,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 5,
+   "dept_requests": 159,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 24
+  }
+ },
+ {
+  "request_id": 3855,
+  "split": "dev",
+  "ids": {
+   "resource": 82370,
+   "mgr_id": 4589,
+   "role_deptname": 120383,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 95,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 96
+  }
+ },
+ {
+  "request_id": 17859,
+  "split": "dev",
+  "ids": {
+   "resource": 73171,
+   "mgr_id": 46476,
+   "role_deptname": 117904,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 2,
+   "dept_requests": 160,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 14
+  }
+ },
+ {
+  "request_id": 29675,
+  "split": "dev",
+  "ids": {
+   "resource": 40919,
+   "mgr_id": 38364,
+   "role_deptname": 118464,
+   "role_family": 308574,
+   "role_title": 118777
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 15,
+   "dept_requests": 36,
+   "dept_resource_requests": 13,
+   "risk_score_percentile": 59
+  }
+ },
+ {
+  "request_id": 20868,
+  "split": "dev",
+  "ids": {
+   "resource": 27323,
+   "mgr_id": 18096,
+   "role_deptname": 118623,
+   "role_family": 292795,
+   "role_title": 118995
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 27,
+   "dept_requests": 284,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 99
+  }
+ },
+ {
+  "request_id": 20879,
+  "split": "dev",
+  "ids": {
+   "resource": 18072,
+   "mgr_id": 15422,
+   "role_deptname": 118867,
+   "role_family": 119784,
+   "role_title": 130479
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 136,
+   "dept_requests": 136,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 77
+  }
+ },
+ {
+  "request_id": 24649,
+  "split": "dev",
+  "ids": {
+   "resource": 73090,
+   "mgr_id": 21837,
+   "role_deptname": 118507,
+   "role_family": 118398,
+   "role_title": 118890
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 3,
+   "dept_requests": 267,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 22
+  }
+ },
+ {
+  "request_id": 21281,
+  "split": "dev",
+  "ids": {
+   "resource": 39264,
+   "mgr_id": 1736,
+   "role_deptname": 119257,
+   "role_family": 292795,
+   "role_title": 118995
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 65,
+   "dept_requests": 75,
+   "dept_resource_requests": 3,
+   "risk_score_percentile": 81
+  }
+ },
+ {
+  "request_id": 16440,
+  "split": "dev",
+  "ids": {
+   "resource": 15668,
+   "mgr_id": 49374,
+   "role_deptname": 118754,
+   "role_family": 292795,
+   "role_title": 280788
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 5,
+   "dept_requests": 52,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 95
+  }
+ },
+ {
+  "request_id": 32363,
+  "split": "dev",
+  "ids": {
+   "resource": 20299,
+   "mgr_id": 103803,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 117879
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 73,
+   "dept_requests": 763,
+   "dept_resource_requests": 24,
+   "risk_score_percentile": 78
+  }
+ },
+ {
+  "request_id": 19498,
+  "split": "dev",
+  "ids": {
+   "resource": 14570,
+   "mgr_id": 8781,
+   "role_deptname": 117920,
+   "role_family": 19793,
+   "role_title": 119323
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 91,
+   "dept_requests": 597,
+   "dept_resource_requests": 7,
+   "risk_score_percentile": 85
+  }
+ },
+ {
+  "request_id": 16132,
+  "split": "dev",
+  "ids": {
+   "resource": 78191,
+   "mgr_id": 6071,
+   "role_deptname": 122007,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 267,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 95
+  }
+ },
+ {
+  "request_id": 31034,
+  "split": "dev",
+  "ids": {
+   "resource": 838,
+   "mgr_id": 54618,
+   "role_deptname": 118992,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 19,
+   "dept_requests": 206,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 98
+  }
+ },
+ {
+  "request_id": 8074,
+  "split": "dev",
+  "ids": {
+   "resource": 23965,
+   "mgr_id": 4729,
+   "role_deptname": 118301,
+   "role_family": 117887,
+   "role_title": 118054
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 22,
+   "dept_requests": 109,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 96
+  }
+ },
+ {
+  "request_id": 10018,
+  "split": "dev",
+  "ids": {
+   "resource": 32303,
+   "mgr_id": 79116,
+   "role_deptname": 118042,
+   "role_family": 270488,
+   "role_title": 118043
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 3,
+   "dept_requests": 296,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 33
+  }
+ },
+ {
+  "request_id": 14595,
+  "split": "dev",
+  "ids": {
+   "resource": 28596,
+   "mgr_id": 4100,
+   "role_deptname": 120291,
+   "role_family": 118331,
+   "role_title": 119928
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 48,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 98
+  }
+ },
+ {
+  "request_id": 31478,
+  "split": "dev",
+  "ids": {
+   "resource": 80900,
+   "mgr_id": 15781,
+   "role_deptname": 118395,
+   "role_family": 118398,
+   "role_title": 118890
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 6,
+   "dept_requests": 292,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 13
+  }
+ },
+ {
+  "request_id": 10600,
+  "split": "dev",
+  "ids": {
+   "resource": 941,
+   "mgr_id": 770,
+   "role_deptname": 118437,
+   "role_family": 118453,
+   "role_title": 118451
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 4,
+   "dept_requests": 317,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 33
+  }
+ },
+ {
+  "request_id": 27950,
+  "split": "dev",
+  "ids": {
+   "resource": 20299,
+   "mgr_id": 19857,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 73,
+   "dept_requests": 763,
+   "dept_resource_requests": 24,
+   "risk_score_percentile": 33
+  }
+ },
+ {
+  "request_id": 6582,
+  "split": "dev",
+  "ids": {
+   "resource": 5764,
+   "mgr_id": 5767,
+   "role_deptname": 118344,
+   "role_family": 118638,
+   "role_title": 119849
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 9,
+   "dept_requests": 65,
+   "dept_resource_requests": 4,
+   "risk_score_percentile": 57
+  }
+ },
+ {
+  "request_id": 13270,
+  "split": "dev",
+  "ids": {
+   "resource": 20897,
+   "mgr_id": 17858,
+   "role_deptname": 120201,
+   "role_family": 19793,
+   "role_title": 117985
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 104,
+   "dept_requests": 1,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 92
+  }
+ },
+ {
+  "request_id": 7184,
+  "split": "dev",
+  "ids": {
+   "resource": 25732,
+   "mgr_id": 6982,
+   "role_deptname": 118783,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 6,
+   "dept_requests": 366,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 37
+  }
+ },
+ {
+  "request_id": 4527,
+  "split": "dev",
+  "ids": {
+   "resource": 14570,
+   "mgr_id": 11987,
+   "role_deptname": 118008,
+   "role_family": 19721,
+   "role_title": 117879
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 91,
+   "dept_requests": 179,
+   "dept_resource_requests": 10,
+   "risk_score_percentile": 93
+  }
+ },
+ {
+  "request_id": 16059,
+  "split": "dev",
+  "ids": {
+   "resource": 39720,
+   "mgr_id": 273476,
+   "role_deptname": 117920,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 5,
+   "dept_requests": 597,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 91
+  }
+ },
+ {
+  "request_id": 7272,
+  "split": "dev",
+  "ids": {
+   "resource": 25287,
+   "mgr_id": 18213,
+   "role_deptname": 125016,
+   "role_family": 118453,
+   "role_title": 118451
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 40,
+   "dept_requests": 46,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 20
+  }
+ },
+ {
+  "request_id": 9998,
+  "split": "dev",
+  "ids": {
+   "resource": 40919,
+   "mgr_id": 38364,
+   "role_deptname": 118464,
+   "role_family": 308574,
+   "role_title": 118777
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 15,
+   "dept_requests": 36,
+   "dept_resource_requests": 13,
+   "risk_score_percentile": 52
+  }
+ },
+ {
+  "request_id": 8690,
+  "split": "dev",
+  "ids": {
+   "resource": 79141,
+   "mgr_id": 70168,
+   "role_deptname": 118053,
+   "role_family": 308574,
+   "role_title": 118685
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 16,
+   "dept_requests": 68,
+   "dept_resource_requests": 3,
+   "risk_score_percentile": 49
+  }
+ },
+ {
+  "request_id": 8173,
+  "split": "dev",
+  "ids": {
+   "resource": 34982,
+   "mgr_id": 5030,
+   "role_deptname": 120126,
+   "role_family": 118424,
+   "role_title": 120497
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 15,
+   "dept_requests": 128,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 63
+  }
+ },
+ {
+  "request_id": 12966,
+  "split": "dev",
+  "ids": {
+   "resource": 81284,
+   "mgr_id": 7011,
+   "role_deptname": 120685,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 2,
+   "dept_requests": 66,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 98
+  }
+ },
+ {
+  "request_id": 18226,
+  "split": "dev",
+  "ids": {
+   "resource": 40919,
+   "mgr_id": 38364,
+   "role_deptname": 118464,
+   "role_family": 118638,
+   "role_title": 120812
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 15,
+   "dept_requests": 36,
+   "dept_resource_requests": 13,
+   "risk_score_percentile": 67
+  }
+ },
+ {
+  "request_id": 8540,
+  "split": "dev",
+  "ids": {
+   "resource": 80687,
+   "mgr_id": 71401,
+   "role_deptname": 118202,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 4,
+   "dept_requests": 296,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 50
+  }
+ },
+ {
+  "request_id": 25735,
+  "split": "dev",
+  "ids": {
+   "resource": 14570,
+   "mgr_id": 65460,
+   "role_deptname": 117878,
+   "role_family": 19721,
+   "role_title": 117879
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 91,
+   "dept_requests": 1135,
+   "dept_resource_requests": 17,
+   "risk_score_percentile": 96
+  }
+ },
+ {
+  "request_id": 1786,
+  "split": "dev",
+  "ids": {
+   "resource": 52364,
+   "mgr_id": 8242,
+   "role_deptname": 119223,
+   "role_family": 118643,
+   "role_title": 118641
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 3,
+   "dept_requests": 210,
+   "dept_resource_requests": 3,
+   "risk_score_percentile": 95
+  }
+ },
+ {
+  "request_id": 22804,
+  "split": "dev",
+  "ids": {
+   "resource": 17278,
+   "mgr_id": 4599,
+   "role_deptname": 124449,
+   "role_family": 118331,
+   "role_title": 307024
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 57,
+   "dept_requests": 60,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 97
+  }
+ },
+ {
+  "request_id": 12554,
+  "split": "dev",
+  "ids": {
+   "resource": 15720,
+   "mgr_id": 15791,
+   "role_deptname": 120663,
+   "role_family": 308574,
+   "role_title": 118777
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 35,
+   "dept_requests": 335,
+   "dept_resource_requests": 13,
+   "risk_score_percentile": 84
+  }
+ },
+ {
+  "request_id": 28376,
+  "split": "dev",
+  "ids": {
+   "resource": 78972,
+   "mgr_id": 70168,
+   "role_deptname": 121949,
+   "role_family": 118638,
+   "role_title": 118636
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 25,
+   "dept_requests": 40,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 64
+  }
+ },
+ {
+  "request_id": 4344,
+  "split": "dev",
+  "ids": {
+   "resource": 36112,
+   "mgr_id": 8698,
+   "role_deptname": 119824,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 2,
+   "dept_requests": 69,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 100
+  }
+ },
+ {
+  "request_id": 6320,
+  "split": "dev",
+  "ids": {
+   "resource": 80101,
+   "mgr_id": 6222,
+   "role_deptname": 118746,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 3,
+   "dept_requests": 415,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 58
+  }
+ },
+ {
+  "request_id": 13832,
+  "split": "dev",
+  "ids": {
+   "resource": 16491,
+   "mgr_id": 2594,
+   "role_deptname": 120410,
+   "role_family": 4673,
+   "role_title": 128230
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 3,
+   "dept_requests": 140,
+   "dept_resource_requests": 3,
+   "risk_score_percentile": 97
+  }
+ },
+ {
+  "request_id": 14796,
+  "split": "dev",
+  "ids": {
+   "resource": 79168,
+   "mgr_id": 50517,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 17,
+   "dept_requests": 763,
+   "dept_resource_requests": 14,
+   "risk_score_percentile": 96
+  }
+ },
+ {
+  "request_id": 2084,
+  "split": "dev",
+  "ids": {
+   "resource": 33642,
+   "mgr_id": 67940,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 99,
+   "dept_requests": 763,
+   "dept_resource_requests": 43,
+   "risk_score_percentile": 89
+  }
+ },
+ {
+  "request_id": 11781,
+  "split": "dev",
+  "ids": {
+   "resource": 18913,
+   "mgr_id": 19857,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 117879
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 65,
+   "dept_requests": 763,
+   "dept_resource_requests": 11,
+   "risk_score_percentile": 76
+  }
+ },
+ {
+  "request_id": 30759,
+  "split": "dev",
+  "ids": {
+   "resource": 32092,
+   "mgr_id": 90707,
+   "role_deptname": 117878,
+   "role_family": 118398,
+   "role_title": 120647
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 2,
+   "dept_requests": 1135,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 73
+  }
+ },
+ {
+  "request_id": 11228,
+  "split": "dev",
+  "ids": {
+   "resource": 102288,
+   "mgr_id": 7198,
+   "role_deptname": 122007,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 267,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 21
+  }
+ },
+ {
+  "request_id": 583,
+  "split": "dev",
+  "ids": {
+   "resource": 78598,
+   "mgr_id": 5269,
+   "role_deptname": 120356,
+   "role_family": 118424,
+   "role_title": 122067
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 5,
+   "dept_requests": 138,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 41
+  }
+ },
+ {
+  "request_id": 3715,
+  "split": "dev",
+  "ids": {
+   "resource": 14570,
+   "mgr_id": 50318,
+   "role_deptname": 117912,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 91,
+   "dept_requests": 191,
+   "dept_resource_requests": 6,
+   "risk_score_percentile": 86
+  }
+ },
+ {
+  "request_id": 26459,
+  "split": "dev",
+  "ids": {
+   "resource": 41971,
+   "mgr_id": 70078,
+   "role_deptname": 118063,
+   "role_family": 118453,
+   "role_title": 128422
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 4,
+   "dept_requests": 19,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 98
+  }
+ },
+ {
+  "request_id": 26567,
+  "split": "dev",
+  "ids": {
+   "resource": 28149,
+   "mgr_id": 36051,
+   "role_deptname": 118635,
+   "role_family": 308574,
+   "role_title": 118685
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 137,
+   "dept_requests": 132,
+   "dept_resource_requests": 8,
+   "risk_score_percentile": 77
+  }
+ },
+ {
+  "request_id": 20329,
+  "split": "dev",
+  "ids": {
+   "resource": 34882,
+   "mgr_id": 3875,
+   "role_deptname": 120318,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 5,
+   "dept_requests": 138,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 87
+  }
+ },
+ {
+  "request_id": 3493,
+  "split": "dev",
+  "ids": {
+   "resource": 20299,
+   "mgr_id": 11513,
+   "role_deptname": 117920,
+   "role_family": 120134,
+   "role_title": 120132
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 73,
+   "dept_requests": 597,
+   "dept_resource_requests": 17,
+   "risk_score_percentile": 81
+  }
+ },
+ {
+  "request_id": 6748,
+  "split": "dev",
+  "ids": {
+   "resource": 38804,
+   "mgr_id": 2163,
+   "role_deptname": 120694,
+   "role_family": 118638,
+   "role_title": 118636
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 48,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 97
+  }
+ },
+ {
+  "request_id": 19740,
+  "split": "dev",
+  "ids": {
+   "resource": 39264,
+   "mgr_id": 32795,
+   "role_deptname": 118623,
+   "role_family": 292795,
+   "role_title": 117946
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 65,
+   "dept_requests": 284,
+   "dept_resource_requests": 27,
+   "risk_score_percentile": 81
+  }
+ },
+ {
+  "request_id": 20818,
+  "split": "dev",
+  "ids": {
+   "resource": 27589,
+   "mgr_id": 52441,
+   "role_deptname": 118556,
+   "role_family": 292795,
+   "role_title": 117946
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 9,
+   "dept_requests": 91,
+   "dept_resource_requests": 2,
+   "risk_score_percentile": 98
+  }
+ },
+ {
+  "request_id": 29422,
+  "split": "dev",
+  "ids": {
+   "resource": 34114,
+   "mgr_id": 71215,
+   "role_deptname": 118404,
+   "role_family": 290919,
+   "role_title": 118784
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 83,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 99
+  }
+ },
+ {
+  "request_id": 15561,
+  "split": "dev",
+  "ids": {
+   "resource": 25993,
+   "mgr_id": 21033,
+   "role_deptname": 123749,
+   "role_family": 118638,
+   "role_title": 118636
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 409,
+   "dept_requests": 54,
+   "dept_resource_requests": 4,
+   "risk_score_percentile": 69
+  }
+ },
+ {
+  "request_id": 5352,
+  "split": "dev",
+  "ids": {
+   "resource": 104316,
+   "mgr_id": 169,
+   "role_deptname": 121639,
+   "role_family": 290919,
+   "role_title": 117905
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 1,
+   "dept_requests": 123,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 67
+  }
+ },
+ {
+  "request_id": 17579,
+  "split": "dev",
+  "ids": {
+   "resource": 79969,
+   "mgr_id": 15894,
+   "role_deptname": 119986,
+   "role_family": 308574,
+   "role_title": 118685
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 19,
+   "dept_requests": 84,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 18
+  }
+ },
+ {
+  "request_id": 26070,
+  "split": "dev",
+  "ids": {
+   "resource": 35498,
+   "mgr_id": 231,
+   "role_deptname": 6104,
+   "role_family": 290919,
+   "role_title": 118321
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 36,
+   "dept_requests": 52,
+   "dept_resource_requests": 1,
+   "risk_score_percentile": 95
+  }
+ },
+ {
+  "request_id": 7889,
+  "split": "dev",
+  "ids": {
+   "resource": 18913,
+   "mgr_id": 19140,
+   "role_deptname": 119569,
+   "role_family": 117887,
+   "role_title": 179731
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 65,
+   "dept_requests": 45,
+   "dept_resource_requests": 10,
+   "risk_score_percentile": 96
+  }
+ },
+ {
+  "request_id": 3074,
+  "split": "dev",
+  "ids": {
+   "resource": 20222,
+   "mgr_id": 15377,
+   "role_deptname": 117945,
+   "role_family": 292795,
+   "role_title": 118274
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 33,
+   "dept_requests": 659,
+   "dept_resource_requests": 22,
+   "risk_score_percentile": 92
+  }
+ },
+ {
+  "request_id": 20065,
+  "split": "dev",
+  "ids": {
+   "resource": 20299,
+   "mgr_id": 27881,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 73,
+   "dept_requests": 763,
+   "dept_resource_requests": 24,
+   "risk_score_percentile": 52
+  }
+ },
+ {
+  "request_id": 20129,
+  "split": "dev",
+  "ids": {
+   "resource": 33642,
+   "mgr_id": 13728,
+   "role_deptname": 117941,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 99,
+   "dept_requests": 763,
+   "dept_resource_requests": 43,
+   "risk_score_percentile": 79
+  }
+ },
+ {
+  "request_id": 31415,
+  "split": "dev",
+  "ids": {
+   "resource": 18913,
+   "mgr_id": 31857,
+   "role_deptname": 117920,
+   "role_family": 19721,
+   "role_title": 118568
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 65,
+   "dept_requests": 597,
+   "dept_resource_requests": 17,
+   "risk_score_percentile": 47
+  }
+ },
+ {
+  "request_id": 25290,
+  "split": "dev",
+  "ids": {
+   "resource": 278393,
+   "mgr_id": 21033,
+   "role_deptname": 123749,
+   "role_family": 308574,
+   "role_title": 118777
+  },
+  "controls": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "numbers": {
+   "resource_requests": 163,
+   "dept_requests": 54,
+   "dept_resource_requests": 4,
+   "risk_score_percentile": 68
+  }
+ },
+ {
+  "request_id": 25384,
+  "split": "dev",
+  "ids": {
+   "resource": 39264,
+   "mgr_id": 58702,
+   "role_deptname": 117945,
+   "role_family": 292795,
+   "role_title": 280788
+  },
+  "controls": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": true
+  },
+  "numbers": {
+   "resource_requests": 65,
+   "dept_requests": 659,
+   "dept_resource_requests": 19,
+   "risk_score_percentile": 84
+  }
+ }
+]

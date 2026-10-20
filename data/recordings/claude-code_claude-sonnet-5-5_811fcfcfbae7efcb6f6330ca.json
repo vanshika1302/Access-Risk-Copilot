@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 26459 triggers no SoD, unusual-for-department or high-risk-resource controls. The resource has 4 requests overall, the department 19, and only 1 for this department-resource pair. The model scores it at the 98th percentile for likely denial. Controls and model disagree, so the owner should review the request before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 4,
+   "dept_requests": 19,
+   "risk_score_percentile": 98
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

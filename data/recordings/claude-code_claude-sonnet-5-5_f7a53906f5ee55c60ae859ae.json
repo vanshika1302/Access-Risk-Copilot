@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 8074 triggers no SoD, unusual-for-department or high-risk-resource controls. The resource has 22 requests overall, and the department has 109 requests, 2 of them for this resource. However, the model score is at the 96th percentile for likely denial. This conflicts with the clean controls, and the drivers are unknown. Have the manager or resource owner review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 22,
+   "dept_requests": 109,
+   "risk_score_percentile": 96
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

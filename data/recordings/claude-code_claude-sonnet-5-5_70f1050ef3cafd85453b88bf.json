@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 16440 triggers no SoD, unusual-for-department or high-risk-resource controls. The resource has 5 requests overall, and the department has 52 requests, only 1 of them for this resource. The model places it at the 95th risk percentile (a score, not a decision). Rarity of this pairing is worth a check: the resource owner should review the business need before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 5,
+   "dept_requests": 52,
+   "risk_score_percentile": 95
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 20879 is for a high-risk resource that is unusual for the requester's department: only 1 department request for it, against 136 total resource requests. No segregation-of-duties conflict was found. The model score is at the 77th percentile (higher means more likely denied). Unusual access to a high-risk resource warrants resource-owner review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": true
+  },
+  "quoted": {
+   "resource_requests": 136,
+   "dept_requests": 136,
+   "risk_score_percentile": 77
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

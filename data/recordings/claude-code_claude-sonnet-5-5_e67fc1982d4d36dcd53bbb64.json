@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "low",
+  "finding": "Request 10600 is flagged unusual for the department: resource 941 has 4 requests overall, and only 1 of the department's 317 requests involved it. No SoD conflict or high-risk resource flag is set, and the risk score percentile is 33. Low concern, but the resource owner should confirm business need before approval, since resource and role meanings are unknown.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": true,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 4,
+   "dept_requests": 317,
+   "risk_score_percentile": 33
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

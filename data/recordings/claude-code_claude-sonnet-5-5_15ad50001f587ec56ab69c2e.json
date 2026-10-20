@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 12610 triggers a segregation-of-duties conflict. It is not unusual for the department (3 of 543 department requests were for this resource) and the resource is not flagged high-risk. The model risk score is low (22nd percentile). An SoD conflict can allow one person to hold incompatible access, so the resource owner should review it before approval.",
+  "claims": {
+   "sod_conflict": true,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 3,
+   "dept_requests": 543,
+   "risk_score_percentile": 22
+  },
+  "uncertain": false,
+  "recommended_action": "review_by_owner"
+ }
+}

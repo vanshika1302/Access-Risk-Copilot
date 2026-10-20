@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5-5",
+ "output": {
+  "severity": "medium",
+  "finding": "Request 6748 triggered no SoD, unusual-for-department or high-risk-resource controls. However, resource 38804 has only 1 request overall (and 1 within the department, which has 48 requests), and the model scores it at the 97th risk percentile. The rarity and high score are unexplained by the controls, so the resource owner should review before approval.",
+  "claims": {
+   "sod_conflict": false,
+   "unusual_for_department": false,
+   "high_risk_resource": false
+  },
+  "quoted": {
+   "resource_requests": 1,
+   "dept_requests": 48,
+   "risk_score_percentile": 97
+  },
+  "uncertain": true,
+  "recommended_action": "review_by_owner"
+ }
+}
